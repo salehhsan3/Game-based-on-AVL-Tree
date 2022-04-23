@@ -1,0 +1,3 @@
+/mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/cmake-build-debug/CMakeFiles/DS_WET1.dir

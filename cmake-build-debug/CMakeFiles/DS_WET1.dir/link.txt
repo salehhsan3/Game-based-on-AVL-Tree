@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/DS_WET1.dir/Company.cpp.o CMakeFiles/DS_WET1.dir/Employee.cpp.o CMakeFiles/DS_WET1.dir/StockExchange.cpp.o  -o DS_WET1 
