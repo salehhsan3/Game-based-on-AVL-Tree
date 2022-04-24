@@ -3,4 +3,4 @@ project(DS_WET1)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(DS_WET1 Company.h Company.cpp Employee.cpp Employee.h StockExchange.cpp StockExchange.h)
+add_executable(DS_WET1 Company.h Company.cpp Employee.cpp Employee.h Industry.cpp Industry.h library1.h main1.cpp)

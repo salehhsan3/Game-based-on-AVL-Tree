@@ -1,0 +1,22 @@
+[
+{
+  "directory": "C:/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -std=gnu++11 -o CMakeFiles\\DS_WET1.dir\\Company.cpp.obj -c C:\\Users\\Saleh\\Desktop\\Data-Structures\\spring\\DS-WET1\\Company.cpp",
+  "file": "C:/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/Company.cpp"
+},
+{
+  "directory": "C:/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -std=gnu++11 -o CMakeFiles\\DS_WET1.dir\\Employee.cpp.obj -c C:\\Users\\Saleh\\Desktop\\Data-Structures\\spring\\DS-WET1\\Employee.cpp",
+  "file": "C:/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/Employee.cpp"
+},
+{
+  "directory": "C:/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -std=gnu++11 -o CMakeFiles\\DS_WET1.dir\\Industry.cpp.obj -c C:\\Users\\Saleh\\Desktop\\Data-Structures\\spring\\DS-WET1\\Industry.cpp",
+  "file": "C:/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/Industry.cpp"
+},
+{
+  "directory": "C:/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -std=gnu++11 -o CMakeFiles\\DS_WET1.dir\\main1.cpp.obj -c C:\\Users\\Saleh\\Desktop\\Data-Structures\\spring\\DS-WET1\\main1.cpp",
+  "file": "C:/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/main1.cpp"
+}
+]
