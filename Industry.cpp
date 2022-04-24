@@ -42,7 +42,13 @@ namespace MIVNI
 
         this->workers_by_id.addNode(EmployeeID,emp_to_add);
         this->workers_by_grade.addNode(Grade,emp_to_add);
-        comp_to_find
+        if(comp_to_find->getCompanyNumOfEmployees() == 0)
+        {
+            this->companies_with_employees.addNode(CompanyID,*comp_to_find);
+        }
+        comp_to_find->AddEmployee(EmployeeID,Grade,emp_to_add);
+        this->num_of_workers++;
+        comp_to_find->UpdateCompanyHighestEarnerAfterAddition();
       
         
     } 

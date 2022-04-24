@@ -19,7 +19,7 @@ namespace MIVNI{
         int ID;
         int value;
         int num_of_employees;
-        std::Shared_ptr<Employee> highest_earner;
+        Employee* highest_earner;
         AVL_Tree<int,Employee> employees_by_grade;
         AVL_Tree<int,Employee> employees_by_id;
 
@@ -28,9 +28,11 @@ namespace MIVNI{
                     AVL_Tree<int,Employee> emp_by_grade, AVL_Tree<int,Employee> emp_by_id);
         ~Company();
 
-        StatusType AddEmployee(int EmployeeID, int CompanyID, int Salary, int Grade);
+        StatusType AddEmployee(int EmployeeID, int Grade, Employee& emp);
         StatusType RemoveEmployee(int EmployeeID);
         StatusType GetCompanyInfo(int CompanyID, int *Value, int *NumEmployees);
+        void UpdateCompanyHighestEarnerAfterAddition(Employee& emp);
+        Employee* getHighestEarner();
         int getCompanyID();
         int getCompanyValue();
         int getCompanyNumOfEmployees();
