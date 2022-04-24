@@ -10,6 +10,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "library1.h"
+#include <memory>
 
 
 namespace MIVNI{
@@ -20,13 +21,17 @@ namespace MIVNI{
         int ID;
         int salary;
         int grade;
-        int group_id;
+        int company_id;
 
     public:
         Employee(int ID,int salary,int grade,int group_id);
         Employee(const Employee& emp) = default;
         Employee& operator=(const Employee& emp) = default;
         ~Employee() = default;
+
+        StatusType GetEmployeeInfo(int EmployeeID, int *EmployerID, int *Salary, int *Grade);
+
+
         bool operator<(const Employee& emp) const
         {
             if (grade == emp.grade)
