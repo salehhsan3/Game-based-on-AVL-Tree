@@ -10,7 +10,13 @@ namespace MIVNI
         this->employees_by_id.addNode(EmployeeID,emp);
         this->employees_by_grade.addNode(Grade,emp);
         this->num_of_employees++;
-        return SUCCESS;   
+        return SUCCESS;
+    }
+    StatusType Company::RemoveEmployee(int EmployeeID){
+        employees_by_id.removeNode(EmployeeID);
+        employees_by_grade.removeNode(EmployeeID);
+        num_of_employees--;
+        return SUCCESS;
     }
     void Company::UpdateCompanyHighestEarnerAfterAddition(Employee& emp)
     {
@@ -27,7 +33,7 @@ namespace MIVNI
         }
 
         if ( ( (player->playerlevel) == (this->champion->data->playerlevel) )
-                 && ( (player->playerid) < (this->champion->data->playerid) ) )
+             && ( (player->playerid) < (this->champion->data->playerid) ) )
         {
             this->champion->data = player;
             this->champion->key = IDRank(player->playerlevel,player->playerid);
@@ -49,5 +55,12 @@ namespace MIVNI
     {
         return num_of_employees;
     }
-} // namespace MIVNI
 
+    void Company::UpdateCompanyValue(int new_value){
+        value = new_value;
+    }
+
+    AVL_Tree<int,Employee>* Company::getCompanyEmployeesTreeByID(){
+        return &employees_by_id;
+    }
+} // namespace MIVNI

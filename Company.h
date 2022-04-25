@@ -25,21 +25,26 @@ namespace MIVNI{
 
     public:
         Company(int id, int val, int num_of_emp, std::shared_ptr<Employee> highest_earner,
-                    AVL_Tree<int,Employee> emp_by_grade, AVL_Tree<int,Employee> emp_by_id);
+                AVL_Tree<int,Employee> emp_by_grade, AVL_Tree<int,Employee> emp_by_id);
         ~Company();
 
         StatusType AddEmployee(int EmployeeID, int Grade, Employee& emp);
-        StatusType RemoveEmployee(int EmployeeID);
+        void RemoveEmployee(int EmployeeID);
         StatusType GetCompanyInfo(int CompanyID, int *Value, int *NumEmployees);
         void UpdateCompanyHighestEarnerAfterAddition(Employee& emp);
+        void UpdateCompanyHighestEarnerAfterRemove();
         Employee* getHighestEarner();
         int getCompanyID();
         int getCompanyValue();
         int getCompanyNumOfEmployees();
+        void UpdateCompanyValue(int new_value);
+        AVL_Tree<int,Employee>* getCompanyEmployeesTreeByID();
+        AVL_Tree<int,Employee>* getCompanyEmployeesTreeBySalary();
+
 
     };
-    
-    
+
+
 }
 
 #endif //DS_WET1_COMPANY_H
