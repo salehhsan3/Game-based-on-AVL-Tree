@@ -23,13 +23,13 @@ namespace MIVNI{
 
     public:
         Industry(
-        // int num_of_workers,
-        // int num_of_companies_with_employees,
-        // Shared_ptr<Employee> highest_earner,
-        // AVL_Tree<int,Employee> workers_by_id,
-        // AVL_Tree<int,Employee> workers_by_grade,
-        // AVL_Tree<int,Company> companies,
-        // AVL_Tree<int,Company> companies_with_employees
+                // int num_of_workers,
+                // int num_of_companies_with_employees,
+                // Shared_ptr<Employee> highest_earner,
+                // AVL_Tree<int,Employee> workers_by_id,
+                // AVL_Tree<int,Employee> workers_by_grade,
+                // AVL_Tree<int,Company> companies,
+                // AVL_Tree<int,Company> companies_with_employees
         );
         Industry(const Industry& ind) = default;
         Industry& operator=(const Industry& ind) = default;
@@ -39,6 +39,8 @@ namespace MIVNI{
         void UpdateIndustryHighestEarnerAfterAddition(Employee* emp);
 
         static void getEmployeesBySalary(tree_node<int,Employee>* node, int *Employees, int *index);
+
+        void UpdateIndustryHighestEarnerAfterRemove(Employee& emp);
 
         Industry *Init();
 
@@ -69,7 +71,7 @@ namespace MIVNI{
         StatusType GetHighestEarnerInEachCompany(int NumOfCompanies, int **Employees);
 
         StatusType GetNumEmployeesMatching(int CompanyID, int MinEmployeeID, int MaxEmployeeId,
-                int MinSalary, int MinGrade, int *TotalNumOfEmployees, int *NumOfEmployees);
+                                           int MinSalary, int MinGrade, int *TotalNumOfEmployees, int *NumOfEmployees);
 
 
     };

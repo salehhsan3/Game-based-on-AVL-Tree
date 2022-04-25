@@ -17,7 +17,7 @@ namespace MIVNI
     {
         return salary;
     }
-    int Employee::getEmployeersid()
+    int Employee::getEmployersid()
     {
         return company_id;
     }
@@ -40,4 +40,9 @@ namespace MIVNI
         this->bumpGrade(bump);
         return;
     }
+    void Employee::UpdateCompanyID(int NewID)
+    {
+        this->company_id = NewID;
+    }
+
 } // namespace MIVNI
