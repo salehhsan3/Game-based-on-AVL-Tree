@@ -16,8 +16,8 @@ namespace MIVNI{
         companies_with_employees()
     {}
 
-    void merge_func(Employee arr1[], Employee arr2[] ,int n1, int n2,
-                    Employee arr3[]){
+    void merge_func(shared_ptr<Employee> arr1[], shared_ptr<Employee> arr2[] ,int n1, int n2,
+                    shared_ptr<Employee>  arr3[]){
         int i = 0, j = 0, k = 0;
 
         while (i<n1 && j <n2)
@@ -44,13 +44,13 @@ namespace MIVNI{
             this->highest_earner = emp;
             return;
         }
-        if ( emp->getEmployeeGrade() > this->highest_earner->getEmployeeGrade() )
+        if ( emp->getEmployeeSalary() > this->highest_earner->getEmployeeSalary() )
         {
             this->highest_earner = emp;
             return;
         }
 
-        if ( (emp->getEmployeeGrade() == this->highest_earner->getEmployeeGrade()) 
+        if ( (emp->getEmployeeSalary() == this->highest_earner->getEmployeeSalary()) 
                  && ( emp->getEmployeeID() < this->highest_earner->getEmployeeID() ) )
         {
             this->highest_earner = emp;
@@ -58,29 +58,50 @@ namespace MIVNI{
         }
         return;
     }
-    tree_node<player_level, std::shared_ptr<player_level>>* createFromSortedArrAux(Employee array[], int start,
-                                                                                   int end, tree_node<int, shared_ptr<Employee>>*parent){
+
+    tree_node<int, shared_ptr<Employee>> *createFromSortedArrAuxForID(shared_ptr<Employee> array[], int start,
+                                                        int end, tree_node<int, shared_ptr<Employee>> *parent){
         if(start > end)
             return nullptr;
         int mid = (start+end)/2;
-        tree_node<int, shared_ptr<Employee>>* new_node = new tree_node<int, shared_ptr<Employee>>(*(array[mid])
-                ,array[mid],parent, nullptr, nullptr, 0);
-        new_node->left_son = createFromSortedArrAux(array, start, mid-1, new_node);
-        new_node->right_son = createFromSortedArrAux(array, mid+1, end, new_node);
+        tree_node<int, shared_ptr<Employee>> *new_node = new tree_node<int, shared_ptr<Employee>>(array[mid]->getEmployeeID(),array[mid],parent, nullptr, nullptr, 0);
+        new_node->left_son = createFromSortedArrAuxForID(array, start, mid-1, new_node);
+        new_node->right_son = createFromSortedArrAuxForID(array, mid+1, end, new_node);
         new_node->updateHeight();
         return new_node;
     }
 
-    AVL_Tree<player_level, std::shared_ptr<player_level>>* createFromSortedArr(Employee array[], int start, int end){
-        AVL_Tree<int, Employee>* new_tree = new AVL_Tree<int, Employee>();
-        new_tree->root = createFromSortedArrAux(array, start, end, nullptr);
+    AVL_Tree<int, shared_ptr<Employee>>* createFromSortedArrForID(shared_ptr<Employee> array[], int start, int end){
+        AVL_Tree<int, shared_ptr<Employee>> *new_tree = new AVL_Tree<int, shared_ptr<Employee>>();
+        new_tree->root = createFromSortedArrAuxForID(array, start, end, nullptr);
         new_tree->max = new_tree->root->findMax();
         new_tree->min = new_tree->root->findMin();
         new_tree->size = end+1;
         return new_tree;
     }
 
-    void visitInOrder2(Employee* array, tree_node<int, Employee>* node, int* counter_ptr, int num){
+    tree_node<int, shared_ptr<Employee>> *createFromSortedArrAuxForSalary(shared_ptr<Employee> array[], int start,
+                                                        int end, tree_node<int, shared_ptr<Employee>> *parent){
+        if(start > end)
+            return nullptr;
+        int mid = (start+end)/2;
+        tree_node<int, shared_ptr<Employee>> *new_node = new tree_node<int, shared_ptr<Employee>>(array[mid]->getEmployeeSalary(),array[mid],parent, nullptr, nullptr, 0);
+        new_node->left_son = createFromSortedArrAuxForSalary(array, start, mid-1, new_node);
+        new_node->right_son = createFromSortedArrAuxForSalary(array, mid+1, end, new_node);
+        new_node->updateHeight();
+        return new_node;
+    }
+
+    AVL_Tree<int, shared_ptr<Employee>>* createFromSortedArrForSalary(shared_ptr<Employee> array[], int start, int end){
+        AVL_Tree<int, shared_ptr<Employee>> *new_tree = new AVL_Tree<int, shared_ptr<Employee>>();
+        new_tree->root = createFromSortedArrAuxForSalary(array, start, end, nullptr);
+        new_tree->max = new_tree->root->findMax();
+        new_tree->min = new_tree->root->findMin();
+        new_tree->size = end+1;
+        return new_tree;
+    }
+
+    void visitInOrder2(shared_ptr<Employee> * array, tree_node<int, shared_ptr<Employee> >* node, int* counter_ptr, int num){
         if (node == nullptr || *counter_ptr == num ) {
             return;
         }
@@ -88,7 +109,7 @@ namespace MIVNI{
         visitInOrder2(array, node->left_son, counter_ptr, num);
 
         /* add id of the min node to array */
-        array[*counter_ptr] = *node->data;
+        array[*counter_ptr] = *(node->data);
         (*counter_ptr)++;
         if (*counter_ptr == num) {
             return;
@@ -97,15 +118,20 @@ namespace MIVNI{
         visitInOrder2(array, node->right_son, counter_ptr, num);
     }
 
+    Industry *Industry::Init()
+    {
+        return(new Industry());
+    }
+
     StatusType Industry::AddCompany(int CompanyID, int Value){
         if(CompanyID <= 0 || Value <= 0){
             return INVALID_INPUT;
         }
-        if(!companies.findNode(CompanyID)){
+        if( companies.findNode(CompanyID) != nullptr){
             return FAILURE;
         }
         shared_ptr<Company> new_company = make_shared<Company>(CompanyID, Value);
-        if (!companies_with_employees.addNode(CompanyID, new_company)){
+        if (!companies.addNode(CompanyID, new_company)){
             return ALLOCATION_ERROR;
         }
         return SUCCESS;
@@ -121,10 +147,8 @@ namespace MIVNI{
         {
             return FAILURE;
         }
-        shared_ptr<Employee> emp_to_find = *(this->workers_by_id.findNode(EmployeeID)->data);
+        // shared_ptr<Employee> emp_to_find = *(this->workers_by_id.findNode(EmployeeID)->data);
         shared_ptr<Company> comp_to_find = *(this->companies.findNode(CompanyID)->data);
-        
-       
         shared_ptr<Employee> emp_to_add = make_shared<Employee>(EmployeeID,Salary,Grade,CompanyID);
 
         if(comp_to_find->getCompanyNumOfEmployees() == 0)
@@ -136,7 +160,8 @@ namespace MIVNI{
         this->workers_by_id.addNode(EmployeeID,emp_to_add);
         this->workers_by_salary.addNode(Salary,emp_to_add);
         this->num_of_workers++;
-        this->UpdateIndustryHighestEarnerAfterAddition(emp_to_add);
+        this->UpdateIndustryHighestEarnerAfterAddition(emp_to_add); // use the updatehighestearner() with no params?
+        return SUCCESS;
     } 
 
     StatusType Industry::RemoveEmployee(int EmployeeID){
@@ -148,19 +173,22 @@ namespace MIVNI{
         }
         shared_ptr<Employee> employee_to_remove = *(workers_by_id.findNode(EmployeeID)->data);
         int company_id = employee_to_remove->getEmployersid();
+        int emp_salary = employee_to_remove->getEmployeeSalary();
         if(companies_with_employees.findNode(company_id)){
             shared_ptr<Company> curr_company = *(companies_with_employees.findNode(company_id)->data);
             if(curr_company->getCompanyNumOfEmployees() == 1){
                 companies_with_employees.removeNode(company_id);
             }
-            if(curr_company->getHighestEarner() == employee_to_remove){
-                curr_company->RemoveEmployee(EmployeeID);
-            }
-            curr_company->RemoveEmployee(EmployeeID);
+            // if(curr_company->getHighestEarner() == employee_to_remove){
+            //     curr_company->RemoveEmployee(EmployeeID);
+            // }
+            curr_company->RemoveEmployee(EmployeeID,emp_salary);
         }
+        workers_by_salary.removeNode(emp_salary);
         workers_by_id.removeNode(EmployeeID);
-        workers_by_salary.removeNode(EmployeeID);
         num_of_workers--;
+        // this->highest_earner = *(this->workers_by_salary.max->data); // updateHighestEarnerafterRemove
+        this->updateHighestEarner();
         return SUCCESS;
     }
 
@@ -228,6 +256,12 @@ namespace MIVNI{
         return SUCCESS;
     }
 
+    void Industry::updateHighestEarner()
+    {
+        this->highest_earner = *(this->workers_by_salary.max->data);
+        return;
+    }
+
     StatusType Industry::PromoteEmployee(int EmployeeID, int SalaryIncrease, int BumpGrade)
     {
         if (EmployeeID <= 0 ||SalaryIncrease <= 0)
@@ -240,7 +274,10 @@ namespace MIVNI{
             return FAILURE;
         }
         shared_ptr<Employee> emp = *(this->workers_by_id.findNode(EmployeeID)->data);
+        shared_ptr<Company> comp = *(this->companies.findNode(emp->getEmployersid())->data);
         emp->promote(SalaryIncrease,BumpGrade);
+        this->updateHighestEarner();
+        comp->updateHighestEarner();
         return SUCCESS;
     }
 
@@ -275,50 +312,60 @@ namespace MIVNI{
         shared_ptr<Company> target_company = *(companies.findNode(TargetID)->data);
         int acquirer_value = acquirer_company->getCompanyValue();
         int target_value = target_company->getCompanyValue();
+        int after_value = ((acquirer_value + target_value)*Factor);
         if (acquirer_value < 10*target_value){
             return FAILURE;
         }
-        if(!companies_with_employees.findNode(TargetID)){
+
+        if(!companies_with_employees.findNode(TargetID)){ // TargetCompany has no employess case
             RemoveCompany(TargetID);
             acquirer_company->UpdateCompanyValue((acquirer_value+target_value)*Factor);
             return SUCCESS;
         }
+
         int acquire_num = acquirer_company->getCompanyNumOfEmployees();
         int target_num = target_company->getCompanyNumOfEmployees();
+        int after_num = acquire_num + target_num;
 
-        AVL_Tree<int, shared_ptr<Employee>>* acquire_employee_tree = companies_with_employees.findNode(AcquirerID)->data->getCompanyEmployeesTreeByID();
-        AVL_Tree<int, shared_ptr<Employee>>* target_employee_tree = companies_with_employees.findNode(TargetID)->data->getCompanyEmployeesTreeByID();
+        AVL_Tree<int, shared_ptr<Employee>>* acquire_employee_tree = companies_with_employees.findNode(AcquirerID)->data->get()->getCompanyEmployeesTreeByID();
+        AVL_Tree<int, shared_ptr<Employee>>* target_employee_tree = companies_with_employees.findNode(TargetID)->data->get()->getCompanyEmployeesTreeByID();
 
-        Employee *acquire_employees_arr = new Employee[acquire_num]();
-        Employee *target_employees_arr = new Employee[target_num]();
+        shared_ptr<Employee> *acquire_employees_arr = new shared_ptr<Employee>[acquire_num]();
+        shared_ptr<Employee> *target_employees_arr = new shared_ptr<Employee>[target_num]();
 
         int counter = 0;
-        visitInOrder2(acquire_employees_arr, acquire_employee_tree->root, &counter, acquire_num);
         int* counter_ptr = &counter;
         *counter_ptr = 0;
+        visitInOrder2(acquire_employees_arr, acquire_employee_tree->root, &counter, acquire_num);
         visitInOrder2(target_employees_arr, target_employee_tree->root, &counter, target_num);
         counter_ptr = nullptr;
 
-        Employee *new_arr = new Employee[acquire_num+target_num]();
+        shared_ptr<Employee> *new_arr = new shared_ptr<Employee>[acquire_num+target_num](); //potential memory leaks?
         merge_func(target_employees_arr, acquire_employees_arr, target_num, acquire_num, new_arr);
 
         for(int i=0; i<target_num+acquire_num; i++){
-            new_arr[i].UpdateCompanyID(AcquirerID);
+            new_arr[i]->UpdateCompanyID(AcquirerID);
         }
 
-        AVL_Tree<int, shared_ptr<Employee>>* new_tree = createFromSortedArr(new_arr, 0, acquire_num+target_num-1);
+        AVL_Tree<int, shared_ptr<Employee>>* new_tree_by_id = createFromSortedArrForID(new_arr, 0, acquire_num+target_num-1);
+        AVL_Tree<int, shared_ptr<Employee>>* new_tree_by_salary = createFromSortedArrForSalary(new_arr, 0, acquire_num+target_num-1);
 
         RemoveCompany(TargetID);
         RemoveCompany(AcquirerID);
 
-        AVL_Tree<int, shared_ptr<Employee>> empty_tree =AVL_Tree<int, shared_ptr<Employee>>();
+        // AVL_Tree<int, shared_ptr<Employee>> empty_tree = AVL_Tree<int, shared_ptr<Employee>>();
+        // this->companies.addNode(AcquirerID,empty_tree);
+        // all_groups_tree.findNode(ReplacementID)->setData(new_tree);
 
-        all_groups_tree.addNode(ReplacementID,empty_tree);
-
-        all_groups_tree.findNode(ReplacementID)->setData(new_tree);
-
-
-
+        shared_ptr<Company> new_comp = make_shared<Company>(AcquirerID,after_value,after_num,new_tree_by_salary->max->data,*new_tree_by_salary,*new_tree_by_id);
+        this->companies.addNode(AcquirerID,new_comp);
+        new_comp->updateHighestEarner();
+        this->updateHighestEarner();
+        if (after_num > 0)
+        {
+            this->companies_with_employees.addNode(AcquirerID,new_comp);
+        }
+        return SUCCESS;
     }
 
     StatusType Industry::GetHighestEarner(int CompanyID, int *EmployeeID)
@@ -355,10 +402,10 @@ namespace MIVNI{
         {
             return;
         }
-        getEmployeesBySalary(node->left_son,Employees,index);
+        getEmployeesBySalary(node->right_son,Employees,index);
         Employees[*index] = node->data->get()->getEmployeeID();
         (*index)++;
-        getEmployeesBySalary(node->right_son,Employees,index);
+        getEmployeesBySalary(node->left_son,Employees,index);
     }
 
     StatusType Industry::GetAllEmployeesBySalary(int CompanyID, int **Employees, int *NumOfEmployees)
@@ -400,7 +447,7 @@ namespace MIVNI{
             getEmployeesBySalary(comp->getCompanyEmployeesTreeBySalary()->root,(*Employees),0);
             return SUCCESS;
         }
-        
+        return SUCCESS;
     }
 
     void getHighestEarnerInEachCompanyIntoArray(int *index, int max_index,tree_node<int,shared_ptr<Company>>* node, int *Employees)
@@ -410,9 +457,22 @@ namespace MIVNI{
             return;
         }
         getHighestEarnerInEachCompanyIntoArray(index,max_index,node->left_son,Employees);
+        if ( (*index) == max_index)
+        {
+            return;
+        }
         Employees[*index] = node->data->get()->getHighestEarnerID();
         (*index)++; // pointer or regular int?
         getHighestEarnerInEachCompanyIntoArray(index,max_index,node->right_son,Employees);
+    }
+
+    int countNodes(tree_node<int,shared_ptr<Company>> *node)
+    {
+        if (node == nullptr)
+        {
+            return 0;
+        }
+        return(countNodes(node->left_son)+countNodes(node->right_son)+1);
     }
 
     StatusType Industry::GetHighestEarnerInEachCompany(int NumOfCompanies, int **Employees)
@@ -421,7 +481,8 @@ namespace MIVNI{
         {
             return INVALID_INPUT;
         }
-        if (this->companies_with_employees.root == nullptr)
+        if ( (this->companies_with_employees.root == nullptr) ||
+             (countNodes(this->companies_with_employees.root) < NumOfCompanies) )
         {
             return FAILURE;
         }

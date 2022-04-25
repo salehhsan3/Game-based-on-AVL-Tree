@@ -177,32 +177,86 @@ Employee.cpp.s:
 	$(MAKE) -f CMakeFiles/DS_WET1.dir/build.make CMakeFiles/DS_WET1.dir/Employee.cpp.s
 .PHONY : Employee.cpp.s
 
-StockExchange.o: StockExchange.cpp.o
+Industry.o: Industry.cpp.o
 
-.PHONY : StockExchange.o
+.PHONY : Industry.o
 
 # target to build an object file
-StockExchange.cpp.o:
-	$(MAKE) -f CMakeFiles/DS_WET1.dir/build.make CMakeFiles/DS_WET1.dir/StockExchange.cpp.o
-.PHONY : StockExchange.cpp.o
+Industry.cpp.o:
+	$(MAKE) -f CMakeFiles/DS_WET1.dir/build.make CMakeFiles/DS_WET1.dir/Industry.cpp.o
+.PHONY : Industry.cpp.o
 
-StockExchange.i: StockExchange.cpp.i
+Industry.i: Industry.cpp.i
 
-.PHONY : StockExchange.i
+.PHONY : Industry.i
 
 # target to preprocess a source file
-StockExchange.cpp.i:
-	$(MAKE) -f CMakeFiles/DS_WET1.dir/build.make CMakeFiles/DS_WET1.dir/StockExchange.cpp.i
-.PHONY : StockExchange.cpp.i
+Industry.cpp.i:
+	$(MAKE) -f CMakeFiles/DS_WET1.dir/build.make CMakeFiles/DS_WET1.dir/Industry.cpp.i
+.PHONY : Industry.cpp.i
 
-StockExchange.s: StockExchange.cpp.s
+Industry.s: Industry.cpp.s
 
-.PHONY : StockExchange.s
+.PHONY : Industry.s
 
 # target to generate assembly for a file
-StockExchange.cpp.s:
-	$(MAKE) -f CMakeFiles/DS_WET1.dir/build.make CMakeFiles/DS_WET1.dir/StockExchange.cpp.s
-.PHONY : StockExchange.cpp.s
+Industry.cpp.s:
+	$(MAKE) -f CMakeFiles/DS_WET1.dir/build.make CMakeFiles/DS_WET1.dir/Industry.cpp.s
+.PHONY : Industry.cpp.s
+
+library1.o: library1.cpp.o
+
+.PHONY : library1.o
+
+# target to build an object file
+library1.cpp.o:
+	$(MAKE) -f CMakeFiles/DS_WET1.dir/build.make CMakeFiles/DS_WET1.dir/library1.cpp.o
+.PHONY : library1.cpp.o
+
+library1.i: library1.cpp.i
+
+.PHONY : library1.i
+
+# target to preprocess a source file
+library1.cpp.i:
+	$(MAKE) -f CMakeFiles/DS_WET1.dir/build.make CMakeFiles/DS_WET1.dir/library1.cpp.i
+.PHONY : library1.cpp.i
+
+library1.s: library1.cpp.s
+
+.PHONY : library1.s
+
+# target to generate assembly for a file
+library1.cpp.s:
+	$(MAKE) -f CMakeFiles/DS_WET1.dir/build.make CMakeFiles/DS_WET1.dir/library1.cpp.s
+.PHONY : library1.cpp.s
+
+main1.o: main1.cpp.o
+
+.PHONY : main1.o
+
+# target to build an object file
+main1.cpp.o:
+	$(MAKE) -f CMakeFiles/DS_WET1.dir/build.make CMakeFiles/DS_WET1.dir/main1.cpp.o
+.PHONY : main1.cpp.o
+
+main1.i: main1.cpp.i
+
+.PHONY : main1.i
+
+# target to preprocess a source file
+main1.cpp.i:
+	$(MAKE) -f CMakeFiles/DS_WET1.dir/build.make CMakeFiles/DS_WET1.dir/main1.cpp.i
+.PHONY : main1.cpp.i
+
+main1.s: main1.cpp.s
+
+.PHONY : main1.s
+
+# target to generate assembly for a file
+main1.cpp.s:
+	$(MAKE) -f CMakeFiles/DS_WET1.dir/build.make CMakeFiles/DS_WET1.dir/main1.cpp.s
+.PHONY : main1.cpp.s
 
 # Help Target
 help:
@@ -219,9 +273,15 @@ help:
 	@echo "... Employee.o"
 	@echo "... Employee.i"
 	@echo "... Employee.s"
-	@echo "... StockExchange.o"
-	@echo "... StockExchange.i"
-	@echo "... StockExchange.s"
+	@echo "... Industry.o"
+	@echo "... Industry.i"
+	@echo "... Industry.s"
+	@echo "... library1.o"
+	@echo "... library1.i"
+	@echo "... library1.s"
+	@echo "... main1.o"
+	@echo "... main1.i"
+	@echo "... main1.s"
 .PHONY : help
 
 

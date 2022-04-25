@@ -33,7 +33,6 @@ namespace MIVNI{
         Industry(const Industry& ind) = default;
         Industry& operator=(const Industry& ind) = default;
         ~Industry()= default;
-        ~Industry();
 
         void UpdateIndustryHighestEarnerAfterAddition(shared_ptr<Employee> emp);
 
@@ -49,6 +48,20 @@ namespace MIVNI{
         void UpdateIndustryHighestEarnerAfterRemove(Employee& emp);
 
         void getHighestEarnerInEachCompanyIntoArray(int *index, int max_index,tree_node<int,shared_ptr<Company>>* node, int *Employees);
+
+        void updateHighestEarner();
+
+        static int countNodes(tree_node<int,shared_ptr<Company>> *node);
+
+        tree_node<int, shared_ptr<Employee>>* createFromSortedArrAuxForID(shared_ptr<Employee> array[], int start,
+                                                              int end, tree_node<int, shared_ptr<Employee>> *parent);
+
+        AVL_Tree<int, shared_ptr<Employee>>* createFromSortedArrForID(shared_ptr<Employee> array[], int start, int end);
+
+        tree_node<int, shared_ptr<Employee>>* createFromSortedArrAuxForSalary(shared_ptr<Employee> array[], int start,
+                                                              int end, tree_node<int, shared_ptr<Employee>> *parent);
+
+        AVL_Tree<int, shared_ptr<Employee>>* createFromSortedArrForSalary(shared_ptr<Employee> array[], int start, int end);
 
         Industry *Init();
 

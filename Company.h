@@ -23,14 +23,14 @@ namespace MIVNI{
         AVL_Tree<int,shared_ptr<Employee>> employees_by_id;
 
     public:
-        Company(int id, int val, int num_of_emp, shared_ptr<Employee> highest_earner,
-                AVL_Tree<int,Employee> emp_by_salary, AVL_Tree<int,Employee> emp_by_id):
+        Company(int id, int val, int num_of_emp, shared_ptr<Employee> &highest_earner,
+                AVL_Tree<int,shared_ptr<Employee>> &emp_by_salary, AVL_Tree<int,shared_ptr<Employee>> &emp_by_id):
             ID(id),
             value(val),
             num_of_employees(num_of_emp),
-            highest_earner(),
-            employees_by_salary(),
-            employees_by_id()
+            highest_earner(highest_earner),
+            employees_by_salary(emp_by_salary),
+            employees_by_id(emp_by_id)
         {}
         explicit Company(int id, int val):
             ID(id),
@@ -43,15 +43,16 @@ namespace MIVNI{
         ~Company();
 
         StatusType AddEmployee(int EmployeeID, int Salary, shared_ptr<Employee> emp);
-        StatusType RemoveEmployee(int EmployeeID);
+        StatusType RemoveEmployee(int EmployeeID, int Salary);
         StatusType GetCompanyInfo(int CompanyID, int *Value, int *NumEmployees);
         void UpdateCompanyHighestEarnerAfterAddition(shared_ptr<Employee> emp);
         void UpdateCompanyHighestEarnerAfterRemove();
         void UpdateCompanyValue(int new_value);
+        void updateHighestEarner();
         int getCompanyID();
         int getCompanyValue();
         int getCompanyNumOfEmployees();
-        int increasecompanyvalue(int increase);
+        void increasecompanyvalue(int increase);
         int getHighestEarnerID();
         shared_ptr<Employee> getHighestEarner();
         AVL_Tree<int,shared_ptr<Employee>>* getCompanyEmployeesTreeByID();

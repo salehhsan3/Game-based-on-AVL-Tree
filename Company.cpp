@@ -15,10 +15,12 @@ namespace MIVNI
 
 
     }
-    StatusType Company::RemoveEmployee(int EmployeeID){
+    StatusType Company::RemoveEmployee(int EmployeeID, int Salary){
         employees_by_id.removeNode(EmployeeID);
-        employees_by_salary.removeNode(EmployeeID);
+        employees_by_salary.removeNode(Salary);
         num_of_employees--;
+        // this->highest_earner = *(employees_by_salary.max->data); // updateHighestEarnerafterRemove
+        this->updateHighestEarner();
         return SUCCESS;
 
     }
@@ -29,13 +31,13 @@ namespace MIVNI
             this->highest_earner = emp;
             return;
         }
-        if ( emp->getEmployeeGrade() > this->highest_earner->getEmployeeGrade() )
+        if ( emp->getEmployeeSalary() > this->highest_earner->getEmployeeSalary() )
         {
             this->highest_earner = emp;
             return;
         }
 
-        if ( (emp->getEmployeeGrade() == this->highest_earner->getEmployeeGrade()) 
+        if ( (emp->getEmployeeSalary() == this->highest_earner->getEmployeeSalary()) 
                  && ( emp->getEmployeeID() < this->highest_earner->getEmployeeID() ) )
 
         {
@@ -57,7 +59,7 @@ namespace MIVNI
         return num_of_employees;
     }
 
-    int Company::increasecompanyvalue(int increase)
+    void Company::increasecompanyvalue(int increase)
     {
         this->value += increase;
     }
@@ -73,6 +75,12 @@ namespace MIVNI
 
     AVL_Tree<int,shared_ptr<Employee>>* Company::getCompanyEmployeesTreeByID(){
         return &employees_by_id;
+    }
+
+    void Company::updateHighestEarner()
+    {
+        this->highest_earner = *(this->employees_by_salary.max->data);
+        return;
     }
 
 } // namespace MIVNI

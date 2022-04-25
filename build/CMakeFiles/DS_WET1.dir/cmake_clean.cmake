@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/DS_WET1.dir/Employee.cpp.obj.d"
   "CMakeFiles/DS_WET1.dir/Industry.cpp.obj"
   "CMakeFiles/DS_WET1.dir/Industry.cpp.obj.d"
+  "CMakeFiles/DS_WET1.dir/library1.cpp.obj"
+  "CMakeFiles/DS_WET1.dir/library1.cpp.obj.d"
   "CMakeFiles/DS_WET1.dir/main1.cpp.obj"
   "CMakeFiles/DS_WET1.dir/main1.cpp.obj.d"
   "DS_WET1.exe"

@@ -200,6 +200,30 @@ Industry.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DS_WET1.dir\build.make CMakeFiles/DS_WET1.dir/Industry.cpp.s
 .PHONY : Industry.cpp.s
 
+library1.obj: library1.cpp.obj
+.PHONY : library1.obj
+
+# target to build an object file
+library1.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DS_WET1.dir\build.make CMakeFiles/DS_WET1.dir/library1.cpp.obj
+.PHONY : library1.cpp.obj
+
+library1.i: library1.cpp.i
+.PHONY : library1.i
+
+# target to preprocess a source file
+library1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DS_WET1.dir\build.make CMakeFiles/DS_WET1.dir/library1.cpp.i
+.PHONY : library1.cpp.i
+
+library1.s: library1.cpp.s
+.PHONY : library1.s
+
+# target to generate assembly for a file
+library1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DS_WET1.dir\build.make CMakeFiles/DS_WET1.dir/library1.cpp.s
+.PHONY : library1.cpp.s
+
 main1.obj: main1.cpp.obj
 .PHONY : main1.obj
 
@@ -242,6 +266,9 @@ help:
 	@echo ... Industry.obj
 	@echo ... Industry.i
 	@echo ... Industry.s
+	@echo ... library1.obj
+	@echo ... library1.i
+	@echo ... library1.s
 	@echo ... main1.obj
 	@echo ... main1.i
 	@echo ... main1.s

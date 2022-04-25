@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/AO_AVL_Tree.h">
+			<Option target="DS_WET1"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/AO_Tree_Node.h">
+			<Option target="DS_WET1"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/Company.cpp">
 			<Option target="DS_WET1"/>
 		</Unit>
@@ -94,10 +100,19 @@
 		<Unit filename="/mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/Employee.h">
 			<Option target="DS_WET1"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/StockExchange.cpp">
+		<Unit filename="/mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/Industry.cpp">
 			<Option target="DS_WET1"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/StockExchange.h">
+		<Unit filename="/mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/Industry.h">
+			<Option target="DS_WET1"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/library1.cpp">
+			<Option target="DS_WET1"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/library1.h">
+			<Option target="DS_WET1"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/main1.cpp">
 			<Option target="DS_WET1"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/CMakeLists.txt">

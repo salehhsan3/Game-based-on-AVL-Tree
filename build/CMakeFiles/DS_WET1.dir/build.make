@@ -68,24 +68,10 @@ include CMakeFiles/DS_WET1.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/DS_WET1.dir/flags.make
 
-CMakeFiles/DS_WET1.dir/Company.cpp.obj: CMakeFiles/DS_WET1.dir/flags.make
-CMakeFiles/DS_WET1.dir/Company.cpp.obj: ../Company.cpp
-CMakeFiles/DS_WET1.dir/Company.cpp.obj: CMakeFiles/DS_WET1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Saleh\Desktop\Data-Structures\spring\DS-WET1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DS_WET1.dir/Company.cpp.obj"
-	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DS_WET1.dir/Company.cpp.obj -MF CMakeFiles\DS_WET1.dir\Company.cpp.obj.d -o CMakeFiles\DS_WET1.dir\Company.cpp.obj -c C:\Users\Saleh\Desktop\Data-Structures\spring\DS-WET1\Company.cpp
-
-CMakeFiles/DS_WET1.dir/Company.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DS_WET1.dir/Company.cpp.i"
-	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Saleh\Desktop\Data-Structures\spring\DS-WET1\Company.cpp > CMakeFiles\DS_WET1.dir\Company.cpp.i
-
-CMakeFiles/DS_WET1.dir/Company.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DS_WET1.dir/Company.cpp.s"
-	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Saleh\Desktop\Data-Structures\spring\DS-WET1\Company.cpp -o CMakeFiles\DS_WET1.dir\Company.cpp.s
-
 CMakeFiles/DS_WET1.dir/Employee.cpp.obj: CMakeFiles/DS_WET1.dir/flags.make
 CMakeFiles/DS_WET1.dir/Employee.cpp.obj: ../Employee.cpp
 CMakeFiles/DS_WET1.dir/Employee.cpp.obj: CMakeFiles/DS_WET1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Saleh\Desktop\Data-Structures\spring\DS-WET1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DS_WET1.dir/Employee.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Saleh\Desktop\Data-Structures\spring\DS-WET1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DS_WET1.dir/Employee.cpp.obj"
 	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DS_WET1.dir/Employee.cpp.obj -MF CMakeFiles\DS_WET1.dir\Employee.cpp.obj.d -o CMakeFiles\DS_WET1.dir\Employee.cpp.obj -c C:\Users\Saleh\Desktop\Data-Structures\spring\DS-WET1\Employee.cpp
 
 CMakeFiles/DS_WET1.dir/Employee.cpp.i: cmake_force
@@ -95,6 +81,20 @@ CMakeFiles/DS_WET1.dir/Employee.cpp.i: cmake_force
 CMakeFiles/DS_WET1.dir/Employee.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DS_WET1.dir/Employee.cpp.s"
 	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Saleh\Desktop\Data-Structures\spring\DS-WET1\Employee.cpp -o CMakeFiles\DS_WET1.dir\Employee.cpp.s
+
+CMakeFiles/DS_WET1.dir/Company.cpp.obj: CMakeFiles/DS_WET1.dir/flags.make
+CMakeFiles/DS_WET1.dir/Company.cpp.obj: ../Company.cpp
+CMakeFiles/DS_WET1.dir/Company.cpp.obj: CMakeFiles/DS_WET1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Saleh\Desktop\Data-Structures\spring\DS-WET1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DS_WET1.dir/Company.cpp.obj"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DS_WET1.dir/Company.cpp.obj -MF CMakeFiles\DS_WET1.dir\Company.cpp.obj.d -o CMakeFiles\DS_WET1.dir\Company.cpp.obj -c C:\Users\Saleh\Desktop\Data-Structures\spring\DS-WET1\Company.cpp
+
+CMakeFiles/DS_WET1.dir/Company.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DS_WET1.dir/Company.cpp.i"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Saleh\Desktop\Data-Structures\spring\DS-WET1\Company.cpp > CMakeFiles\DS_WET1.dir\Company.cpp.i
+
+CMakeFiles/DS_WET1.dir/Company.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DS_WET1.dir/Company.cpp.s"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Saleh\Desktop\Data-Structures\spring\DS-WET1\Company.cpp -o CMakeFiles\DS_WET1.dir\Company.cpp.s
 
 CMakeFiles/DS_WET1.dir/Industry.cpp.obj: CMakeFiles/DS_WET1.dir/flags.make
 CMakeFiles/DS_WET1.dir/Industry.cpp.obj: ../Industry.cpp
@@ -110,10 +110,24 @@ CMakeFiles/DS_WET1.dir/Industry.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DS_WET1.dir/Industry.cpp.s"
 	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Saleh\Desktop\Data-Structures\spring\DS-WET1\Industry.cpp -o CMakeFiles\DS_WET1.dir\Industry.cpp.s
 
+CMakeFiles/DS_WET1.dir/library1.cpp.obj: CMakeFiles/DS_WET1.dir/flags.make
+CMakeFiles/DS_WET1.dir/library1.cpp.obj: ../library1.cpp
+CMakeFiles/DS_WET1.dir/library1.cpp.obj: CMakeFiles/DS_WET1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Saleh\Desktop\Data-Structures\spring\DS-WET1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DS_WET1.dir/library1.cpp.obj"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DS_WET1.dir/library1.cpp.obj -MF CMakeFiles\DS_WET1.dir\library1.cpp.obj.d -o CMakeFiles\DS_WET1.dir\library1.cpp.obj -c C:\Users\Saleh\Desktop\Data-Structures\spring\DS-WET1\library1.cpp
+
+CMakeFiles/DS_WET1.dir/library1.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DS_WET1.dir/library1.cpp.i"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Saleh\Desktop\Data-Structures\spring\DS-WET1\library1.cpp > CMakeFiles\DS_WET1.dir\library1.cpp.i
+
+CMakeFiles/DS_WET1.dir/library1.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DS_WET1.dir/library1.cpp.s"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Saleh\Desktop\Data-Structures\spring\DS-WET1\library1.cpp -o CMakeFiles\DS_WET1.dir\library1.cpp.s
+
 CMakeFiles/DS_WET1.dir/main1.cpp.obj: CMakeFiles/DS_WET1.dir/flags.make
 CMakeFiles/DS_WET1.dir/main1.cpp.obj: ../main1.cpp
 CMakeFiles/DS_WET1.dir/main1.cpp.obj: CMakeFiles/DS_WET1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Saleh\Desktop\Data-Structures\spring\DS-WET1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DS_WET1.dir/main1.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Saleh\Desktop\Data-Structures\spring\DS-WET1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/DS_WET1.dir/main1.cpp.obj"
 	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DS_WET1.dir/main1.cpp.obj -MF CMakeFiles\DS_WET1.dir\main1.cpp.obj.d -o CMakeFiles\DS_WET1.dir\main1.cpp.obj -c C:\Users\Saleh\Desktop\Data-Structures\spring\DS-WET1\main1.cpp
 
 CMakeFiles/DS_WET1.dir/main1.cpp.i: cmake_force
@@ -126,23 +140,25 @@ CMakeFiles/DS_WET1.dir/main1.cpp.s: cmake_force
 
 # Object files for target DS_WET1
 DS_WET1_OBJECTS = \
-"CMakeFiles/DS_WET1.dir/Company.cpp.obj" \
 "CMakeFiles/DS_WET1.dir/Employee.cpp.obj" \
+"CMakeFiles/DS_WET1.dir/Company.cpp.obj" \
 "CMakeFiles/DS_WET1.dir/Industry.cpp.obj" \
+"CMakeFiles/DS_WET1.dir/library1.cpp.obj" \
 "CMakeFiles/DS_WET1.dir/main1.cpp.obj"
 
 # External object files for target DS_WET1
 DS_WET1_EXTERNAL_OBJECTS =
 
-DS_WET1.exe: CMakeFiles/DS_WET1.dir/Company.cpp.obj
 DS_WET1.exe: CMakeFiles/DS_WET1.dir/Employee.cpp.obj
+DS_WET1.exe: CMakeFiles/DS_WET1.dir/Company.cpp.obj
 DS_WET1.exe: CMakeFiles/DS_WET1.dir/Industry.cpp.obj
+DS_WET1.exe: CMakeFiles/DS_WET1.dir/library1.cpp.obj
 DS_WET1.exe: CMakeFiles/DS_WET1.dir/main1.cpp.obj
 DS_WET1.exe: CMakeFiles/DS_WET1.dir/build.make
 DS_WET1.exe: CMakeFiles/DS_WET1.dir/linklibs.rsp
 DS_WET1.exe: CMakeFiles/DS_WET1.dir/objects1.rsp
 DS_WET1.exe: CMakeFiles/DS_WET1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Saleh\Desktop\Data-Structures\spring\DS-WET1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable DS_WET1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Saleh\Desktop\Data-Structures\spring\DS-WET1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable DS_WET1.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\DS_WET1.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
