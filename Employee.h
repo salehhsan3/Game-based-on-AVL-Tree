@@ -34,7 +34,7 @@ namespace MIVNI{
 
         bool operator<(const Employee& emp) const
         {
-            if (grade == emp.grade)
+            if (salary == emp.salary)
             {
                 return ID > emp.ID;
             }
@@ -42,16 +42,23 @@ namespace MIVNI{
         }
         bool operator==(const Employee& emp) const
         {
-            return ( grade == emp.grade && ID == emp.ID);
+            return ( salary == emp.salary && ID == emp.ID);
         }
         bool operator>(const Employee& emp) const
         {
-            if (grade == emp.grade)
+            if (salary == emp.salary)
             {
                 return ID < emp.ID;
             }
-            return grade > emp.grade;
+            return salary > emp.salary;
         }
+        int getEmployeeID();
+        int getEmployeeGrade();
+        int getEmployeeSalary();
+        int getEmployeersid();
+        void increaseSalary(int increase);
+        void bumpGrade(int bump);
+        void promote(int increase,int bump);
     };
     
     

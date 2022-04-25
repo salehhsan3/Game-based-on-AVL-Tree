@@ -8,29 +8,28 @@ namespace MIVNI
     StatusType Company::AddEmployee(int EmployeeID, int Grade, Employee& emp)
     {
         this->employees_by_id.addNode(EmployeeID,emp);
-        this->employees_by_grade.addNode(Grade,emp);
+        this->employees_by_salary.addNode(Grade,emp);
         this->num_of_employees++;
+        UpdateCompanyHighestEarnerAfterAddition(&emp);
         return SUCCESS;   
     }
-    void Company::UpdateCompanyHighestEarnerAfterAddition(Employee& emp)
+    void Company::UpdateCompanyHighestEarnerAfterAddition(Employee* emp)
     {
         if (this->highest_earner == nullptr)
         {
-            this->highestearner = emp;
+            this->highest_earner = emp;
             return;
         }
-        if ( (player->playerlevel) > (this->champion->data->playerlevel))
+        if ( emp->getEmployeeGrade() > this->highest_earner->getEmployeeGrade() )
         {
-            this->champion->data = player;
-            this->champion->key = IDRank(player->playerlevel,player->playerid);
+            this->highest_earner = emp;
             return;
         }
 
-        if ( ( (player->playerlevel) == (this->champion->data->playerlevel) )
-                 && ( (player->playerid) < (this->champion->data->playerid) ) )
+        if ( (emp->getEmployeeGrade() == this->highest_earner->getEmployeeGrade()) 
+                 && ( emp->getEmployeeID() < this->highest_earner->getEmployeeID() ) )
         {
-            this->champion->data = player;
-            this->champion->key = IDRank(player->playerlevel,player->playerid);
+            this->highest_earner = emp;
             return;
         }
         return;
@@ -48,6 +47,10 @@ namespace MIVNI
     int Company::getCompanyNumOfEmployees()
     {
         return num_of_employees;
+    }
+    int Company::increasecompanyvalue(int increase)
+    {
+        this->value += increase;
     }
 } // namespace MIVNI
 

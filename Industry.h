@@ -17,7 +17,7 @@ namespace MIVNI{
         int num_of_companies_with_employees;
         Employee* highest_earner;
         AVL_Tree<int,Employee> workers_by_id;
-        AVL_Tree<int,Employee> workers_by_grade;
+        AVL_Tree<int,Employee> workers_by_salary;
         AVL_Tree<int,Company> companies;
         AVL_Tree<int,Company> companies_with_employees;
 
@@ -36,7 +36,9 @@ namespace MIVNI{
         ~Industry()= default;
         ~Industry();
 
-        void UpdateIndustryHighestEarnerAfterAddition(Employee& emp);
+        void UpdateIndustryHighestEarnerAfterAddition(Employee* emp);
+
+        static void getEmployeesBySalary(tree_node<int,Employee>* node, int *Employees, int *index);
 
         Industry *Init();
 
