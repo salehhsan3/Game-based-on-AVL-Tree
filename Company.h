@@ -6,7 +6,6 @@
 #define DS_WET1_COMPANY_H
 
 #include "Employee.h"
-#include <memory>
 #include "AO_AVL_Tree.h"
 using namespace std;
 
@@ -19,12 +18,12 @@ namespace MIVNI{
         int ID;
         int value;
         int num_of_employees;
-        Employee* highest_earner;
-        AVL_Tree<int,Employee> employees_by_salary;
-        AVL_Tree<int,Employee> employees_by_id;
+        shared_ptr<Employee> highest_earner;
+        AVL_Tree<int,shared_ptr<Employee>> employees_by_salary;
+        AVL_Tree<int,shared_ptr<Employee>> employees_by_id;
 
     public:
-        Company(int id, int val, int num_of_emp, std::shared_ptr<Employee> highest_earner,
+        Company(int id, int val, int num_of_emp, shared_ptr<Employee> highest_earner,
                 AVL_Tree<int,Employee> emp_by_salary, AVL_Tree<int,Employee> emp_by_id):
             ID(id),
             value(val),
@@ -43,19 +42,20 @@ namespace MIVNI{
         {}
         ~Company();
 
-        StatusType AddEmployee(int EmployeeID, int Salary, Employee& emp);
+        StatusType AddEmployee(int EmployeeID, int Salary, shared_ptr<Employee> emp);
         StatusType RemoveEmployee(int EmployeeID);
         StatusType GetCompanyInfo(int CompanyID, int *Value, int *NumEmployees);
-        void UpdateCompanyHighestEarnerAfterAddition(Employee* emp);
+        void UpdateCompanyHighestEarnerAfterAddition(shared_ptr<Employee> emp);
         void UpdateCompanyHighestEarnerAfterRemove();
-        Employee* getHighestEarner();
+        void UpdateCompanyValue(int new_value);
         int getCompanyID();
         int getCompanyValue();
         int getCompanyNumOfEmployees();
         int increasecompanyvalue(int increase);
-        void UpdateCompanyValue(int new_value);
-        AVL_Tree<int,Employee>* getCompanyEmployeesTreeByID();
-        AVL_Tree<int,Employee>* getCompanyEmployeesTreeBySalary();
+        int getHighestEarnerID();
+        shared_ptr<Employee> getHighestEarner();
+        AVL_Tree<int,shared_ptr<Employee>>* getCompanyEmployeesTreeByID();
+        AVL_Tree<int,shared_ptr<Employee>>* getCompanyEmployeesTreeBySalary();
 
 
     };

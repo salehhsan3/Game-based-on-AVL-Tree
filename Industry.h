@@ -5,7 +5,6 @@
 #ifndef DS_WET1_STOCKEXCHANGE_H
 #define DS_WET1_STOCKEXCHANGE_H
 #include "Company.h"
-#include <memory>
 
 using namespace std;
 namespace MIVNI{
@@ -15,11 +14,11 @@ namespace MIVNI{
     private:
         int num_of_workers;
         int num_of_companies_with_employees;
-        Employee* highest_earner;
-        AVL_Tree<int,Employee> workers_by_id;
-        AVL_Tree<int,Employee> workers_by_salary;
-        AVL_Tree<int,Company> companies;
-        AVL_Tree<int,Company> companies_with_employees;
+        shared_ptr<Employee> highest_earner;
+        AVL_Tree<int,shared_ptr<Employee>> workers_by_id;
+        AVL_Tree<int,shared_ptr<Employee>> workers_by_salary;
+        AVL_Tree<int,shared_ptr<Company>> companies;
+        AVL_Tree<int,shared_ptr<Company>> companies_with_employees;
 
     public:
         Industry(
@@ -36,11 +35,20 @@ namespace MIVNI{
         ~Industry()= default;
         ~Industry();
 
-        void UpdateIndustryHighestEarnerAfterAddition(Employee* emp);
+        void UpdateIndustryHighestEarnerAfterAddition(shared_ptr<Employee> emp);
 
-        static void getEmployeesBySalary(tree_node<int,Employee>* node, int *Employees, int *index);
+        static void getEmployeesBySalary(tree_node<int,shared_ptr<Employee>>* node, int *Employees, int *index);
+
+        static void countEmployeesByID(tree_node<int,shared_ptr<Employee>>* node, int MinEmployeeID, int MaxEmployeeId, int *counter);
+
+        static void getEmployeesByIDInArray(tree_node<int,shared_ptr<Employee>>* node, shared_ptr<Employee> *Employees, int *index, int MinEmployeeID, int MaxEmployeeId);
+
+        static int getEmployeesWithMinSalaryAndGrade(shared_ptr<Employee> *Employees, int size, int MinSalary, int MinGrade);
+
 
         void UpdateIndustryHighestEarnerAfterRemove(Employee& emp);
+
+        void getHighestEarnerInEachCompanyIntoArray(int *index, int max_index,tree_node<int,shared_ptr<Company>>* node, int *Employees);
 
         Industry *Init();
 
