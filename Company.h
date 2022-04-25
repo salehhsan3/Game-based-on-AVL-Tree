@@ -37,6 +37,9 @@ namespace MIVNI{
         int getCompanyValue();
         int getCompanyNumOfEmployees();
         int increasecompanyvalue(int increase);
+        void UpdateCompanyValue(int new_value);
+        AVL_Tree<int,Employee>* getCompanyEmployeesTreeByID();
+        AVL_Tree<int,Employee>* getCompanyEmployeesTreeBySalary();
 
     };
     
