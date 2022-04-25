@@ -3,6 +3,8 @@
 //
 
 #include "Industry.h"
+#include "library1.h"
+
 
 namespace MIVNI{
 
@@ -16,7 +18,7 @@ namespace MIVNI{
         companies_with_employees()
     {}
 
-    void merge_func(shared_ptr<Employee> arr1[], shared_ptr<Employee> arr2[] ,int n1, int n2,
+    void Industry::merge_func(shared_ptr<Employee> arr1[], shared_ptr<Employee> arr2[] ,int n1, int n2,
                     shared_ptr<Employee>  arr3[]){
         int i = 0, j = 0, k = 0;
 
@@ -59,7 +61,7 @@ namespace MIVNI{
         return;
     }
 
-    tree_node<int, shared_ptr<Employee>> *createFromSortedArrAuxForID(shared_ptr<Employee> array[], int start,
+    tree_node<int, shared_ptr<Employee>> *Industry::createFromSortedArrAuxForID(shared_ptr<Employee> array[], int start,
                                                         int end, tree_node<int, shared_ptr<Employee>> *parent){
         if(start > end)
             return nullptr;
@@ -71,7 +73,7 @@ namespace MIVNI{
         return new_node;
     }
 
-    AVL_Tree<int, shared_ptr<Employee>>* createFromSortedArrForID(shared_ptr<Employee> array[], int start, int end){
+    AVL_Tree<int, shared_ptr<Employee>>* Industry::createFromSortedArrForID(shared_ptr<Employee> array[], int start, int end){
         AVL_Tree<int, shared_ptr<Employee>> *new_tree = new AVL_Tree<int, shared_ptr<Employee>>();
         new_tree->root = createFromSortedArrAuxForID(array, start, end, nullptr);
         new_tree->max = new_tree->root->findMax();
@@ -80,7 +82,7 @@ namespace MIVNI{
         return new_tree;
     }
 
-    tree_node<int, shared_ptr<Employee>> *createFromSortedArrAuxForSalary(shared_ptr<Employee> array[], int start,
+    tree_node<int, shared_ptr<Employee>> *Industry::createFromSortedArrAuxForSalary(shared_ptr<Employee> array[], int start,
                                                         int end, tree_node<int, shared_ptr<Employee>> *parent){
         if(start > end)
             return nullptr;
@@ -92,7 +94,7 @@ namespace MIVNI{
         return new_node;
     }
 
-    AVL_Tree<int, shared_ptr<Employee>>* createFromSortedArrForSalary(shared_ptr<Employee> array[], int start, int end){
+    AVL_Tree<int, shared_ptr<Employee>>* Industry::createFromSortedArrForSalary(shared_ptr<Employee> array[], int start, int end){
         AVL_Tree<int, shared_ptr<Employee>> *new_tree = new AVL_Tree<int, shared_ptr<Employee>>();
         new_tree->root = createFromSortedArrAuxForSalary(array, start, end, nullptr);
         new_tree->max = new_tree->root->findMax();
@@ -101,7 +103,7 @@ namespace MIVNI{
         return new_tree;
     }
 
-    void visitInOrder2(shared_ptr<Employee> * array, tree_node<int, shared_ptr<Employee> >* node, int* counter_ptr, int num){
+    void Industry::visitInOrder2(shared_ptr<Employee> * array, tree_node<int, shared_ptr<Employee> >* node, int* counter_ptr, int num){
         if (node == nullptr || *counter_ptr == num ) {
             return;
         }
@@ -357,7 +359,9 @@ namespace MIVNI{
         // this->companies.addNode(AcquirerID,empty_tree);
         // all_groups_tree.findNode(ReplacementID)->setData(new_tree);
 
-        shared_ptr<Company> new_comp = make_shared<Company>(AcquirerID,after_value,after_num,new_tree_by_salary->max->data,*new_tree_by_salary,*new_tree_by_id);
+        // shared_ptr<Company> new_comp = make_shared<Company>(AcquirerID,after_value,after_num,new_tree_by_salary->max->data,*new_tree_by_salary,*new_tree_by_id);
+        shared_ptr<Company> new_comp = make_shared<Company>(AcquirerID,after_value);
+
         this->companies.addNode(AcquirerID,new_comp);
         new_comp->updateHighestEarner();
         this->updateHighestEarner();
@@ -390,13 +394,13 @@ namespace MIVNI{
         {
             return FAILURE;
         }
-        *EmployeeID = ( comp_node->data->get()->getHighestEarner()->getEmployeeID() );
+        *EmployeeID = ( comp_node->data->get()->getHighestEarnerID() );
         return SUCCESS;
     }
 
 
 
-    void getEmployeesBySalary(tree_node<int,shared_ptr<Employee>>* node, int *Employees, int *index)
+    void Industry::getEmployeesBySalary(tree_node<int,shared_ptr<Employee>>* node, int *Employees, int *index)
     {
         if(node == nullptr)
         {
@@ -450,7 +454,7 @@ namespace MIVNI{
         return SUCCESS;
     }
 
-    void getHighestEarnerInEachCompanyIntoArray(int *index, int max_index,tree_node<int,shared_ptr<Company>>* node, int *Employees)
+    void Industry::getHighestEarnerInEachCompanyIntoArray(int *index, int max_index,tree_node<int,shared_ptr<Company>>* node, int *Employees)
     {
         if(node == nullptr || ( (*index) >= max_index ))
         {
@@ -466,7 +470,7 @@ namespace MIVNI{
         getHighestEarnerInEachCompanyIntoArray(index,max_index,node->right_son,Employees);
     }
 
-    int countNodes(tree_node<int,shared_ptr<Company>> *node)
+    int Industry::countNodes(tree_node<int,shared_ptr<Company>> *node)
     {
         if (node == nullptr)
         {
@@ -506,7 +510,7 @@ namespace MIVNI{
         return SUCCESS;
     }
 
-    static void countEmployeesByID(tree_node<int,shared_ptr<Employee>>* node, int MinEmployeeID, int MaxEmployeeId,int *counter)
+    void Industry::countEmployeesByID(tree_node<int,shared_ptr<Employee>>* node, int MinEmployeeID, int MaxEmployeeId,int *counter)
     {
         if (node == nullptr)
         {
@@ -525,7 +529,7 @@ namespace MIVNI{
         (*counter)++;   
     }
 
-    static void getEmployeesByIDInArray(tree_node<int,shared_ptr<Employee>>* node, shared_ptr<Employee> *Employees, int *index, int MinEmployeeID, int MaxEmployeeId)
+    void Industry::getEmployeesByIDInArray(tree_node<int,shared_ptr<Employee>>* node, shared_ptr<Employee> *Employees, int *index, int MinEmployeeID, int MaxEmployeeId)
     {
         if (node == nullptr)
         {
@@ -545,7 +549,7 @@ namespace MIVNI{
         (*index)++;
     }
 
-    static int getEmployeesWithMinSalaryAndGrade(shared_ptr<Employee> *Employees,int size, int MinSalary, int MinGrade)
+    int Industry::getEmployeesWithMinSalaryAndGrade(shared_ptr<Employee> *Employees,int size, int MinSalary, int MinGrade)
     {
         int counter = 0;
         for (int i = 0; i < size; i++)

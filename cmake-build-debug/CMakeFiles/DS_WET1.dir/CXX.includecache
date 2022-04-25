@@ -26,10 +26,6 @@ Employee.h
 AO_AVL_Tree.h
 /mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/AO_AVL_Tree.h
 
-/mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/Employee.cpp
-Employee.h
-/mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/Employee.h
-
 /mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/Employee.h
 iostream
 -
@@ -59,18 +55,4 @@ Industry.h
 /mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/Industry.h
 
 /mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/library1.h
-
-/mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/main1.cpp
-assert.h
--
-stdio.h
--
-stdlib.h
--
-string.h
--
-library1.h
-/mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/library1.h
-iostream
--
 

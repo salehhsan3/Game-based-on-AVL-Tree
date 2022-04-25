@@ -5,23 +5,23 @@
 
 namespace MIVNI
 {
-    StatusType Company::AddEmployee(int EmployeeID, int Salary, shared_ptr<Employee> emp)
+    void Company::AddEmployee(int EmployeeID, int Salary, shared_ptr<Employee> emp)
     {
         this->employees_by_id.addNode(EmployeeID,emp);
         this->employees_by_salary.addNode(Salary,emp);
         this->num_of_employees++;
         UpdateCompanyHighestEarnerAfterAddition(emp);
-        return SUCCESS;   
+        return;   
 
 
     }
-    StatusType Company::RemoveEmployee(int EmployeeID, int Salary){
+    void Company::RemoveEmployee(int EmployeeID, int Salary){
         employees_by_id.removeNode(EmployeeID);
         employees_by_salary.removeNode(Salary);
         num_of_employees--;
         // this->highest_earner = *(employees_by_salary.max->data); // updateHighestEarnerafterRemove
         this->updateHighestEarner();
-        return SUCCESS;
+        return;
 
     }
     void Company::UpdateCompanyHighestEarnerAfterAddition(shared_ptr<Employee> emp)
@@ -74,7 +74,11 @@ namespace MIVNI
     }
 
     AVL_Tree<int,shared_ptr<Employee>>* Company::getCompanyEmployeesTreeByID(){
-        return &employees_by_id;
+        return &(this->employees_by_id);
+    }
+
+    AVL_Tree<int,shared_ptr<Employee>>* Company::getCompanyEmployeesTreeBySalary(){
+        return &(this->employees_by_salary);
     }
 
     void Company::updateHighestEarner()

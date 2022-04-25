@@ -136,7 +136,6 @@ CMakeFiles/DS_WET1.dir/Company.cpp.obj: ../Company.cpp \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/istream \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/bits/istream.tcc \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/assert.h \
-  ../library1.h \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/memory \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/bits/stl_construct.h \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/bits/stl_uninitialized.h \
@@ -296,7 +295,6 @@ CMakeFiles/DS_WET1.dir/Employee.cpp.obj: ../Employee.cpp \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/istream \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/bits/istream.tcc \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/assert.h \
-  ../library1.h \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/memory \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/bits/stl_construct.h \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/bits/stl_uninitialized.h \
@@ -456,7 +454,6 @@ CMakeFiles/DS_WET1.dir/Industry.cpp.obj: ../Industry.cpp \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/istream \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/bits/istream.tcc \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/assert.h \
-  ../library1.h \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/memory \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/bits/stl_construct.h \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/bits/stl_uninitialized.h \
@@ -480,7 +477,8 @@ CMakeFiles/DS_WET1.dir/Industry.cpp.obj: ../Industry.cpp \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/bits/atomic_lockfree_defines.h \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/backward/auto_ptr.h \
   ../AO_AVL_Tree.h \
-  ../AO_Tree_node.h
+  ../AO_Tree_node.h \
+  ../library1.h
 
 CMakeFiles/DS_WET1.dir/library1.cpp.obj: ../library1.cpp \
   ../Industry.h \
@@ -618,7 +616,6 @@ CMakeFiles/DS_WET1.dir/library1.cpp.obj: ../library1.cpp \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/istream \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/bits/istream.tcc \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/assert.h \
-  ../library1.h \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/memory \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/bits/stl_construct.h \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/bits/stl_uninitialized.h \
@@ -642,7 +639,8 @@ CMakeFiles/DS_WET1.dir/library1.cpp.obj: ../library1.cpp \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/bits/atomic_lockfree_defines.h \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/backward/auto_ptr.h \
   ../AO_AVL_Tree.h \
-  ../AO_Tree_node.h
+  ../AO_Tree_node.h \
+  ../library1.h
 
 CMakeFiles/DS_WET1.dir/main1.cpp.obj: ../main1.cpp \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/assert.h \

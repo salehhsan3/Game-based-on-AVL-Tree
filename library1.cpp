@@ -1,11 +1,8 @@
-// #include "library1.h"
 #include "Industry.h"
 
-namespace MIVNI
-{
     void *Init()
     {
-        return static_cast<void*>(new Industry());
+        return static_cast<void*>(new MIVNI::Industry());
     }
 
     StatusType AddCompany(void *DS, int CompanyID, int Value)
@@ -14,7 +11,7 @@ namespace MIVNI
         {
             return INVALID_INPUT;
         }
-        return static_cast<Industry*>(DS)->AddCompany(CompanyID,Value);
+        return static_cast<MIVNI::Industry*>(DS)->AddCompany(CompanyID,Value);
     }
 
     StatusType AddEmployee(void *DS, int EmployeeID, int CompanyID, int Salary, int Grade)
@@ -23,7 +20,7 @@ namespace MIVNI
         {
             return INVALID_INPUT;
         }
-        return static_cast<Industry*>(DS)->AddEmployee(EmployeeID,CompanyID,Salary,Grade);
+        return static_cast<MIVNI::Industry*>(DS)->AddEmployee(EmployeeID,CompanyID,Salary,Grade);
     }
 
     StatusType RemoveCompany(void *DS, int CompanyID)
@@ -32,7 +29,7 @@ namespace MIVNI
         {
             return INVALID_INPUT;
         }
-        return static_cast<Industry*>(DS)->RemoveCompany(CompanyID);
+        return static_cast<MIVNI::Industry*>(DS)->RemoveCompany(CompanyID);
     }
 
     StatusType RemoveEmployee(void *DS, int EmployeeID)
@@ -41,7 +38,7 @@ namespace MIVNI
         {
             return INVALID_INPUT;
         }
-        return static_cast<Industry*>(DS)->RemoveEmployee(EmployeeID);
+        return static_cast<MIVNI::Industry*>(DS)->RemoveEmployee(EmployeeID);
     }
 
     StatusType GetCompanyInfo(void *DS, int CompanyID, int *Value, int *NumEmployees)
@@ -50,7 +47,7 @@ namespace MIVNI
         {
             return INVALID_INPUT;
         }
-        return static_cast<Industry*>(DS)->GetCompanyInfo(CompanyID,Value,NumEmployees);
+        return static_cast<MIVNI::Industry*>(DS)->GetCompanyInfo(CompanyID,Value,NumEmployees);
     }
 
     StatusType GetEmployeeInfo(void *DS, int EmployeeID, int *EmployerID, int *Salary, int *Grade)
@@ -59,7 +56,7 @@ namespace MIVNI
         {
             return INVALID_INPUT;
         }
-        return static_cast<Industry*>(DS)->GetEmployeeInfo(EmployeeID,EmployerID,Salary,Grade);
+        return static_cast<MIVNI::Industry*>(DS)->GetEmployeeInfo(EmployeeID,EmployerID,Salary,Grade);
     }
 
     StatusType IncreaseCompanyValue(void *DS, int CompanyID, int ValueIncrease)
@@ -68,7 +65,7 @@ namespace MIVNI
         {
             return INVALID_INPUT;
         }
-        return static_cast<Industry*>(DS)->IncreaseCompanyValue(CompanyID,ValueIncrease);
+        return static_cast<MIVNI::Industry*>(DS)->IncreaseCompanyValue(CompanyID,ValueIncrease);
     }
 
     StatusType PromoteEmployee(void *DS, int EmployeeID, int SalaryIncrease, int BumpGrade)
@@ -77,7 +74,7 @@ namespace MIVNI
         {
             return INVALID_INPUT;
         }
-        return static_cast<Industry*>(DS)->PromoteEmployee(EmployeeID,SalaryIncrease,BumpGrade);
+        return static_cast<MIVNI::Industry*>(DS)->PromoteEmployee(EmployeeID,SalaryIncrease,BumpGrade);
     }
 
     StatusType HireEmployee(void *DS, int EmployeeID, int NewCompanyID)
@@ -86,7 +83,7 @@ namespace MIVNI
         {
             return INVALID_INPUT;
         }
-        return static_cast<Industry*>(DS)->HireEmployee(EmployeeID,NewCompanyID);
+        return static_cast<MIVNI::Industry*>(DS)->HireEmployee(EmployeeID,NewCompanyID);
     }
 
     StatusType AcquireCompany(void *DS, int AcquirerID, int TargetID, double Factor)
@@ -95,7 +92,7 @@ namespace MIVNI
         {
             return INVALID_INPUT;
         }
-        return static_cast<Industry*>(DS)->AcquireCompany(AcquirerID,TargetID,Factor);
+        return static_cast<MIVNI::Industry*>(DS)->AcquireCompany(AcquirerID,TargetID,Factor);
     }
 
     StatusType GetHighestEarner(void *DS, int CompanyID, int *EmployeeID)
@@ -104,7 +101,7 @@ namespace MIVNI
         {
             return INVALID_INPUT;
         }
-        return static_cast<Industry*>(DS)->GetHighestEarner(CompanyID,EmployeeID);
+        return static_cast<MIVNI::Industry*>(DS)->GetHighestEarner(CompanyID,EmployeeID);
     }
 
     StatusType GetAllEmployeesBySalary(void *DS, int CompanyID, int **Employees, int *NumOfEmployees)
@@ -113,7 +110,7 @@ namespace MIVNI
         {
             return INVALID_INPUT;
         }
-        return static_cast<Industry*>(DS)->GetAllEmployeesBySalary(CompanyID,Employees,NumOfEmployees);
+        return static_cast<MIVNI::Industry*>(DS)->GetAllEmployeesBySalary(CompanyID,Employees,NumOfEmployees);
     }
 
     StatusType GetHighestEarnerInEachCompany(void *DS, int NumOfCompanies, int **Employees)
@@ -122,7 +119,7 @@ namespace MIVNI
         {
             return INVALID_INPUT;
         }
-        return static_cast<Industry*>(DS)->GetHighestEarnerInEachCompany(NumOfCompanies,Employees);
+        return static_cast<MIVNI::Industry*>(DS)->GetHighestEarnerInEachCompany(NumOfCompanies,Employees);
     }
 
     StatusType GetNumEmployeesMatching(void *DS, int CompanyID, int MinEmployeeID, int MaxEmployeeId,
@@ -132,7 +129,7 @@ namespace MIVNI
         {
             return INVALID_INPUT;
         }
-        return static_cast<Industry*>(DS)->GetNumEmployeesMatching(CompanyID,MinEmployeeID,MaxEmployeeId,
+        return static_cast<MIVNI::Industry*>(DS)->GetNumEmployeesMatching(CompanyID,MinEmployeeID,MaxEmployeeId,
                                                                    MinSalary,MinGrade,TotalNumOfEmployees,NumOfEmployees);
             }
 
@@ -142,7 +139,6 @@ namespace MIVNI
         {
             return;
         }
-        delete static_cast<Industry*>(*DS);
+        delete static_cast<MIVNI::Industry*>(*DS);
         *DS =nullptr;
     }
-} // namespace MIVNI

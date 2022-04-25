@@ -5,6 +5,7 @@
 #ifndef DS_WET1_STOCKEXCHANGE_H
 #define DS_WET1_STOCKEXCHANGE_H
 #include "Company.h"
+#include "library1.h"
 
 using namespace std;
 namespace MIVNI{
@@ -44,7 +45,6 @@ namespace MIVNI{
 
         static int getEmployeesWithMinSalaryAndGrade(shared_ptr<Employee> *Employees, int size, int MinSalary, int MinGrade);
 
-
         void UpdateIndustryHighestEarnerAfterRemove(Employee& emp);
 
         void getHighestEarnerInEachCompanyIntoArray(int *index, int max_index,tree_node<int,shared_ptr<Company>>* node, int *Employees);
@@ -52,6 +52,11 @@ namespace MIVNI{
         void updateHighestEarner();
 
         static int countNodes(tree_node<int,shared_ptr<Company>> *node);
+
+        void merge_func(shared_ptr<Employee> arr1[], shared_ptr<Employee> arr2[] ,int n1, int n2,
+                        shared_ptr<Employee>  arr3[]);
+
+        void visitInOrder2(shared_ptr<Employee> * array, tree_node<int, shared_ptr<Employee> >* node, int* counter_ptr, int num);
 
         tree_node<int, shared_ptr<Employee>>* createFromSortedArrAuxForID(shared_ptr<Employee> array[], int start,
                                                               int end, tree_node<int, shared_ptr<Employee>> *parent);

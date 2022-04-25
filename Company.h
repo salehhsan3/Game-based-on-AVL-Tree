@@ -40,11 +40,11 @@ namespace MIVNI{
             employees_by_salary(),
             employees_by_id()
         {}
-        ~Company();
+        ~Company() = default;
 
-        StatusType AddEmployee(int EmployeeID, int Salary, shared_ptr<Employee> emp);
-        StatusType RemoveEmployee(int EmployeeID, int Salary);
-        StatusType GetCompanyInfo(int CompanyID, int *Value, int *NumEmployees);
+        void AddEmployee(int EmployeeID, int Salary, shared_ptr<Employee> emp);
+        void RemoveEmployee(int EmployeeID, int Salary);
+        void GetCompanyInfo(int CompanyID, int *Value, int *NumEmployees);
         void UpdateCompanyHighestEarnerAfterAddition(shared_ptr<Employee> emp);
         void UpdateCompanyHighestEarnerAfterRemove();
         void UpdateCompanyValue(int new_value);
