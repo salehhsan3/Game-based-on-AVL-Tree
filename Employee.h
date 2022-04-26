@@ -20,11 +20,11 @@ namespace MIVNI{
         public:
             int salary;
             int ID;
-            SalaryID()=default;
-            explicit SalaryID(int salary,int id):
+            SalaryID(int salary,int id):
                     salary(salary),
                     ID(id)
             {}
+            SalaryID(const SalaryID& other) = default;
             bool operator==(const SalaryID& other)const
             {
                 return ID == other.ID && salary == other.salary;
@@ -93,6 +93,7 @@ namespace MIVNI{
         void bumpGrade(int bump);
         void promote(int increase,int bump);
         void UpdateCompanyID(int NewID);
+        SalaryID getEmployeeSalaryID();
     };
 
 

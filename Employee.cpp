@@ -44,5 +44,10 @@ namespace MIVNI
     {
         this->company_id = NewID;
     }
+    SalaryID Employee::getEmployeeSalaryID()
+    {
+        SalaryID to_ret = SalaryID(salary, ID);
+        return to_ret;
+    }
 
 } // namespace MIVNI
