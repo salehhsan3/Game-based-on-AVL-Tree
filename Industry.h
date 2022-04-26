@@ -22,18 +22,18 @@ namespace MIVNI{
         AVL_Tree<int,shared_ptr<Company>> companies_with_employees;
 
     public:
-        Industry(
-                // int num_of_workers,
-                // int num_of_companies_with_employees,
-                // Shared_ptr<Employee> highest_earner,
-                // AVL_Tree<int,Employee> workers_by_id,
-                // AVL_Tree<int,Employee> workers_by_grade,
-                // AVL_Tree<int,Company> companies,
-                // AVL_Tree<int,Company> companies_with_employees
-        );
+        Industry():
+        num_of_workers(),
+        num_of_companies_with_employees(),
+        highest_earner(),
+        workers_by_id(),
+        workers_by_salary(),
+        companies(),
+        companies_with_employees()
+    {}
         Industry(const Industry& ind) = default;
         Industry& operator=(const Industry& ind) = default;
-        ~Industry()= default;
+        ~Industry() = default;
 
         void UpdateIndustryHighestEarnerAfterAddition(shared_ptr<Employee> emp);
 
@@ -67,6 +67,12 @@ namespace MIVNI{
                                                               int end, tree_node<int, shared_ptr<Employee>> *parent);
 
         AVL_Tree<int, shared_ptr<Employee>>* createFromSortedArrForSalary(shared_ptr<Employee> array[], int start, int end);
+
+        // tree_node<int, shared_ptr<Employee>>* getAncestorNode(tree_node<int,shared_ptr<Employee>>* node, int MaxID);
+
+        // tree_node<int, shared_ptr<Employee>>* Industry::findClosestNode(tree_node<int,shared_ptr<Employee>>* node, int MinID);
+
+        tree_node<int,shared_ptr<Employee>> *findLCA(tree_node<int,shared_ptr<Employee>> *root, int MinID, int MaxID);
 
         Industry *Init();
 

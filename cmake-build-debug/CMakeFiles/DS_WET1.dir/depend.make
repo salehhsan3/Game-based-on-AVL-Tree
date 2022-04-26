@@ -18,9 +18,6 @@ CMakeFiles/DS_WET1.dir/Industry.cpp.o: ../Industry.cpp
 CMakeFiles/DS_WET1.dir/Industry.cpp.o: ../Industry.h
 CMakeFiles/DS_WET1.dir/Industry.cpp.o: ../library1.h
 
-CMakeFiles/DS_WET1.dir/Tests.cpp.o: ../Tests.cpp
-CMakeFiles/DS_WET1.dir/Tests.cpp.o: ../library1.h
-
 CMakeFiles/DS_WET1.dir/library1.cpp.o: ../AO_AVL_Tree.h
 CMakeFiles/DS_WET1.dir/library1.cpp.o: ../AO_Tree_node.h
 CMakeFiles/DS_WET1.dir/library1.cpp.o: ../Company.h

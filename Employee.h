@@ -35,7 +35,7 @@ namespace MIVNI{
             {
                 return ID > emp.ID;
             }
-            return grade < emp.grade;
+            return salary < emp.salary;
         }
         bool operator==(const Employee& emp) const
         {
