@@ -15,6 +15,42 @@
 
 namespace MIVNI{
 
+    class SalaryID
+    {
+        public:
+            int salary;
+            int ID;
+            SalaryID()=default;
+            explicit SalaryID(int salary,int id):
+                    salary(salary),
+                    ID(id)
+            {}
+            bool operator==(const SalaryID& other)const
+            {
+                return ID == other.ID && salary == other.salary;
+            }
+            bool operator!=(const SalaryID& other)const
+            {
+                return ID != other.ID;
+            }
+            bool operator<(const SalaryID& other) const
+            {
+                if (salary == other.salary)
+                {
+                   return ID > other.ID;
+                 }
+                return salary < other.salary;
+            }
+            bool operator>(const SalaryID& other) const
+            {
+                if (salary == other.salary)
+                {
+                    return ID < other.ID;
+                }
+                return salary > other.salary;
+            }
+    };
+
     class Employee
     {
     private:
@@ -58,6 +94,8 @@ namespace MIVNI{
         void promote(int increase,int bump);
         void UpdateCompanyID(int NewID);
     };
+
+
     
     
 }
