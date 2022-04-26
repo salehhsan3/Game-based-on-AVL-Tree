@@ -278,13 +278,14 @@ namespace MIVNI{
             return FAILURE;
         }
         shared_ptr<Employee> emp = *(this->workers_by_id.findNode(EmployeeID)->data);
+        SalaryID sal_id = SalaryID(emp->getEmployeeSalary(),EmployeeID);
         shared_ptr<Company> comp = *(this->companies.findNode(emp->getEmployersid())->data);
-        comp->getCompanyEmployeesTreeBySalary()->removeNode(EmployeeID);
-        this->workers_by_salary.removeNode(EmployeeID);
+        comp->getCompanyEmployeesTreeBySalary()->removeNode(sal_id);
+        this->workers_by_salary.removeNode(sal_id);
 //        comp->getCompanyEmployeesTreeByID()->removeNode(EmployeeID);
         emp->promote(SalaryIncrease,BumpGrade);
-        comp->getCompanyEmployeesTreeBySalary()->addNode(EmployeeID,emp);
-        this->workers_by_salary.addNode(EmployeeID,emp);
+        comp->getCompanyEmployeesTreeBySalary()->addNode(sal_id,emp);
+        this->workers_by_salary.addNode(sal_id,emp);
         this->updateHighestEarner();
         comp->updateHighestEarner();
         return SUCCESS;
