@@ -218,7 +218,7 @@ namespace MIVNI{
 
     StatusType Industry::GetCompanyInfo(int CompanyID, int *Value, int *NumEmployees){
         if(!Value || !NumEmployees || CompanyID <= 0){
-            return ALLOCATION_ERROR;
+            return INVALID_INPUT;
         }
         if(!companies.findNode(CompanyID)){
             return FAILURE;
@@ -337,8 +337,8 @@ namespace MIVNI{
 
         int counter = 0;
         int* counter_ptr = &counter;
-        *counter_ptr = 0;
         visitInOrder2(acquire_employees_arr, acquire_employee_tree->root, &counter, acquire_num);
+        *counter_ptr = 0;
         visitInOrder2(target_employees_arr, target_employee_tree->root, &counter, target_num);
         counter_ptr = nullptr;
 
@@ -352,22 +352,41 @@ namespace MIVNI{
         AVL_Tree<int, shared_ptr<Employee>>* new_tree_by_id = createFromSortedArrForID(new_arr, 0, acquire_num+target_num-1);
         AVL_Tree<int, shared_ptr<Employee>>* new_tree_by_salary = createFromSortedArrForSalary(new_arr, 0, acquire_num+target_num-1);
 
-        RemoveCompany(TargetID);
-        RemoveCompany(AcquirerID);
-
+//        RemoveCompany(TargetID);
+//        RemoveCompany(AcquirerID);
+// using the above remove functions isn't sufficient because we may have employees in the companies at the moment of removal
+        this->companies.removeNode(TargetID);
+        if (target_num > 0)
+        {
+            this->companies_with_employees.removeNode(TargetID);
+        }
+//        this->companies.removeNode(AcquirerID);
+//        if (acquire_num > 0)
+//        {
+//            this->companies_with_employees.removeNode(AcquirerID);
+//        }
+        acquirer_company->UpdateCompanyValue(after_value);
+        acquirer_company->updateNumOfEmployees(after_num);
+        acquirer_company->getCompanyEmployeesTreeByID()->treeClear();
+        acquirer_company->changeCompanyEmployeesTreeByID(*new_tree_by_id);
+        acquirer_company->getCompanyEmployeesTreeBySalary()->treeClear();
+        acquirer_company->changeCompanyEmployeesTreeBySalary(*new_tree_by_salary);
+        acquirer_company->updateHighestEarner();
         // AVL_Tree<int, shared_ptr<Employee>> empty_tree = AVL_Tree<int, shared_ptr<Employee>>();
         // this->companies.addNode(AcquirerID,empty_tree);
         // all_groups_tree.findNode(ReplacementID)->setData(new_tree);
 
-        // shared_ptr<Company> new_comp = make_shared<Company>(AcquirerID,after_value,after_num,new_tree_by_salary->max->data,*new_tree_by_salary,*new_tree_by_id);
-        shared_ptr<Company> new_comp = make_shared<Company>(AcquirerID,after_value);
+        // shared_ptr<Company> new_comp = make_shared<Company>(AcquirerID,after_value,after_num,new_tree_by_salary->max->data);
+        // new_comp->changeCompanyEmployeesTreeByID(*new_tree_by_id);
+        // new_comp->changeCompanyEmployeesTreeBySalary(*new_tree_by_salary);
 
-        this->companies.addNode(AcquirerID,new_comp);
-        new_comp->updateHighestEarner();
+        // this->companies.addNode(AcquirerID,new_comp);
+        // new_comp->updateHighestEarner();
         this->updateHighestEarner();
         if (after_num > 0)
         {
-            this->companies_with_employees.addNode(AcquirerID,new_comp);
+            this->companies_with_employees.addNode(AcquirerID,acquirer_company);//maybe check if company already exists in tree?
+            //potential problem, I believe that if the node already exists there then the algorithm terminates!
         }
         return SUCCESS;
     }
@@ -428,6 +447,8 @@ namespace MIVNI{
         {
             return FAILURE;
         }
+        int index = 0;
+        int *index_ptr = &index;
 
         if (CompanyID < 0)
         {
@@ -436,7 +457,7 @@ namespace MIVNI{
             {
                 return ALLOCATION_ERROR;
             }
-            getEmployeesBySalary(this->workers_by_salary.root,(*Employees),0);
+            getEmployeesBySalary(this->workers_by_salary.root,(*Employees),index_ptr);
             return SUCCESS;
         }
 
@@ -448,7 +469,8 @@ namespace MIVNI{
             {
                 return ALLOCATION_ERROR;
             }
-            getEmployeesBySalary(comp->getCompanyEmployeesTreeBySalary()->root,(*Employees),0);
+            getEmployeesBySalary(comp->getCompanyEmployeesTreeBySalary()->root,(*Employees),index_ptr);
+            *NumOfEmployees = *index_ptr;//correct implementation?
             return SUCCESS;
         }
         return SUCCESS;

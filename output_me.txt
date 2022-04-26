@@ -1,0 +1,93 @@
+AddEmployee 55 26 35 57
+PromoteEmploAddEmployee: INVALID_INPUT
+yee 33 83 -11
+GPromoteEmployee: INVALID_INPUT
+etHighestEarnerInEachCompany 19
+GeGetHighestEarnerInEachCompany: INVALID_INPUT
+tHighestEarner 25
+AddGetHighestEarner: INVALID_INPUT
+Company 47 21
+RAddCompany: INVALID_INPUT
+emoveCompany 30
+GetHRemoveCompany: INVALID_INPUT
+ighestEarnerInEachCompany 37
+GetCoGetHighestEarnerInEachCompany: INVALID_INPUT
+mpanyInfo 90
+RGetCompanyInfo: INVALID_INPUT
+emoveEmployee 74
+Init
+RemoveEmployee: INVALID_INPUT
+AddComInit done
+pany 1 50
+AddCAddCompany: SUCCESS
+ompany 2 500
+AdAddCompany: SUCCESS
+dCompany 3 5000
+AddEmAddCompany: SUCCESS
+ployee 11 1 60 70
+AddEAddEmployee: SUCCESS
+mployee 12 2 600 700
+AdAddEmployee: SUCCESS
+dEmployee 13 3 6000 7000
+AcquiAddEmployee: SUCCESS
+reCompany 3 2 1.63
+IncreaseCoAcquireCompany: SUCCESS
+mpanyValue 1 100
+PromoIncreaseCompanyValue: SUCCESS
+teEmployee 13 10 1
+GetPromoteEmployee: SUCCESS
+HighestEarner 12
+GetAGetHighestEarner: FAILURE
+llEmployeesBySalary 3
+GetHGetAllEmployeesBySalary: SUCCESS. Highest earners:
+ighestEEmployee Rank || Employee ID
+arnerIn0 - 13
+EachCompany 2
+GetHighestEarnerInEachCompany: SUCCESS. Highest earners:
+Company Index || Employee ID
+GetNum0 - 11
+1 - 12
+EmployeesMatching -1 0 20 100 10
+HireGetNumEmployeesMatching: SUCCESS. Out of 3, 2 match
+Employee 12 1
+GHireEmployee: SUCCESS
+etCompanyInfo 1
+GetCGetCompanyInfo: SUCCESS. Company 1 has 2 employees and value 150
+ompanyInfo 2
+GGetCompanyInfo: SUCCESS. Company 2 has 1 employees and value 500
+etCompanyInfo 3
+GetEGetCompanyInfo: SUCCESS. Company 3 has 0 employees and value 5000
+mployeeInfo 11
+GetEmGetEmployeeInfo: SUCCESS. Employee 11 works at 1 and earns 60 at grade 70
+ployeeInfo 12
+GGetEmployeeInfo: SUCCESS. Employee 12 works at 1 and earns 600 at grade 700
+etEmployeeInfo 13
+ReGetEmployeeInfo: SUCCESS. Employee 13 works at 3 and earns 6010 at grade 7001
+moveEmployee 13
+RemoveRemoveEmployee: SUCCESS
+Company 3
+AddERemoveCompany: SUCCESS
+mployee 11 1 70 25
+GetAddEmployee: FAILURE
+CompanyInfo -14
+GetCGetCompanyInfo: ALLOCATION_ERROR
+ompanyInfo 1
+IGetCompanyInfo: SUCCESS. Company 1 has 2 employees and value 150
+ncreaseCompanyValue 1 39
+IncrIncreaseCompanyValue: SUCCESS
+easeCompanyValue 1 15
+IncreaseCompanyValue: SUCCESS
+GetHighestEarner 1
+GGetHighestEarner: SUCCESS. Highest earner is 12
+etNumEmployeesMatching 1 1 52 54 65
+GGetNumEmployeesMatching: SUCCESS. Out of 2, 2 match
+etHighestEarnerInEachCompany 1
+QuGetHighestEarnerInEachCompany: SUCCESS. Highest earners:
+it
+GetNCompany Index || Employee ID
+0 - 12
+umEmplQuit done
+oyeesMatching -16 58 21 57 60
+GGetNumEmployeesMatching: INVALID_INPUT
+GetAllEmployeesBySalary 82
+GetAllEmployeesBySalary: INVALID_INPUT

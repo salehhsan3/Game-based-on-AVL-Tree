@@ -106,6 +106,12 @@
 		<Unit filename="/mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/Industry.h">
 			<Option target="DS_WET1"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/Tests.cpp">
+			<Option target="DS_WET1"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/Tests.h">
+			<Option target="DS_WET1"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/Saleh/Desktop/Data-Structures/spring/DS-WET1/library1.cpp">
 			<Option target="DS_WET1"/>
 		</Unit>

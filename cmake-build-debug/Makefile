@@ -204,6 +204,33 @@ Industry.cpp.s:
 	$(MAKE) -f CMakeFiles/DS_WET1.dir/build.make CMakeFiles/DS_WET1.dir/Industry.cpp.s
 .PHONY : Industry.cpp.s
 
+Tests.o: Tests.cpp.o
+
+.PHONY : Tests.o
+
+# target to build an object file
+Tests.cpp.o:
+	$(MAKE) -f CMakeFiles/DS_WET1.dir/build.make CMakeFiles/DS_WET1.dir/Tests.cpp.o
+.PHONY : Tests.cpp.o
+
+Tests.i: Tests.cpp.i
+
+.PHONY : Tests.i
+
+# target to preprocess a source file
+Tests.cpp.i:
+	$(MAKE) -f CMakeFiles/DS_WET1.dir/build.make CMakeFiles/DS_WET1.dir/Tests.cpp.i
+.PHONY : Tests.cpp.i
+
+Tests.s: Tests.cpp.s
+
+.PHONY : Tests.s
+
+# target to generate assembly for a file
+Tests.cpp.s:
+	$(MAKE) -f CMakeFiles/DS_WET1.dir/build.make CMakeFiles/DS_WET1.dir/Tests.cpp.s
+.PHONY : Tests.cpp.s
+
 library1.o: library1.cpp.o
 
 .PHONY : library1.o
@@ -276,6 +303,9 @@ help:
 	@echo "... Industry.o"
 	@echo "... Industry.i"
 	@echo "... Industry.s"
+	@echo "... Tests.o"
+	@echo "... Tests.i"
+	@echo "... Tests.s"
 	@echo "... library1.o"
 	@echo "... library1.i"
 	@echo "... library1.s"

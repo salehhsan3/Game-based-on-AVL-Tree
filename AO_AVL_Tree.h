@@ -17,6 +17,8 @@ public:
     int size;
 
     AVL_Tree() : root(NULL), min(NULL), max(NULL), size(0){}
+    AVL_Tree(AVL_Tree *tree) : root(tree->root), min(tree->min), max(tree->max), size(tree->size){}//added by saleh
+    AVL_Tree(const AVL_Tree& copy); // added by saleh
     void delete_sub_tree(tree_node<Key, Data>* curr_root);
     ~AVL_Tree();
     void treeClear();
@@ -276,6 +278,16 @@ tree_node<Key, Data>* AVL_Tree<Key, Data>::removeNodeAux(tree_node<Key, Data> *c
 }
 
 template<class Key, class Data>
+AVL_Tree<Key, Data>::AVL_Tree(const AVL_Tree& copy){
+    treeClear();
+    root = copy->root;
+    size = copy->size;
+    min = copy->min;
+    max = copy->max;
+}
+
+//added by saleh
+template<class Key, class Data>
 AVL_Tree<Key, Data>& AVL_Tree<Key, Data>::operator=(AVL_Tree<struct player_level, int> *tree) {
     treeClear();
     root = tree->root;
@@ -284,6 +296,7 @@ AVL_Tree<Key, Data>& AVL_Tree<Key, Data>::operator=(AVL_Tree<struct player_level
     max = tree->max;
     return *this;
 }
+//added by saleh
 
 template<class Key, class Data>
 tree_node<Key, Data>* AVL_Tree<Key, Data>::copyTreeNode(tree_node<Key, Data> root) {

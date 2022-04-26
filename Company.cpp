@@ -73,6 +73,12 @@ namespace MIVNI
         return (highest_earner->getEmployeeID());
     }
 
+    void Company::updateNumOfEmployees(int new_num)
+    {
+        this->num_of_employees = new_num;
+        return;
+    }
+
     AVL_Tree<int,shared_ptr<Employee>>* Company::getCompanyEmployeesTreeByID(){
         return &(this->employees_by_id);
     }
@@ -83,8 +89,26 @@ namespace MIVNI
 
     void Company::updateHighestEarner()
     {
-        this->highest_earner = *(this->employees_by_salary.max->data);
+        if (this->employees_by_salary.max != nullptr){
+            this->highest_earner = *(this->employees_by_salary.max->data);
+        }
+        else
+        {
+            this->highest_earner = nullptr;
+        }
         return;
     }
+    void Company::changeCompanyEmployeesTreeByID(AVL_Tree<int,shared_ptr<Employee>>& tree)
+    {
+        // review later!
+        this->employees_by_id = tree;
+        return;
+    }
+    void Company::changeCompanyEmployeesTreeBySalary(AVL_Tree<int,shared_ptr<Employee>>& tree)
+    {
+        this->employees_by_salary = tree;
+        return;
+    }
+
 
 } // namespace MIVNI
