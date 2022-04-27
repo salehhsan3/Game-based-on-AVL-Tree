@@ -723,7 +723,7 @@ GetCompanyInfo: SUCCESS. Company 273 has 6 employees and value 81
 GetNumEmployeesMatching: INVALID_INPUT
 GetCompanyInfo: SUCCESS. Company 483 has 9 employees and value 86
 PromoteEmployee: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 4, 3 match
+GetNumEmployeesMatching: SUCCESS. Out of 2, 3 match
 GetCompanyInfo: SUCCESS. Company 151 has 5 employees and value 26
 GetHighestEarner: FAILURE
 AcquireCompany: FAILURE
@@ -6541,7 +6541,7 @@ HireEmployee: SUCCESS
 AcquireCompany: INVALID_INPUT
 GetNumEmployeesMatching: INVALID_INPUT
 GetHighestEarner: SUCCESS. Highest earner is 367
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 1, 1 match
 PromoteEmployee: SUCCESS
 HireEmployee: SUCCESS
 GetCompanyInfo: INVALID_INPUT
@@ -10911,7 +10911,7 @@ GetCompanyInfo: SUCCESS. Company 389 has 4 employees and value 15
 GetNumEmployeesMatching: INVALID_INPUT
 HireEmployee: SUCCESS
 GetCompanyInfo: SUCCESS. Company 134 has 0 employees and value 8
-GetNumEmployeesMatching: SUCCESS. Out of 1, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of -1, 0 match
 GetCompanyInfo: SUCCESS. Company 393 has 3 employees and value 12
 PromoteEmployee: SUCCESS
 HireEmployee: SUCCESS
@@ -11866,7 +11866,7 @@ IncreaseCompanyValue: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT
 GetCompanyInfo: SUCCESS. Company 58 has 8 employees and value 59
 RemoveCompany: FAILURE
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of -1, 1 match
 RemoveEmployee: SUCCESS
 HireEmployee: SUCCESS
 HireEmployee: SUCCESS
@@ -12558,7 +12558,7 @@ IncreaseCompanyValue: SUCCESS
 RemoveEmployee: FAILURE
 AcquireCompany: FAILURE
 HireEmployee: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of -1, 0 match
 PromoteEmployee: SUCCESS
 AddEmployee: SUCCESS
 IncreaseCompanyValue: SUCCESS
@@ -12967,7 +12967,7 @@ AddCompany: SUCCESS
 GetHighestEarner: SUCCESS. Highest earner is 3691
 HireEmployee: SUCCESS
 HireEmployee: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 2, 0 match
 GetNumEmployeesMatching: INVALID_INPUT
 GetEmployeeInfo: SUCCESS. Employee 3000 works at 329 and earns 60 at grade 0
 PromoteEmployee: SUCCESS

@@ -320,7 +320,7 @@ GetCompanyInfo: SUCCESS. Company 39 has 6 employees and value 62
 GetCompanyInfo: SUCCESS. Company 420 has 14 employees and value 37
 GetHighestEarnerInEachCompany: INVALID_INPUT
 AcquireCompany: INVALID_INPUT
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of -1, 0 match
 GetHighestEarnerInEachCompany: INVALID_INPUT
 HireEmployee: INVALID_INPUT
 GetEmployeeInfo: SUCCESS. Employee 6159 works at 179 and earns 98 at grade 4
@@ -2712,7 +2712,7 @@ GetNumEmployeesMatching: INVALID_INPUT
 PromoteEmployee: SUCCESS
 PromoteEmployee: SUCCESS
 HireEmployee: FAILURE
-GetNumEmployeesMatching: SUCCESS. Out of 1, 1 match
+GetNumEmployeesMatching: SUCCESS. Out of -1, 1 match
 HireEmployee: FAILURE
 GetAllEmployeesBySalary: SUCCESS. Highest earners:
 Employee Rank || Employee ID
@@ -4207,7 +4207,7 @@ RemoveEmployee: SUCCESS
 GetHighestEarner: INVALID_INPUT
 GetHighestEarner: FAILURE
 PromoteEmployee: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 4, 2 match
+GetNumEmployeesMatching: SUCCESS. Out of 3, 2 match
 HireEmployee: SUCCESS
 IncreaseCompanyValue: SUCCESS
 GetCompanyInfo: SUCCESS. Company 19 has 6 employees and value 105
@@ -4925,9 +4925,9 @@ IncreaseCompanyValue: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT
 GetCompanyInfo: SUCCESS. Company 465 has 13 employees and value 60
 GetCompanyInfo: SUCCESS. Company 181 has 1 employees and value 8
-GetNumEmployeesMatching: SUCCESS. Out of 3, 3 match
+GetNumEmployeesMatching: SUCCESS. Out of 2, 3 match
 GetNumEmployeesMatching: INVALID_INPUT
-GetNumEmployeesMatching: SUCCESS. Out of 1, 1 match
+GetNumEmployeesMatching: SUCCESS. Out of 0, 1 match
 GetNumEmployeesMatching: INVALID_INPUT
 GetNumEmployeesMatching: INVALID_INPUT
 GetHighestEarner: FAILURE
@@ -4958,7 +4958,7 @@ PromoteEmployee: INVALID_INPUT
 GetNumEmployeesMatching: INVALID_INPUT
 GetNumEmployeesMatching: INVALID_INPUT
 GetHighestEarnerInEachCompany: INVALID_INPUT
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 1, 0 match
 RemoveEmployee: INVALID_INPUT
 IncreaseCompanyValue: SUCCESS
 GetHighestEarner: SUCCESS. Highest earner is 4533
@@ -5922,7 +5922,7 @@ Employee Rank || Employee ID
 139 - 2196
 140 - 6082
 GetNumEmployeesMatching: INVALID_INPUT
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of -1, 0 match
 GetNumEmployeesMatching: INVALID_INPUT
 GetHighestEarnerInEachCompany: INVALID_INPUT
 AcquireCompany: FAILURE
@@ -7638,7 +7638,7 @@ GetEmployeeInfo: FAILURE
 AcquireCompany: INVALID_INPUT
 PromoteEmployee: SUCCESS
 GetHighestEarner: FAILURE
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 0, 1 match
 GetEmployeeInfo: SUCCESS. Employee 3151 works at 176 and earns 22 at grade 8
 GetHighestEarner: FAILURE
 AcquireCompany: INVALID_INPUT
@@ -10740,7 +10740,7 @@ HireEmployee: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT
 PromoteEmployee: SUCCESS
 GetCompanyInfo: SUCCESS. Company 156 has 7 employees and value 22
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 2, 1 match
 IncreaseCompanyValue: SUCCESS
 HireEmployee: SUCCESS
 GetHighestEarnerInEachCompany: SUCCESS. Highest earners:
@@ -10766,7 +10766,7 @@ HireEmployee: SUCCESS
 GetAllEmployeesBySalary: FAILURE
 AcquireCompany: INVALID_INPUT
 IncreaseCompanyValue: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 3, 2 match
+GetNumEmployeesMatching: SUCCESS. Out of 1, 2 match
 PromoteEmployee: SUCCESS
 RemoveCompany: INVALID_INPUT
 HireEmployee: SUCCESS
@@ -11619,7 +11619,7 @@ HireEmployee: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT
 AcquireCompany: FAILURE
 GetHighestEarnerInEachCompany: INVALID_INPUT
-GetNumEmployeesMatching: SUCCESS. Out of 1, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of -1, 0 match
 GetEmployeeInfo: SUCCESS. Employee 2776 works at 19 and earns 65 at grade 4
 GetAllEmployeesBySalary: SUCCESS. Highest earners:
 Employee Rank || Employee ID

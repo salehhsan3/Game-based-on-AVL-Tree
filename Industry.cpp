@@ -691,11 +691,16 @@ namespace MIVNI{
         {
             int *num = new int();
             int *index = new int();
+
+
+            shared_ptr<Employee> min_emp = make_shared<Employee>(MinEmployeeID);
+            shared_ptr<Employee> max_emp = make_shared<Employee>(MaxEmployeeId);
+
             if (CompanyID < 0)
             {
                 // countEmployeesByID(this->workers_by_id.root,MinEmployeeID,MaxEmployeeId,num);
-                shared_ptr<Employee> min_emp = make_shared<Employee>(MinEmployeeID);
-                shared_ptr<Employee> max_emp = make_shared<Employee>(MaxEmployeeId);
+//                shared_ptr<Employee> min_emp = make_shared<Employee>(MinEmployeeID);
+//                shared_ptr<Employee> max_emp = make_shared<Employee>(MaxEmployeeId);
                 tree_node<int,shared_ptr<Employee>> *min_res = this->workers_by_id.addNode(MinEmployeeID,min_emp);
                 tree_node<int,shared_ptr<Employee>> *max_res = this->workers_by_id.addNode(MaxEmployeeId,max_emp);
                 countEmployeesByID(findLCA(this->workers_by_id.root,MinEmployeeID,MaxEmployeeId),MinEmployeeID,MaxEmployeeId,num);
@@ -729,13 +734,49 @@ namespace MIVNI{
             }
             if (CompanyID > 0)
             {
+                int y =0;
+                if ( CompanyID == 492 && MinEmployeeID ==5869 && MaxEmployeeId==7419 && MinSalary==1 &&MinGrade==84 )
+                {
+                    y+= (*NumOfEmployees);//first potential problem!
+                }
+//                shared_ptr<Employee> min_emp = make_shared<Employee>(MinEmployeeID);
+//                shared_ptr<Employee> max_emp = make_shared<Employee>(MaxEmployeeId);
+//                tree_node<int,shared_ptr<Employee>> *min_res = this->workers_by_id.addNode(MinEmployeeID,min_emp);
+//                tree_node<int,shared_ptr<Employee>> *max_res = this->workers_by_id.addNode(MaxEmployeeId,max_emp);
                 shared_ptr<Company> comp = *(this->companies.findNode(CompanyID)->data);
-                countEmployeesByID(comp->getCompanyEmployeesTreeByID()->root,MinEmployeeID,MaxEmployeeId,num);
+                tree_node<int,shared_ptr<Employee>> *min_res = comp->AddEmployeeToIDTree(MinEmployeeID,min_emp);
+                tree_node<int,shared_ptr<Employee>> *max_res = comp->AddEmployeeToIDTree(MaxEmployeeId,max_emp);
+//                min_res = comp->AddEmployeeToIDTree(MinEmployeeID,min_emp);
+//                max_res = comp->AddEmployeeToIDTree(MaxEmployeeId,max_emp);
+                countEmployeesByID(findLCA(comp->getEmployeeTreeByIDRoot(),MinEmployeeID,MaxEmployeeId),MinEmployeeID,MaxEmployeeId,num);
                 shared_ptr<Employee> *Employees = new shared_ptr<Employee>[*num]();
-                getEmployeesByIDInArray(comp->getCompanyEmployeesTreeByID()->root,Employees,index,MinEmployeeID,MaxEmployeeId);
-                *NumOfEmployees =  getEmployeesWithMinSalaryAndGrade(Employees,*num,MinSalary,MinGrade);
+                getEmployeesByIDInArray(findLCA(comp->getEmployeeTreeByIDRoot(),MinEmployeeID,MaxEmployeeId),Employees,index,MinEmployeeID,MaxEmployeeId);
                 *TotalNumOfEmployees = *num;
+                *NumOfEmployees =  getEmployeesWithMinSalaryAndGrade(Employees,*num,MinSalary,MinGrade);
+
+
+                if (min_res)
+                {
+                    (*TotalNumOfEmployees)--;
+                    if (MinGrade == 0 && MinSalary == 0)
+                    {
+                        (*NumOfEmployees)--;
+                    }
+
+                    comp->getCompanyEmployeesTreeByID()->removeNode(MinEmployeeID);
+                }
+                if (max_res)
+                {
+                    (*TotalNumOfEmployees)--;
+                    if (MinGrade == 0 && MinSalary == 0)
+                    {
+                        (*NumOfEmployees)--;
+                    }
+                    comp->getCompanyEmployeesTreeByID()->removeNode(MaxEmployeeId);
+                }
+
             }
+
             delete index;
             delete num;
         }
@@ -743,6 +784,12 @@ namespace MIVNI{
         {
             return ALLOCATION_ERROR;
         }
+//        int x =0;
+//        if ( ( (*TotalNumOfEmployees) == 1) && ( (*NumOfEmployees) == 0) )
+//        {
+//            x+= (*NumOfEmployees);//first potential problem!
+//
+//        }
         return SUCCESS;
     }
 } // namespace MIVNI

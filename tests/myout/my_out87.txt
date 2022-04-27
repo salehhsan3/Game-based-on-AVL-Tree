@@ -704,7 +704,7 @@ RemoveCompany: FAILURE
 GetEmployeeInfo: SUCCESS. Employee 2875 works at 150 and earns 46 at grade 4
 IncreaseCompanyValue: INVALID_INPUT
 RemoveEmployee: FAILURE
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 1, 0 match
 GetNumEmployeesMatching: INVALID_INPUT
 IncreaseCompanyValue: SUCCESS
 GetHighestEarner: SUCCESS. Highest earner is 4073
@@ -1620,7 +1620,7 @@ GetNumEmployeesMatching: INVALID_INPUT
 GetEmployeeInfo: SUCCESS. Employee 3760 works at 401 and earns 80 at grade 4
 RemoveCompany: FAILURE
 GetHighestEarner: SUCCESS. Highest earner is 4073
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of -1, 0 match
 RemoveEmployee: FAILURE
 HireEmployee: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT
@@ -2196,7 +2196,7 @@ GetEmployeeInfo: SUCCESS. Employee 2128 works at 232 and earns 10 at grade 3
 GetNumEmployeesMatching: INVALID_INPUT
 IncreaseCompanyValue: SUCCESS
 GetCompanyInfo: SUCCESS. Company 7 has 0 employees and value 3
-GetNumEmployeesMatching: SUCCESS. Out of 5, 3 match
+GetNumEmployeesMatching: SUCCESS. Out of 3, 3 match
 AcquireCompany: SUCCESS
 GetHighestEarner: SUCCESS. Highest earner is 2982
 PromoteEmployee: SUCCESS
@@ -2240,7 +2240,7 @@ GetEmployeeInfo: SUCCESS. Employee 7623 works at 5 and earns 71 at grade 4
 GetHighestEarnerInEachCompany: INVALID_INPUT
 IncreaseCompanyValue: INVALID_INPUT
 GetEmployeeInfo: INVALID_INPUT
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of -1, 0 match
 AddEmployee: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT
 AddEmployee: SUCCESS
@@ -2710,7 +2710,7 @@ Employee Rank || Employee ID
 141 - 1501
 142 - 5385
 IncreaseCompanyValue: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 4, 1 match
+GetNumEmployeesMatching: SUCCESS. Out of 3, 1 match
 PromoteEmployee: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT
 GetNumEmployeesMatching: INVALID_INPUT
@@ -5310,7 +5310,7 @@ AcquireCompany: FAILURE
 AcquireCompany: FAILURE
 GetNumEmployeesMatching: INVALID_INPUT
 GetAllEmployeesBySalary: FAILURE
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 1, 1 match
 AcquireCompany: INVALID_INPUT
 GetNumEmployeesMatching: INVALID_INPUT
 GetNumEmployeesMatching: INVALID_INPUT
@@ -11785,7 +11785,7 @@ Employee Rank || Employee ID
 168 - 4042
 GetCompanyInfo: SUCCESS. Company 486 has 0 employees and value 8
 GetAllEmployeesBySalary: FAILURE
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of -1, 0 match
 AcquireCompany: INVALID_INPUT
 GetEmployeeInfo: SUCCESS. Employee 4042 works at 64 and earns 1 at grade 0
 GetAllEmployeesBySalary: FAILURE
@@ -12465,7 +12465,7 @@ GetNumEmployeesMatching: INVALID_INPUT
 IncreaseCompanyValue: SUCCESS
 AcquireCompany: FAILURE
 HireEmployee: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of -1, 1 match
 RemoveCompany: FAILURE
 IncreaseCompanyValue: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT

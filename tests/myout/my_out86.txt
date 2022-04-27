@@ -2268,7 +2268,7 @@ GetNumEmployeesMatching: INVALID_INPUT
 PromoteEmployee: SUCCESS
 HireEmployee: FAILURE
 GetNumEmployeesMatching: INVALID_INPUT
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of -1, 0 match
 GetNumEmployeesMatching: INVALID_INPUT
 IncreaseCompanyValue: INVALID_INPUT
 HireEmployee: SUCCESS
@@ -2311,7 +2311,7 @@ AddEmployee: SUCCESS
 GetCompanyInfo: SUCCESS. Company 276 has 10 employees and value 80
 HireEmployee: SUCCESS
 PromoteEmployee: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 4, 2 match
+GetNumEmployeesMatching: SUCCESS. Out of 2, 2 match
 PromoteEmployee: SUCCESS
 PromoteEmployee: INVALID_INPUT
 RemoveCompany: INVALID_INPUT
@@ -4410,7 +4410,7 @@ Employee Rank || Employee ID
 148 - 4792
 149 - 6833
 RemoveEmployee: INVALID_INPUT
-GetNumEmployeesMatching: SUCCESS. Out of 1, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of -1, 0 match
 IncreaseCompanyValue: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT
 GetHighestEarnerInEachCompany: INVALID_INPUT
@@ -6503,7 +6503,7 @@ GetHighestEarnerInEachCompany: INVALID_INPUT
 PromoteEmployee: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT
 IncreaseCompanyValue: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 3, 1 match
+GetNumEmployeesMatching: SUCCESS. Out of 1, 1 match
 GetHighestEarner: FAILURE
 GetAllEmployeesBySalary: FAILURE
 GetEmployeeInfo: SUCCESS. Employee 5201 works at 105 and earns 24 at grade 4
@@ -8762,7 +8762,7 @@ Employee Rank || Employee ID
 163 - 2483
 164 - 1023
 165 - 711
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of -1, 0 match
 GetNumEmployeesMatching: INVALID_INPUT
 GetCompanyInfo: SUCCESS. Company 236 has 1 employees and value 6
 AddEmployee: SUCCESS
@@ -12449,24 +12449,22 @@ GetNumEmployeesMatching: INVALID_INPUT
 GetCompanyInfo: SUCCESS. Company 287 has 3 employees and value 5
 GetAllEmployeesBySalary: SUCCESS. Highest earners:
 Employee Rank || Employee ID
-0 - 4055
-1 - 6149
-2 - 6107
-3 - 4989
-4 - 4295
-5 - 7174
-6 - 897
+0 - 4989
+1 - 4295
+2 - 7174
+3 - 897
+4 - 4055
+5 - 1430
+6 - 6107
 7 - 132
 8 - 1394
-9 - 4804
-10 - 4562
+9 - 4562
+10 - 4804
 11 - 3982
 12 - 1132
 13 - 1128
 14 - 1083
-15 - 1430
-16 - 691
-17 - 4562
+15 - 691
 GetCompanyInfo: SUCCESS. Company 275 has 9 employees and value 47
 GetCompanyInfo: SUCCESS. Company 440 has 9 employees and value 111
 GetNumEmployeesMatching: INVALID_INPUT

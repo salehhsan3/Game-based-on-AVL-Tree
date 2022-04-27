@@ -21,8 +21,16 @@ namespace MIVNI
         this->employees_by_salary.addNode(sal_id,emp);
         this->updateHighestEarner();
         return;
+    }
+    
+    tree_node<int,shared_ptr<Employee>> *Company::AddEmployeeToIDTree(int id, shared_ptr<Employee> emp)
+    {
+        return(this->employees_by_id.addNode(id,emp));
+    }
 
-
+    tree_node<int,shared_ptr<Employee>> *Company::getEmployeeTreeByIDRoot()
+    {
+        return(this->employees_by_id.root);
     }
 
     void Company::RemoveEmployeeFromSalaryTree(SalaryID sal_id)

@@ -1182,7 +1182,7 @@ HireEmployee: SUCCESS
 GetEmployeeInfo: INVALID_INPUT
 GetNumEmployeesMatching: INVALID_INPUT
 HireEmployee: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 1, 1 match
 GetHighestEarnerInEachCompany: INVALID_INPUT
 AcquireCompany: INVALID_INPUT
 RemoveCompany: FAILURE
@@ -1355,7 +1355,7 @@ GetNumEmployeesMatching: INVALID_INPUT
 AddCompany: INVALID_INPUT
 GetNumEmployeesMatching: INVALID_INPUT
 HireEmployee: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 1, 1 match
+GetNumEmployeesMatching: SUCCESS. Out of -1, 1 match
 PromoteEmployee: SUCCESS
 GetEmployeeInfo: SUCCESS. Employee 2978 works at 417 and earns 46 at grade 2
 GetEmployeeInfo: INVALID_INPUT
