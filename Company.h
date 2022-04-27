@@ -55,6 +55,8 @@ namespace MIVNI{
         int getCompanyNumOfEmployees();
         void increasecompanyvalue(int increase);
         int getHighestEarnerID();
+        void AddEmployeeToSalaryTree(SalaryID sal_id, shared_ptr<Employee> emp);
+        void RemoveEmployeeFromSalaryTree(SalaryID sal_id);
         shared_ptr<Employee> getHighestEarner();
         AVL_Tree<int,shared_ptr<Employee>>* getCompanyEmployeesTreeByID();
         void changeCompanyEmployeesTreeByID(AVL_Tree<int,shared_ptr<Employee>>& tree);

@@ -1,5 +1,5 @@
 //
-// Created by omima on 11/27/2021.
+// Created by Ahmad on 11/27/2021.
 //
 
 #ifndef AVL_IMP_AO_AVL_TREE_H
@@ -225,6 +225,11 @@ void AVL_Tree<Key, Data>::removeNode(Key key) {
 }
 template<class Key, class Data>
 tree_node<Key, Data>* AVL_Tree<Key, Data>::removeNodeAux(tree_node<Key, Data> *curr_root, Key key) {
+    // added by - saleh
+    if (curr_root == nullptr){
+        return nullptr; // may cause wrong behavior!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! - saleh
+    }
+    //added by - saleh
     if (key < *curr_root->key) {
         curr_root->left_son = removeNodeAux(curr_root->left_son, key);
     } else if (key > *curr_root->key) {

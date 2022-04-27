@@ -15,6 +15,25 @@ namespace MIVNI
 
 
     }
+
+    void Company::AddEmployeeToSalaryTree(SalaryID sal_id, shared_ptr<Employee> emp)
+    {
+        this->employees_by_salary.addNode(sal_id,emp);
+        this->updateHighestEarner();
+        return;
+
+
+    }
+
+    void Company::RemoveEmployeeFromSalaryTree(SalaryID sal_id)
+    {
+        this->employees_by_salary.removeNode(sal_id);
+        this->updateHighestEarner();
+        return;
+
+
+    }
+
     void Company::RemoveEmployee(int EmployeeID, int Salary){
         employees_by_id.removeNode(EmployeeID);
         SalaryID new_emp = SalaryID(Salary, EmployeeID);

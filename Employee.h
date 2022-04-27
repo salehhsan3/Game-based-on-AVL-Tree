@@ -37,17 +37,18 @@ namespace MIVNI{
             {
                 if (salary == other.salary)
                 {
-                   return ID > other.ID;
+                   return (this->ID > other.ID);
                  }
                 return salary < other.salary;
             }
             bool operator>(const SalaryID& other) const
             {
-                if (salary == other.salary)
-                {
-                    return ID < other.ID;
-                }
-                return salary > other.salary;
+                // if (salary == other.salary)
+                // {
+                //     return ID < other.ID;
+                // }
+                // return salary > other.salary;
+                return( (! ( (*this) < other) ) && (! ( (*this) == other) ) );
             }
     };
 
