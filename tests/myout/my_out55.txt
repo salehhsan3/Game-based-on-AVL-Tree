@@ -13161,7 +13161,7 @@ GetHighestEarnerInEachCompany: INVALID_INPUT
 AcquireCompany: INVALID_INPUT
 IncreaseCompanyValue: SUCCESS
 RemoveCompany: FAILURE
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 1, 1 match
 GetHighestEarnerInEachCompany: INVALID_INPUT
 AcquireCompany: INVALID_INPUT
 IncreaseCompanyValue: SUCCESS

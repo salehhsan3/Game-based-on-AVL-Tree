@@ -2433,7 +2433,7 @@ GetNumEmployeesMatching: INVALID_INPUT
 GetHighestEarnerInEachCompany: INVALID_INPUT
 HireEmployee: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 1, 0 match
 HireEmployee: SUCCESS
 HireEmployee: SUCCESS
 IncreaseCompanyValue: SUCCESS

@@ -8485,7 +8485,7 @@ GetHighestEarnerInEachCompany: INVALID_INPUT
 RemoveEmployee: FAILURE
 HireEmployee: SUCCESS
 IncreaseCompanyValue: INVALID_INPUT
-GetNumEmployeesMatching: SUCCESS. Out of 6, 1 match
+GetNumEmployeesMatching: SUCCESS. Out of 5, 1 match
 RemoveEmployee: INVALID_INPUT
 GetHighestEarnerInEachCompany: INVALID_INPUT
 AddEmployee: SUCCESS

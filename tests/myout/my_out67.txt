@@ -11322,7 +11322,7 @@ PromoteEmployee: SUCCESS
 GetCompanyInfo: SUCCESS. Company 161 has 2 employees and value 9
 HireEmployee: FAILURE
 AddEmployee: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 1, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 2, 0 match
 GetNumEmployeesMatching: INVALID_INPUT
 GetNumEmployeesMatching: INVALID_INPUT
 GetNumEmployeesMatching: INVALID_INPUT

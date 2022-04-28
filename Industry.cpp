@@ -38,6 +38,27 @@ namespace MIVNI{
             arr3[k++] = arr2[j++];
     }
 
+    void Industry::merge_func_by_id(shared_ptr<Employee> arr1[], shared_ptr<Employee> arr2[] ,int n1, int n2,
+                    shared_ptr<Employee>  arr3[]){
+        int i = 0, j = 0, k = 0;
+
+        while (i<n1 && j <n2)
+        {
+            if ((arr1[i]->getEmployeeID()) < (arr2[j]->getEmployeeID()))
+                arr3[k++] = arr1[i++];
+            else
+                arr3[k++] = arr2[j++];
+        }
+
+        // Store remaining elements of first array
+        while (i < n1)
+            arr3[k++] = arr1[i++];
+
+        // Store remaining elements of second array
+        while (j < n2)
+            arr3[k++] = arr2[j++];
+    }
+
     tree_node<int, shared_ptr<Employee>> *Industry::createFromSortedArrAuxForID(shared_ptr<Employee> array[], int start,
                                                         int end, tree_node<int, shared_ptr<Employee>> *parent){
         if(start > end)
@@ -351,18 +372,20 @@ namespace MIVNI{
         if(!companies.findNode(AcquirerID) || !companies.findNode(TargetID)){
             return FAILURE;
         }
+
         shared_ptr<Company> acquirer_company = *(companies.findNode(AcquirerID)->data);
         shared_ptr<Company> target_company = *(companies.findNode(TargetID)->data);
         int acquirer_value = acquirer_company->getCompanyValue();
         int target_value = target_company->getCompanyValue();
         int after_value = ((acquirer_value + target_value)*Factor);
-        if (acquirer_value < 10*target_value){
+
+        if (acquirer_value < (10*target_value) ){
             return FAILURE;
         }
 
-        if(!companies_with_employees.findNode(TargetID)){ // TargetCompany has no employess case
+        if(companies_with_employees.findNode(TargetID) == nullptr){ // TargetCompany has no employess case
             RemoveCompany(TargetID);
-            acquirer_company->UpdateCompanyValue((acquirer_value+target_value)*Factor);
+            acquirer_company->UpdateCompanyValue(after_value);
             return SUCCESS;
         }
 
@@ -370,10 +393,10 @@ namespace MIVNI{
         int target_num = target_company->getCompanyNumOfEmployees();
         int after_num = acquire_num + target_num;
 
-        AVL_Tree<int, shared_ptr<Employee>>* acquire_employee_tree = companies_with_employees.findNode(AcquirerID)->data->get()->getCompanyEmployeesTreeByID();
-        AVL_Tree<int, shared_ptr<Employee>>* target_employee_tree = companies_with_employees.findNode(TargetID)->data->get()->getCompanyEmployeesTreeByID();
-        AVL_Tree<SalaryID, shared_ptr<Employee>>* acquire_employee_tree_salary = companies_with_employees.findNode(AcquirerID)->data->get()->getCompanyEmployeesTreeBySalary();
-        AVL_Tree<SalaryID, shared_ptr<Employee>>* target_employee_tree_salary = companies_with_employees.findNode(TargetID)->data->get()->getCompanyEmployeesTreeBySalary();
+        AVL_Tree<int, shared_ptr<Employee>>* acquire_employee_tree = companies.findNode(AcquirerID)->data->get()->getCompanyEmployeesTreeByID();
+        AVL_Tree<int, shared_ptr<Employee>>* target_employee_tree = companies.findNode(TargetID)->data->get()->getCompanyEmployeesTreeByID();
+        AVL_Tree<SalaryID, shared_ptr<Employee>>* acquire_employee_tree_salary = companies.findNode(AcquirerID)->data->get()->getCompanyEmployeesTreeBySalary();
+        AVL_Tree<SalaryID, shared_ptr<Employee>>* target_employee_tree_salary = companies.findNode(TargetID)->data->get()->getCompanyEmployeesTreeBySalary();
 
         shared_ptr<Employee> *acquire_employees_arr = new shared_ptr<Employee>[acquire_num]();
         shared_ptr<Employee> *target_employees_arr = new shared_ptr<Employee>[target_num]();
@@ -394,11 +417,14 @@ namespace MIVNI{
         visitInOrder3(target_employees_arr_salary, target_employee_tree_salary->root, &counter, target_num);
         counter_ptr = nullptr;
 
-        shared_ptr<Employee> *new_arr = new shared_ptr<Employee>[acquire_num+target_num](); //potential memory leaks?
-        merge_func(target_employees_arr, acquire_employees_arr, target_num, acquire_num, new_arr);
-        shared_ptr<Employee> *new_arr_salary = new shared_ptr<Employee>[acquire_num+target_num](); //potential memory leaks?
+        shared_ptr<Employee> *new_arr = new shared_ptr<Employee>[after_num](); //potential memory leaks?
+        merge_func_by_id(target_employees_arr, acquire_employees_arr, target_num, acquire_num, new_arr);
+        shared_ptr<Employee> *new_arr_salary = new shared_ptr<Employee>[after_num](); //potential memory leaks?
         merge_func(target_employees_arr_salary, acquire_employees_arr_salary, target_num, acquire_num, new_arr_salary);
-
+        if (x==1)
+        {
+            x++;
+        }
         for(int i=0; i<target_num+acquire_num; i++){
 //            if (new_arr[i])//needed?
                 new_arr[i]->UpdateCompanyID(AcquirerID);

@@ -7434,7 +7434,7 @@ AcquireCompany: FAILURE
 PromoteEmployee: SUCCESS
 PromoteEmployee: INVALID_INPUT
 GetAllEmployeesBySalary: INVALID_INPUT
-GetNumEmployeesMatching: SUCCESS. Out of 4, 3 match
+GetNumEmployeesMatching: SUCCESS. Out of 6, 4 match
 GetEmployeeInfo: SUCCESS. Employee 5248 works at 480 and earns 237 at grade 10
 AddCompany: SUCCESS
 RemoveEmployee: INVALID_INPUT

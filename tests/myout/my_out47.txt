@@ -12744,7 +12744,7 @@ GetNumEmployeesMatching: INVALID_INPUT
 HireEmployee: SUCCESS
 PromoteEmployee: SUCCESS
 HireEmployee: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 4, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 5, 0 match
 PromoteEmployee: INVALID_INPUT
 IncreaseCompanyValue: SUCCESS
 PromoteEmployee: SUCCESS

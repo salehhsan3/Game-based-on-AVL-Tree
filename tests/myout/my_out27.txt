@@ -6950,7 +6950,7 @@ GetNumEmployeesMatching: INVALID_INPUT
 GetNumEmployeesMatching: INVALID_INPUT
 GetNumEmployeesMatching: INVALID_INPUT
 IncreaseCompanyValue: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 15, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 13, 0 match
 PromoteEmployee: SUCCESS
 GetEmployeeInfo: SUCCESS. Employee 5743 works at 125 and earns 67 at grade 3
 GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match

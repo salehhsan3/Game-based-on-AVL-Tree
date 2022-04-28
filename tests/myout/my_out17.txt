@@ -14260,7 +14260,7 @@ GetAllEmployeesBySalary: FAILURE
 GetNumEmployeesMatching: INVALID_INPUT
 GetHighestEarner: FAILURE
 AcquireCompany: FAILURE
-GetNumEmployeesMatching: SUCCESS. Out of 1, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
 IncreaseCompanyValue: SUCCESS
 GetAllEmployeesBySalary: FAILURE
 AcquireCompany: FAILURE

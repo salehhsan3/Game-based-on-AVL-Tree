@@ -13243,7 +13243,7 @@ GetCompanyInfo: SUCCESS. Company 437 has 6 employees and value 22
 HireEmployee: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT
 GetHighestEarnerInEachCompany: INVALID_INPUT
-GetNumEmployeesMatching: SUCCESS. Out of 6, 1 match
+GetNumEmployeesMatching: SUCCESS. Out of 7, 2 match
 AddCompany: SUCCESS
 AcquireCompany: INVALID_INPUT
 RemoveEmployee: SUCCESS

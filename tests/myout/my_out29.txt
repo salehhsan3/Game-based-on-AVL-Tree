@@ -15146,7 +15146,7 @@ GetNumEmployeesMatching: INVALID_INPUT
 GetHighestEarnerInEachCompany: INVALID_INPUT
 GetEmployeeInfo: SUCCESS. Employee 3114 works at 270 and earns 66 at grade 2
 IncreaseCompanyValue: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 4, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 6, 0 match
 IncreaseCompanyValue: SUCCESS
 IncreaseCompanyValue: SUCCESS
 HireEmployee: SUCCESS

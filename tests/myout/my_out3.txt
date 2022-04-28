@@ -14171,7 +14171,7 @@ GetNumEmployeesMatching: INVALID_INPUT
 PromoteEmployee: SUCCESS
 GetAllEmployeesBySalary: INVALID_INPUT
 GetNumEmployeesMatching: INVALID_INPUT
-GetNumEmployeesMatching: SUCCESS. Out of 4, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 3, 0 match
 IncreaseCompanyValue: SUCCESS
 GetAllEmployeesBySalary: SUCCESS. Highest earners:
 Employee Rank || Employee ID

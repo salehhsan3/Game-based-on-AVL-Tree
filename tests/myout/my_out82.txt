@@ -8081,7 +8081,7 @@ RemoveEmployee: SUCCESS
 PromoteEmployee: SUCCESS
 GetHighestEarner: FAILURE
 HireEmployee: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 1, 0 match
 AcquireCompany: INVALID_INPUT
 HireEmployee: SUCCESS
 HireEmployee: SUCCESS
@@ -10025,7 +10025,7 @@ GetNumEmployeesMatching: INVALID_INPUT
 AcquireCompany: FAILURE
 PromoteEmployee: SUCCESS
 AddEmployee: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 6, 4 match
+GetNumEmployeesMatching: SUCCESS. Out of 7, 5 match
 GetHighestEarnerInEachCompany: INVALID_INPUT
 AddCompany: SUCCESS
 PromoteEmployee: SUCCESS
@@ -13225,7 +13225,7 @@ Employee Rank || Employee ID
 174 - 7514
 GetEmployeeInfo: INVALID_INPUT
 IncreaseCompanyValue: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 1, 0 match
 IncreaseCompanyValue: SUCCESS
 HireEmployee: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT

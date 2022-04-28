@@ -10822,7 +10822,7 @@ RemoveEmployee: FAILURE
 AddCompany: SUCCESS
 PromoteEmployee: SUCCESS
 PromoteEmployee: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 2, 0 match
 GetNumEmployeesMatching: INVALID_INPUT
 GetHighestEarner: FAILURE
 RemoveEmployee: SUCCESS

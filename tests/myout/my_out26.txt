@@ -13799,7 +13799,7 @@ PromoteEmployee: SUCCESS
 IncreaseCompanyValue: SUCCESS
 AddCompany: SUCCESS
 AddCompany: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 9, 9 match
+GetNumEmployeesMatching: SUCCESS. Out of 8, 8 match
 IncreaseCompanyValue: SUCCESS
 AddCompany: SUCCESS
 GetCompanyInfo: INVALID_INPUT

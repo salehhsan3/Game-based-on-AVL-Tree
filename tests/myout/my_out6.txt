@@ -4577,7 +4577,7 @@ GetNumEmployeesMatching: INVALID_INPUT
 AcquireCompany: FAILURE
 GetCompanyInfo: SUCCESS. Company 301 has 7 employees and value 82
 IncreaseCompanyValue: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 8, 7 match
+GetNumEmployeesMatching: SUCCESS. Out of 9, 8 match
 IncreaseCompanyValue: INVALID_INPUT
 HireEmployee: SUCCESS
 GetHighestEarnerInEachCompany: INVALID_INPUT
@@ -12705,7 +12705,7 @@ IncreaseCompanyValue: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT
 IncreaseCompanyValue: SUCCESS
 AcquireCompany: FAILURE
-GetNumEmployeesMatching: SUCCESS. Out of 2, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 3, 1 match
 AcquireCompany: INVALID_INPUT
 AcquireCompany: INVALID_INPUT
 AcquireCompany: SUCCESS

@@ -9188,7 +9188,7 @@ AcquireCompany: FAILURE
 GetHighestEarnerInEachCompany: INVALID_INPUT
 GetNumEmployeesMatching: INVALID_INPUT
 HireEmployee: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 1, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 2, 0 match
 GetHighestEarnerInEachCompany: INVALID_INPUT
 IncreaseCompanyValue: INVALID_INPUT
 GetNumEmployeesMatching: INVALID_INPUT

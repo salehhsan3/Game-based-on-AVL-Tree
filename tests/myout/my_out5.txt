@@ -13378,7 +13378,7 @@ GetEmployeeInfo: SUCCESS. Employee 5675 works at 302 and earns 78 at grade 8
 PromoteEmployee: SUCCESS
 PromoteEmployee: SUCCESS
 GetEmployeeInfo: SUCCESS. Employee 503 works at 118 and earns 239 at grade 5
-GetNumEmployeesMatching: SUCCESS. Out of 5, 2 match
+GetNumEmployeesMatching: SUCCESS. Out of 6, 3 match
 PromoteEmployee: SUCCESS
 GetHighestEarner: SUCCESS. Highest earner is 1634
 GetEmployeeInfo: SUCCESS. Employee 588 works at 284 and earns 29 at grade 6

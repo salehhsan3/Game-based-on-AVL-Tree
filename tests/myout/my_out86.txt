@@ -16358,7 +16358,7 @@ GetHighestEarnerInEachCompany: INVALID_INPUT
 GetNumEmployeesMatching: INVALID_INPUT
 IncreaseCompanyValue: SUCCESS
 GetHighestEarner: FAILURE
-GetNumEmployeesMatching: SUCCESS. Out of 4, 2 match
+GetNumEmployeesMatching: SUCCESS. Out of 3, 2 match
 GetAllEmployeesBySalary: SUCCESS. Highest earners:
 Employee Rank || Employee ID
 0 - 6107

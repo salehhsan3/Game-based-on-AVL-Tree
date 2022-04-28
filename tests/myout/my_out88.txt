@@ -10979,7 +10979,7 @@ HireEmployee: SUCCESS
 GetHighestEarnerInEachCompany: INVALID_INPUT
 GetAllEmployeesBySalary: FAILURE
 IncreaseCompanyValue: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 9, 2 match
+GetNumEmployeesMatching: SUCCESS. Out of 7, 3 match
 GetNumEmployeesMatching: INVALID_INPUT
 PromoteEmployee: SUCCESS
 IncreaseCompanyValue: INVALID_INPUT

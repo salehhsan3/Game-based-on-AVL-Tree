@@ -4772,7 +4772,7 @@ GetNumEmployeesMatching: INVALID_INPUT
 GetHighestEarner: SUCCESS. Highest earner is 675
 AcquireCompany: FAILURE
 AcquireCompany: INVALID_INPUT
-GetNumEmployeesMatching: SUCCESS. Out of 4, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 5, 0 match
 AddEmployee: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT
 RemoveCompany: INVALID_INPUT

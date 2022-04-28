@@ -5710,7 +5710,7 @@ GetHighestEarnerInEachCompany: INVALID_INPUT
 GetNumEmployeesMatching: INVALID_INPUT
 AcquireCompany: SUCCESS
 HireEmployee: FAILURE
-GetNumEmployeesMatching: SUCCESS. Out of 1, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 2, 1 match
 HireEmployee: SUCCESS
 GetHighestEarner: SUCCESS. Highest earner is 6044
 GetHighestEarner: SUCCESS. Highest earner is 6044

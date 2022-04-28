@@ -11287,7 +11287,7 @@ GetCompanyInfo: SUCCESS. Company 447 has 0 employees and value 2
 AcquireCompany: FAILURE
 PromoteEmployee: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 2, 0 match
 PromoteEmployee: SUCCESS
 PromoteEmployee: SUCCESS
 GetEmployeeInfo: SUCCESS. Employee 5238 works at 53 and earns 68 at grade 6

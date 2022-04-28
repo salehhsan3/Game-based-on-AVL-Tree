@@ -83,11 +83,7 @@ namespace MIVNI{
         }
         bool operator>(const Employee& emp) const
         {
-            if (salary == emp.salary)
-            {
-                return ID < emp.ID;
-            }
-            return salary > emp.salary;
+            return( (! ( (*this) < emp) ) && (! ( (*this) == emp) ) );
         }
         int getEmployeeID();
         int getEmployeeGrade();

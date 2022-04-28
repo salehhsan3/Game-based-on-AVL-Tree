@@ -13310,7 +13310,7 @@ GetEmployeeInfo: SUCCESS. Employee 5879 works at 450 and earns 84 at grade 3
 PromoteEmployee: SUCCESS
 AddEmployee: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 2, 2 match
 GetAllEmployeesBySalary: SUCCESS. Highest earners:
 Employee Rank || Employee ID
 0 - 5555
@@ -13704,7 +13704,7 @@ GetNumEmployeesMatching: INVALID_INPUT
 GetCompanyInfo: SUCCESS. Company 71 has 3 employees and value 13
 PromoteEmployee: SUCCESS
 AddCompany: FAILURE
-GetNumEmployeesMatching: SUCCESS. Out of 1, 1 match
+GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
 GetEmployeeInfo: SUCCESS. Employee 1430 works at 195 and earns 58 at grade 1
 HireEmployee: SUCCESS
 GetCompanyInfo: SUCCESS. Company 239 has 3 employees and value 59

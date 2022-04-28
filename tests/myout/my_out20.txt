@@ -13262,7 +13262,7 @@ GetNumEmployeesMatching: INVALID_INPUT
 GetAllEmployeesBySalary: FAILURE
 GetCompanyInfo: SUCCESS. Company 152 has 3 employees and value 13
 HireEmployee: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 5, 1 match
+GetNumEmployeesMatching: SUCCESS. Out of 9, 3 match
 HireEmployee: INVALID_INPUT
 HireEmployee: SUCCESS
 HireEmployee: SUCCESS
@@ -14395,7 +14395,7 @@ Employee Rank || Employee ID
 AddEmployee: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT
 GetNumEmployeesMatching: INVALID_INPUT
-GetNumEmployeesMatching: SUCCESS. Out of 5, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 10, 0 match
 GetHighestEarnerInEachCompany: INVALID_INPUT
 RemoveEmployee: FAILURE
 GetNumEmployeesMatching: INVALID_INPUT

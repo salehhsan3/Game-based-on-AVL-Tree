@@ -3615,7 +3615,7 @@ PromoteEmployee: SUCCESS
 GetEmployeeInfo: SUCCESS. Employee 7903 works at 345 and earns 26 at grade 8
 RemoveEmployee: INVALID_INPUT
 IncreaseCompanyValue: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 1, 0 match
 IncreaseCompanyValue: INVALID_INPUT
 HireEmployee: SUCCESS
 GetCompanyInfo: SUCCESS. Company 187 has 9 employees and value 43
