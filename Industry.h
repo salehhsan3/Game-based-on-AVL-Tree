@@ -22,20 +22,11 @@ namespace MIVNI{
         AVL_Tree<int,shared_ptr<Company>> companies_with_employees;
 
     public:
-        Industry(
-                // int num_of_workers,
-                // int num_of_companies_with_employees,
-                // Shared_ptr<Employee> highest_earner,
-                // AVL_Tree<int,Employee> workers_by_id,
-                // AVL_Tree<int,Employee> workers_by_grade,
-                // AVL_Tree<int,Company> companies,
-                // AVL_Tree<int,Company> companies_with_employees
-        );
+        Industry();
         Industry(const Industry& ind) = default;
         Industry& operator=(const Industry& ind) = default;
         ~Industry()= default;
 
-        void UpdateIndustryHighestEarnerAfterAddition(shared_ptr<Employee> emp);
 
         static void getEmployeesBySalary(tree_node<SalaryID,shared_ptr<Employee>>* node, int *Employees, int *index);
 

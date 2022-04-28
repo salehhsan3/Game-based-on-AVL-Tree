@@ -10,7 +10,7 @@ namespace MIVNI
         this->employees_by_id.addNode(EmployeeID,emp);
         this->employees_by_salary.addNode(salaryId,emp);
         this->num_of_employees++;
-        UpdateCompanyHighestEarnerAfterAddition(emp);
+        this->updateHighestEarner();
         return;   
 
 
@@ -41,38 +41,14 @@ namespace MIVNI
 
 
     }
-
     void Company::RemoveEmployee(int EmployeeID, int Salary){
+        SalaryID sal_id = SalaryID(Salary, EmployeeID);
         employees_by_id.removeNode(EmployeeID);
-        SalaryID new_emp = SalaryID(Salary, EmployeeID);
-        employees_by_salary.removeNode(new_emp);
+        employees_by_salary.removeNode(sal_id);
         num_of_employees--;
-        // this->highest_earner = *(employees_by_salary.max->data); // updateHighestEarnerafterRemove
         this->updateHighestEarner();
         return;
 
-    }
-    void Company::UpdateCompanyHighestEarnerAfterAddition(shared_ptr<Employee> emp)
-    {
-        if (this->highest_earner == nullptr)
-        {
-            this->highest_earner = emp;
-            return;
-        }
-        if ( emp->getEmployeeSalary() > this->highest_earner->getEmployeeSalary() )
-        {
-            this->highest_earner = emp;
-            return;
-        }
-
-        if ( (emp->getEmployeeSalary() == this->highest_earner->getEmployeeSalary()) 
-                 && ( emp->getEmployeeID() < this->highest_earner->getEmployeeID() ) )
-
-        {
-            this->highest_earner = emp;
-            return;
-        }
-        return;
     }
     int Company::getCompanyID()
     {
