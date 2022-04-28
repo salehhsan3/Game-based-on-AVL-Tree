@@ -5,20 +5,19 @@
 
 namespace MIVNI
 {
-    void Company::AddEmployee(int EmployeeID, int Salary, shared_ptr<Employee> emp, SalaryID salaryId)
+    void Company::AddEmployee(int EmployeeID,  shared_ptr<Employee> emp, SalaryID salaryId)
     {
         this->employees_by_id.addNode(EmployeeID,emp);
         this->employees_by_salary.addNode(salaryId,emp);
         this->num_of_employees++;
         this->updateHighestEarner();
         return;   
-
-
     }
 
     void Company::AddEmployeeToSalaryTree(SalaryID sal_id, shared_ptr<Employee> emp)
     {
         this->employees_by_salary.addNode(sal_id,emp);
+        // this->employees_by_id.addNode(sal_id.getID(),emp);
         this->updateHighestEarner();
         return;
     }
@@ -60,12 +59,12 @@ namespace MIVNI
     }
     int Company::getCompanyNumOfEmployees()
     {
-        return num_of_employees;
+        return this->num_of_employees;
     }
 
     void Company::increasecompanyvalue(int increase)
     {
-        this->value += increase;
+        this->value+=increase;
     }
 
     void Company::UpdateCompanyValue(int new_value){

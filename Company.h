@@ -42,7 +42,7 @@ namespace MIVNI{
         {}
         ~Company() = default;
 
-        void AddEmployee(int EmployeeID, int Salary, shared_ptr<Employee> emp, SalaryID salary_id);
+        void AddEmployee(int EmployeeID, shared_ptr<Employee> emp, SalaryID salary_id);
         void RemoveEmployee(int EmployeeID, int Salary);
         void GetCompanyInfo(int CompanyID, int *Value, int *NumEmployees);
         void UpdateCompanyValue(int new_value);

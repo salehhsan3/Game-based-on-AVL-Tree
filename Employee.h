@@ -43,12 +43,15 @@ namespace MIVNI{
             }
             bool operator>(const SalaryID& other) const
             {
-                // if (salary == other.salary)
-                // {
-                //     return ID < other.ID;
-                // }
-                // return salary > other.salary;
                 return( (! ( (*this) < other) ) && (! ( (*this) == other) ) );
+            }
+            int getSalary()
+            {
+                return this->salary;
+            }
+            int getID()
+            {
+                return this->ID;
             }
     };
 

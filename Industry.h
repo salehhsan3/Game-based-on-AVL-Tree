@@ -51,6 +51,10 @@ namespace MIVNI{
 
         void visitInOrder2(shared_ptr<Employee> * array, tree_node<int, shared_ptr<Employee> >* node, int* counter_ptr, int num);
 
+        void addEmployeeToIndustry(int EmployeeID, shared_ptr<Employee> emp, SalaryID salaryId);
+        
+        void removeEmployeeFromIndustry(int EmployeeID, SalaryID salaryId);
+        
         tree_node<int, shared_ptr<Employee>>* createFromSortedArrAuxForID(shared_ptr<Employee> array[], int start,
                                                               int end, tree_node<int, shared_ptr<Employee>> *parent);
 

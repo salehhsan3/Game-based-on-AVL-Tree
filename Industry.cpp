@@ -163,6 +163,14 @@ namespace MIVNI{
         return SUCCESS;
     }
 
+    void Industry::addEmployeeToIndustry(int EmployeeID, shared_ptr<Employee> emp, SalaryID salaryId)
+    {
+        this->workers_by_id.addNode(EmployeeID,emp);
+        this->workers_by_salary.addNode(salaryId,emp);
+        this->num_of_workers++;
+        this->updateHighestEarner();
+    }
+
     StatusType Industry::AddEmployee(int EmployeeID, int CompanyID, int Salary, int Grade)
     {
         if (EmployeeID <= 0 || CompanyID <= 0 || Salary <= 0 || Grade < 0)
@@ -180,15 +188,19 @@ namespace MIVNI{
         {
             this->companies_with_employees.addNode(CompanyID,comp_to_find);
         }
-        SalaryID new_emp = SalaryID(Salary, EmployeeID);
-        comp_to_find->AddEmployee(EmployeeID,Salary,emp_to_add, new_emp);
-
-        this->workers_by_id.addNode(EmployeeID,emp_to_add);
-        this->workers_by_salary.addNode(new_emp,emp_to_add);
-        this->num_of_workers++;
-        this->updateHighestEarner();
+        SalaryID sal_id = SalaryID(Salary, EmployeeID);
+        comp_to_find->AddEmployee(EmployeeID,emp_to_add, sal_id);
+        this->addEmployeeToIndustry(EmployeeID,emp_to_add,sal_id);
         return SUCCESS;
     } 
+
+    void Industry::removeEmployeeFromIndustry(int EmployeeID, SalaryID salaryId)
+    {
+        this->workers_by_salary.removeNode(salaryId);
+        this->workers_by_id.removeNode(EmployeeID);
+        this->num_of_workers--;
+        this->updateHighestEarner();
+    }
 
     StatusType Industry::RemoveEmployee(int EmployeeID){
         if(EmployeeID <= 0){
@@ -208,10 +220,7 @@ namespace MIVNI{
             curr_company->RemoveEmployee(EmployeeID,emp_salary);
         }
         SalaryID sal_id = SalaryID(emp_salary, EmployeeID);
-        workers_by_salary.removeNode(sal_id);
-        workers_by_id.removeNode(EmployeeID);
-        num_of_workers--;
-        this->updateHighestEarner();
+        this->removeEmployeeFromIndustry(EmployeeID,sal_id);
         return SUCCESS;
     }
 
@@ -300,10 +309,13 @@ namespace MIVNI{
         shared_ptr<Employee> emp = *(this->workers_by_id.findNode(EmployeeID)->data);
         SalaryID sal_id = SalaryID(emp->getEmployeeSalary(),EmployeeID);
         shared_ptr<Company> comp = *(this->companies.findNode(emp->getEmployersid())->data);
+
         comp->RemoveEmployeeFromSalaryTree(sal_id);
         this->workers_by_salary.removeNode(sal_id);
+
         emp->promote(SalaryIncrease,BumpGrade);
         sal_id = SalaryID(emp->getEmployeeSalary(),EmployeeID);
+
         comp->AddEmployeeToSalaryTree(sal_id,emp);
         this->workers_by_salary.addNode(sal_id,emp);
         this->updateHighestEarner();
@@ -331,6 +343,7 @@ namespace MIVNI{
         AddEmployee(EmployeeID, NewCompanyID, salary, grade);
         return SUCCESS;
     }
+
     StatusType Industry::AcquireCompany(int AcquirerID, int TargetID, double Factor){
         if(AcquirerID <= 0 || TargetID <= 0 || Factor < 1.00 || TargetID == AcquirerID){
             return INVALID_INPUT;
@@ -366,7 +379,10 @@ namespace MIVNI{
         shared_ptr<Employee> *target_employees_arr = new shared_ptr<Employee>[target_num]();
         shared_ptr<Employee> *acquire_employees_arr_salary = new shared_ptr<Employee>[acquire_num]();
         shared_ptr<Employee> *target_employees_arr_salary = new shared_ptr<Employee>[target_num]();
-
+        int x=0;
+        if ( AcquirerID==28 && TargetID==179 && Factor>2.35 && acquirer_value==136 && target_value==4 && acquire_num==15 && target_num==1 ){
+            x++;
+        }
         int counter = 0;
         int *counter_ptr = &counter;
         visitInOrder2(acquire_employees_arr, acquire_employee_tree->root, &counter, acquire_num);
@@ -398,11 +414,7 @@ namespace MIVNI{
         {
             this->companies_with_employees.removeNode(TargetID);
         }
-//        this->companies.removeNode(AcquirerID);
-//        if (acquire_num > 0)
-//        {
-//            this->companies_with_employees.removeNode(AcquirerID);
-//        }
+
         acquirer_company->UpdateCompanyValue(after_value);
         acquirer_company->updateNumOfEmployees(after_num);
         acquirer_company->getCompanyEmployeesTreeByID()->treeClear();
@@ -410,16 +422,7 @@ namespace MIVNI{
         acquirer_company->getCompanyEmployeesTreeBySalary()->treeClear();
         acquirer_company->changeCompanyEmployeesTreeBySalary(*new_tree_by_salary);
         acquirer_company->updateHighestEarner();
-        // AVL_Tree<int, shared_ptr<Employee>> empty_tree = AVL_Tree<int, shared_ptr<Employee>>();
-        // this->companies.addNode(AcquirerID,empty_tree);
-        // all_groups_tree.findNode(ReplacementID)->setData(new_tree);
 
-        // shared_ptr<Company> new_comp = make_shared<Company>(AcquirerID,after_value,after_num,new_tree_by_salary->max->data);
-        // new_comp->changeCompanyEmployeesTreeByID(*new_tree_by_id);
-        // new_comp->changeCompanyEmployeesTreeBySalary(*new_tree_by_salary);
-
-        // this->companies.addNode(AcquirerID,new_comp);
-        // new_comp->updateHighestEarner();
         this->updateHighestEarner();
         if (after_num > 0)
         {
@@ -441,12 +444,6 @@ namespace MIVNI{
             {
                 return FAILURE;
             }
-
-//            tree_node<SalaryID,shared_ptr<Employee>> *node = this->workers_by_salary.max;
-//            tree_node<int,shared_ptr<Employee>> *node_of_worker = this->workers_by_id.findNode(6060);
-//            SalaryID sal_id = SalaryID(145,6060);
-//            tree_node<SalaryID,shared_ptr<Employee>> *node_of_worker_salid = this->workers_by_salary.findNode(sal_id);
-//            tree_node<SalaryID,shared_ptr<Employee>> *node_max = this->workers_by_salary.max;
             *EmployeeID = (this->highest_earner->getEmployeeID());
             return SUCCESS;
         }
@@ -457,11 +454,6 @@ namespace MIVNI{
             return FAILURE;
         }
         *EmployeeID = ( comp_node->data->get()->getHighestEarnerID() );
-//        int x =0;
-//        if( (*EmployeeID) == 601)
-//        {
-////            tree_node<SalaryID,shared_ptr<Employee>> *find_node2 = this->workers_by_salary.;
-//        }
         return SUCCESS;
     }
 

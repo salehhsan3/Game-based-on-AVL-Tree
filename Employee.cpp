@@ -23,7 +23,7 @@ namespace MIVNI
     }
     void Employee::increaseSalary(int increase)
     {
-        this->salary += increase;
+        (this->salary)+=increase;
         return;
     }
     void Employee::bumpGrade(int bump)
