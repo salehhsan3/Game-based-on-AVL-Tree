@@ -1946,7 +1946,7 @@ HireEmployee: FAILURE
 RemoveCompany: INVALID_INPUT
 PromoteEmployee: INVALID_INPUT
 GetEmployeeInfo: SUCCESS. Employee 2326 works at 8 and earns 84 at grade 7
-GetNumEmployeesMatching: SUCCESS. Out of 1, 1 match
+GetNumEmployeesMatching: SUCCESS. Out of 4, 2 match
 PromoteEmployee: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT
 RemoveEmployee: FAILURE
@@ -2784,7 +2784,7 @@ HireEmployee: SUCCESS
 HireEmployee: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT
 IncreaseCompanyValue: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of -1, 1 match
+GetNumEmployeesMatching: SUCCESS. Out of 4, 2 match
 HireEmployee: SUCCESS
 AcquireCompany: INVALID_INPUT
 GetCompanyInfo: SUCCESS. Company 396 has 9 employees and value 54

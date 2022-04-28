@@ -547,7 +547,7 @@ GetHighestEarnerInEachCompany: INVALID_INPUT
 PromoteEmployee: SUCCESS
 RemoveEmployee: INVALID_INPUT
 RemoveEmployee: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 8, 1 match
+GetNumEmployeesMatching: SUCCESS. Out of 10, 1 match
 GetHighestEarner: SUCCESS. Highest earner is 3931
 HireEmployee: SUCCESS
 AcquireCompany: INVALID_INPUT

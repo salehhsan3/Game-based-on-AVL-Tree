@@ -1300,7 +1300,7 @@ IncreaseCompanyValue: INVALID_INPUT
 GetCompanyInfo: SUCCESS. Company 74 has 9 employees and value 95
 PromoteEmployee: INVALID_INPUT
 IncreaseCompanyValue: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 1, 1 match
+GetNumEmployeesMatching: SUCCESS. Out of 2, 1 match
 GetNumEmployeesMatching: INVALID_INPUT
 HireEmployee: SUCCESS
 AddCompany: SUCCESS
@@ -3729,7 +3729,7 @@ PromoteEmployee: SUCCESS
 HireEmployee: SUCCESS
 GetHighestEarner: SUCCESS. Highest earner is 3314
 GetHighestEarnerInEachCompany: INVALID_INPUT
-GetNumEmployeesMatching: SUCCESS. Out of -1, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
 GetNumEmployeesMatching: INVALID_INPUT
 GetCompanyInfo: SUCCESS. Company 466 has 8 employees and value 53
 GetAllEmployeesBySalary: FAILURE
@@ -4809,7 +4809,7 @@ GetEmployeeInfo: SUCCESS. Employee 7557 works at 183 and earns 86 at grade 3
 GetEmployeeInfo: SUCCESS. Employee 5157 works at 196 and earns 28 at grade 9
 GetHighestEarnerInEachCompany: SUCCESS. Highest earners:
 Company Index || Employee ID
-0 - 1930
+0 - 1445
 1 - 5745
 2 - 6978
 3 - 7578
@@ -6611,7 +6611,7 @@ GetEmployeeInfo: SUCCESS. Employee 1392 works at 267 and earns 210 at grade 5
 GetHighestEarner: FAILURE
 GetCompanyInfo: SUCCESS. Company 230 has 3 employees and value 16
 AcquireCompany: FAILURE
-GetNumEmployeesMatching: SUCCESS. Out of -1, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 2, 1 match
 IncreaseCompanyValue: SUCCESS
 PromoteEmployee: INVALID_INPUT
 PromoteEmployee: SUCCESS
@@ -10264,7 +10264,7 @@ Employee Rank || Employee ID
 173 - 7058
 174 - 7175
 175 - 6511
-GetNumEmployeesMatching: SUCCESS. Out of 1, 1 match
+GetNumEmployeesMatching: SUCCESS. Out of 2, 1 match
 HireEmployee: SUCCESS
 IncreaseCompanyValue: SUCCESS
 GetEmployeeInfo: SUCCESS. Employee 3127 works at 32 and earns 286 at grade 9
@@ -10470,7 +10470,7 @@ GetCompanyInfo: SUCCESS. Company 44 has 10 employees and value 24
 AcquireCompany: INVALID_INPUT
 GetHighestEarnerInEachCompany: INVALID_INPUT
 GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
-GetNumEmployeesMatching: SUCCESS. Out of -1, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
 IncreaseCompanyValue: SUCCESS
 RemoveEmployee: INVALID_INPUT
 GetCompanyInfo: SUCCESS. Company 74 has 13 employees and value 108
@@ -10489,7 +10489,7 @@ AcquireCompany: FAILURE
 PromoteEmployee: SUCCESS
 GetEmployeeInfo: SUCCESS. Employee 4834 works at 22 and earns 197 at grade 8
 PromoteEmployee: SUCCESS
-GetEmployeeInfo: SUCCESS. Employee 4741 works at 335 and earns 137 at grade 2
+GetEmployeeInfo: SUCCESS. Employee 4741 works at 22 and earns 137 at grade 2
 GetCompanyInfo: INVALID_INPUT
 AddEmployee: SUCCESS
 GetHighestEarner: SUCCESS. Highest earner is 3127
@@ -12454,7 +12454,7 @@ GetHighestEarner: FAILURE
 IncreaseCompanyValue: SUCCESS
 PromoteEmployee: SUCCESS
 RemoveCompany: FAILURE
-GetNumEmployeesMatching: SUCCESS. Out of -1, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
 GetCompanyInfo: SUCCESS. Company 223 has 1 employees and value 6
 PromoteEmployee: SUCCESS
 IncreaseCompanyValue: SUCCESS
@@ -13262,7 +13262,7 @@ GetNumEmployeesMatching: INVALID_INPUT
 GetAllEmployeesBySalary: FAILURE
 GetCompanyInfo: SUCCESS. Company 152 has 3 employees and value 13
 HireEmployee: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of -1, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 5, 1 match
 HireEmployee: INVALID_INPUT
 HireEmployee: SUCCESS
 HireEmployee: SUCCESS
@@ -13333,7 +13333,7 @@ GetNumEmployeesMatching: INVALID_INPUT
 GetCompanyInfo: SUCCESS. Company 367 has 11 employees and value 61
 GetNumEmployeesMatching: INVALID_INPUT
 PromoteEmployee: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 1, 0 match
 IncreaseCompanyValue: INVALID_INPUT
 GetNumEmployeesMatching: INVALID_INPUT
 PromoteEmployee: SUCCESS
@@ -14395,7 +14395,7 @@ Employee Rank || Employee ID
 AddEmployee: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT
 GetNumEmployeesMatching: INVALID_INPUT
-GetNumEmployeesMatching: SUCCESS. Out of -1, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 5, 0 match
 GetHighestEarnerInEachCompany: INVALID_INPUT
 RemoveEmployee: FAILURE
 GetNumEmployeesMatching: INVALID_INPUT
@@ -14609,7 +14609,7 @@ HireEmployee: SUCCESS
 HireEmployee: SUCCESS
 AcquireCompany: FAILURE
 IncreaseCompanyValue: SUCCESS
-GetEmployeeInfo: SUCCESS. Employee 3605 works at 335 and earns 49 at grade 2
+GetEmployeeInfo: SUCCESS. Employee 3605 works at 22 and earns 49 at grade 2
 PromoteEmployee: SUCCESS
 IncreaseCompanyValue: SUCCESS
 PromoteEmployee: SUCCESS
@@ -14844,7 +14844,7 @@ AddEmployee: SUCCESS
 AcquireCompany: FAILURE
 GetHighestEarnerInEachCompany: INVALID_INPUT
 HireEmployee: SUCCESS
-GetCompanyInfo: SUCCESS. Company 22 has 32 employees and value 46755
+GetCompanyInfo: SUCCESS. Company 22 has 30 employees and value 46755
 RemoveEmployee: INVALID_INPUT
 GetHighestEarner: SUCCESS. Highest earner is 3005
 GetCompanyInfo: SUCCESS. Company 297 has 10 employees and value 70
@@ -16594,7 +16594,7 @@ GetHighestEarner: SUCCESS. Highest earner is 3005
 IncreaseCompanyValue: SUCCESS
 HireEmployee: SUCCESS
 GetAllEmployeesBySalary: INVALID_INPUT
-GetNumEmployeesMatching: SUCCESS. Out of -1, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
 IncreaseCompanyValue: SUCCESS
 PromoteEmployee: SUCCESS
 GetEmployeeInfo: SUCCESS. Employee 3098 works at 74 and earns 139 at grade 6
@@ -17075,7 +17075,7 @@ HireEmployee: SUCCESS
 RemoveEmployee: INVALID_INPUT
 RemoveEmployee: FAILURE
 GetNumEmployeesMatching: INVALID_INPUT
-GetNumEmployeesMatching: SUCCESS. Out of -1, 1 match
+GetNumEmployeesMatching: SUCCESS. Out of 2, 2 match
 IncreaseCompanyValue: SUCCESS
 HireEmployee: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT
@@ -17576,7 +17576,7 @@ GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
 HireEmployee: SUCCESS
 HireEmployee: SUCCESS
 RemoveCompany: FAILURE
-GetNumEmployeesMatching: SUCCESS. Out of -1, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
 RemoveEmployee: SUCCESS
 AcquireCompany: INVALID_INPUT
 GetNumEmployeesMatching: INVALID_INPUT

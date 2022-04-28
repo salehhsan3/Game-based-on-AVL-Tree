@@ -39,7 +39,7 @@ namespace MIVNI{
 
         static void getEmployeesBySalary(tree_node<SalaryID,shared_ptr<Employee>>* node, int *Employees, int *index);
 
-        static void countEmployeesByID(tree_node<int,shared_ptr<Employee>>* node, int MinEmployeeID, int MaxEmployeeId, int *counter);
+        static int countEmployeesByID(tree_node<int,shared_ptr<Employee>>* node, int MinEmployeeID, int MaxEmployeeId);
 
         static void getEmployeesByIDInArray(tree_node<int,shared_ptr<Employee>>* node, shared_ptr<Employee> *Employees, int *index, int MinEmployeeID, int MaxEmployeeId);
 
@@ -52,6 +52,8 @@ namespace MIVNI{
         void updateHighestEarner();
 
         static int countNodes(tree_node<int,shared_ptr<Company>> *node);
+
+        void visitInOrder3(shared_ptr<Employee> * array, tree_node<SalaryID, shared_ptr<Employee> >* node, int* counter_ptr, int num);
 
         void merge_func(shared_ptr<Employee> arr1[], shared_ptr<Employee> arr2[] ,int n1, int n2,
                         shared_ptr<Employee>  arr3[]);

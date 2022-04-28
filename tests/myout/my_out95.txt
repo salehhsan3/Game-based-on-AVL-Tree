@@ -150,7 +150,7 @@ AddEmployee: SUCCESS
 AddEmployee: SUCCESS
 IncreaseCompanyValue: SUCCESS
 HireEmployee: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 1, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 2, 0 match
 GetNumEmployeesMatching: INVALID_INPUT
 GetEmployeeInfo: SUCCESS. Employee 1683 works at 246 and earns 9 at grade 0
 GetNumEmployeesMatching: INVALID_INPUT
@@ -2001,7 +2001,7 @@ GetNumEmployeesMatching: INVALID_INPUT
 GetEmployeeInfo: SUCCESS. Employee 7670 works at 245 and earns 53 at grade 6
 GetHighestEarner: SUCCESS. Highest earner is 1398
 PromoteEmployee: INVALID_INPUT
-GetNumEmployeesMatching: SUCCESS. Out of 4, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 5, 0 match
 PromoteEmployee: SUCCESS
 PromoteEmployee: SUCCESS
 PromoteEmployee: SUCCESS
@@ -6747,7 +6747,7 @@ GetCompanyInfo: SUCCESS. Company 139 has 4 employees and value 7
 AcquireCompany: SUCCESS
 GetHighestEarnerInEachCompany: INVALID_INPUT
 IncreaseCompanyValue: SUCCESS
-GetNumEmployeesMatching: SUCCESS. Out of 1, 2 match
+GetNumEmployeesMatching: SUCCESS. Out of 2, 2 match
 GetCompanyInfo: SUCCESS. Company 203 has 0 employees and value 9
 PromoteEmployee: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT
@@ -10933,7 +10933,7 @@ HireEmployee: SUCCESS
 GetAllEmployeesBySalary: FAILURE
 PromoteEmployee: SUCCESS
 GetAllEmployeesBySalary: FAILURE
-GetNumEmployeesMatching: SUCCESS. Out of 3, 1 match
+GetNumEmployeesMatching: SUCCESS. Out of 5, 2 match
 GetEmployeeInfo: SUCCESS. Employee 2829 works at 82 and earns 9 at grade 8
 GetNumEmployeesMatching: INVALID_INPUT
 GetNumEmployeesMatching: INVALID_INPUT
@@ -13910,11 +13910,11 @@ GetHighestEarner: SUCCESS. Highest earner is 1398
 GetCompanyInfo: FAILURE
 HireEmployee: SUCCESS
 GetEmployeeInfo: SUCCESS. Employee 447 works at 271 and earns 95 at grade 6
-GetNumEmployeesMatching: SUCCESS. Out of -1, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 1, 0 match
 HireEmployee: SUCCESS
 IncreaseCompanyValue: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT
-GetHighestEarner: SUCCESS. Highest earner is 4409
+GetHighestEarner: SUCCESS. Highest earner is 296
 GetHighestEarnerInEachCompany: INVALID_INPUT
 PromoteEmployee: SUCCESS
 GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match

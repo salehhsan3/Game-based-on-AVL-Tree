@@ -2014,7 +2014,7 @@ Employee Rank || Employee ID
 144 - 1151
 AddCompany: SUCCESS
 RemoveCompany: FAILURE
-GetNumEmployeesMatching: SUCCESS. Out of -1, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 1, 0 match
 GetCompanyInfo: SUCCESS. Company 252 has 4 employees and value 70
 GetAllEmployeesBySalary: FAILURE
 HireEmployee: SUCCESS
@@ -3110,7 +3110,7 @@ AddEmployee: SUCCESS
 AcquireCompany: INVALID_INPUT
 GetEmployeeInfo: SUCCESS. Employee 7832 works at 430 and earns 3 at grade 4
 GetCompanyInfo: SUCCESS. Company 447 has 13 employees and value 67
-GetNumEmployeesMatching: SUCCESS. Out of 1, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 3, 0 match
 AcquireCompany: FAILURE
 GetHighestEarner: SUCCESS. Highest earner is 3372
 GetEmployeeInfo: SUCCESS. Employee 7020 works at 309 and earns 62 at grade 7
@@ -4460,7 +4460,7 @@ GetCompanyInfo: SUCCESS. Company 93 has 8 employees and value 80
 GetNumEmployeesMatching: INVALID_INPUT
 PromoteEmployee: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT
-GetNumEmployeesMatching: SUCCESS. Out of -1, 0 match
+GetNumEmployeesMatching: SUCCESS. Out of 0, 0 match
 GetNumEmployeesMatching: INVALID_INPUT
 GetCompanyInfo: SUCCESS. Company 203 has 13 employees and value 82
 PromoteEmployee: SUCCESS
