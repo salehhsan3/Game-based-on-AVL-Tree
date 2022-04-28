@@ -17,18 +17,27 @@ namespace MIVNI{
         int num_of_companies_with_employees;
         shared_ptr<Employee> highest_earner;
         AVL_Tree<int,shared_ptr<Employee>> workers_by_id;
-        AVL_Tree<SalaryID,shared_ptr<Employee>> workers_by_salary;
+        AVL_Tree<shared_ptr<SalaryID>,shared_ptr<Employee>> workers_by_salary;
         AVL_Tree<int,shared_ptr<Company>> companies;
         AVL_Tree<int,shared_ptr<Company>> companies_with_employees;
 
     public:
-        Industry();
+        Industry(
+                // int num_of_workers,
+                // int num_of_companies_with_employees,
+                // Shared_ptr<Employee> highest_earner,
+                // AVL_Tree<int,Employee> workers_by_id,
+                // AVL_Tree<int,Employee> workers_by_grade,
+                // AVL_Tree<int,Company> companies,
+                // AVL_Tree<int,Company> companies_with_employees
+        );
         Industry(const Industry& ind) = default;
         Industry& operator=(const Industry& ind) = default;
         ~Industry()= default;
 
+        void UpdateIndustryHighestEarnerAfterAddition(shared_ptr<Employee> emp);
 
-        static void getEmployeesBySalary(tree_node<SalaryID,shared_ptr<Employee>>* node, int *Employees, int *index);
+        static void getEmployeesBySalary(tree_node<shared_ptr<SalaryID>,shared_ptr<Employee>>* node, int *Employees, int *index);
 
         static int countEmployeesByID(tree_node<int,shared_ptr<Employee>>* node, int MinEmployeeID, int MaxEmployeeId);
 
@@ -44,7 +53,7 @@ namespace MIVNI{
 
         static int countNodes(tree_node<int,shared_ptr<Company>> *node);
 
-        void visitInOrder3(shared_ptr<Employee> * array, tree_node<SalaryID, shared_ptr<Employee> >* node, int* counter_ptr, int num);
+        void visitInOrder3(shared_ptr<Employee> * array, tree_node<shared_ptr<SalaryID>, shared_ptr<Employee> >* node, int* counter_ptr, int num);
 
         void merge_func(shared_ptr<Employee> arr1[], shared_ptr<Employee> arr2[] ,int n1, int n2,
                         shared_ptr<Employee>  arr3[]);
@@ -56,10 +65,10 @@ namespace MIVNI{
 
         AVL_Tree<int, shared_ptr<Employee>>* createFromSortedArrForID(shared_ptr<Employee> array[], int start, int end);
 
-        tree_node<SalaryID, shared_ptr<Employee>>* createFromSortedArrAuxForSalary(shared_ptr<Employee> array[], int start,
-                                                              int end, tree_node<SalaryID, shared_ptr<Employee>> *parent);
+        tree_node<shared_ptr<SalaryID>, shared_ptr<Employee>>* createFromSortedArrAuxForSalary(shared_ptr<Employee> array[], int start,
+                                                              int end, tree_node<shared_ptr<SalaryID>, shared_ptr<Employee>> *parent);
 
-        AVL_Tree<SalaryID, shared_ptr<Employee>>* createFromSortedArrForSalary(shared_ptr<Employee> array[], int start, int end);
+        AVL_Tree<shared_ptr<SalaryID>, shared_ptr<Employee>>* createFromSortedArrForSalary(shared_ptr<Employee> array[], int start, int end);
 
         Industry *Init();
 

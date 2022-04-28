@@ -5,7 +5,7 @@
 
 namespace MIVNI
 {
-    void Company::AddEmployee(int EmployeeID, int Salary, shared_ptr<Employee> emp, SalaryID salaryId)
+    void Company::AddEmployee(int EmployeeID, int Salary, shared_ptr<Employee> emp, shared_ptr<SalaryID> salaryId)
     {
         this->employees_by_id.addNode(EmployeeID,emp);
         this->employees_by_salary.addNode(salaryId,emp);
@@ -16,7 +16,7 @@ namespace MIVNI
 
     }
 
-    void Company::AddEmployeeToSalaryTree(SalaryID sal_id, shared_ptr<Employee> emp)
+    void Company::AddEmployeeToSalaryTree(shared_ptr<SalaryID> sal_id , shared_ptr<Employee> emp)
     {
         this->employees_by_salary.addNode(sal_id,emp);
         this->updateHighestEarner();
@@ -33,7 +33,7 @@ namespace MIVNI
         return(this->employees_by_id.root);
     }
 
-    void Company::RemoveEmployeeFromSalaryTree(SalaryID sal_id)
+    void Company::RemoveEmployeeFromSalaryTree(shared_ptr<SalaryID> sal_id)
     {
         this->employees_by_salary.removeNode(sal_id);
         this->updateHighestEarner();
@@ -41,14 +41,38 @@ namespace MIVNI
 
 
     }
+
     void Company::RemoveEmployee(int EmployeeID, int Salary){
-        SalaryID sal_id = SalaryID(Salary, EmployeeID);
         employees_by_id.removeNode(EmployeeID);
-        employees_by_salary.removeNode(sal_id);
+        shared_ptr<SalaryID> to_remove = make_shared<SalaryID>(Salary, EmployeeID);
+        employees_by_salary.removeNode(to_remove);
         num_of_employees--;
+        // this->highest_earner = *(employees_by_salary.max->data); // updateHighestEarnerafterRemove
         this->updateHighestEarner();
         return;
 
+    }
+    void Company::UpdateCompanyHighestEarnerAfterAddition(shared_ptr<Employee> emp)
+    {
+        if (this->highest_earner == nullptr)
+        {
+            this->highest_earner = emp;
+            return;
+        }
+        if ( emp->getEmployeeSalary() > this->highest_earner->getEmployeeSalary() )
+        {
+            this->highest_earner = emp;
+            return;
+        }
+
+        if ( (emp->getEmployeeSalary() == this->highest_earner->getEmployeeSalary()) 
+                 && ( emp->getEmployeeID() < this->highest_earner->getEmployeeID() ) )
+
+        {
+            this->highest_earner = emp;
+            return;
+        }
+        return;
     }
     int Company::getCompanyID()
     {
@@ -87,7 +111,7 @@ namespace MIVNI
         return &(this->employees_by_id);
     }
 
-    AVL_Tree<SalaryID,shared_ptr<Employee>>* Company::getCompanyEmployeesTreeBySalary(){
+    AVL_Tree<shared_ptr<SalaryID>,shared_ptr<Employee>>* Company::getCompanyEmployeesTreeBySalary(){
         return &(this->employees_by_salary);
     }
 
@@ -102,13 +126,14 @@ namespace MIVNI
         }
         return;
     }
+
     void Company::changeCompanyEmployeesTreeByID(AVL_Tree<int,shared_ptr<Employee>>& tree)
     {
         // review later!
         this->employees_by_id = tree;
         return;
     }
-    void Company::changeCompanyEmployeesTreeBySalary(AVL_Tree<SalaryID,shared_ptr<Employee>>& tree)
+    void Company::changeCompanyEmployeesTreeBySalary(AVL_Tree<shared_ptr<SalaryID>,shared_ptr<Employee>>& tree)
     {
         this->employees_by_salary = tree;
         return;

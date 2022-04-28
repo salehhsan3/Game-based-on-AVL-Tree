@@ -19,7 +19,7 @@ namespace MIVNI{
         int value;
         int num_of_employees;
         shared_ptr<Employee> highest_earner;
-        AVL_Tree<SalaryID,shared_ptr<Employee>> employees_by_salary;
+        AVL_Tree<shared_ptr<SalaryID>,shared_ptr<Employee>> employees_by_salary;
         AVL_Tree<int,shared_ptr<Employee>> employees_by_id;
 
     public:
@@ -42,9 +42,11 @@ namespace MIVNI{
         {}
         ~Company() = default;
 
-        void AddEmployee(int EmployeeID, int Salary, shared_ptr<Employee> emp, SalaryID salary_id);
+        void AddEmployee(int EmployeeID, int Salary, shared_ptr<Employee> emp, shared_ptr<SalaryID> salary_id);
         void RemoveEmployee(int EmployeeID, int Salary);
         void GetCompanyInfo(int CompanyID, int *Value, int *NumEmployees);
+        void UpdateCompanyHighestEarnerAfterAddition(shared_ptr<Employee> emp);
+        void UpdateCompanyHighestEarnerAfterRemove();
         void UpdateCompanyValue(int new_value);
         void updateHighestEarner();
         void updateNumOfEmployees(int new_num);
@@ -53,17 +55,15 @@ namespace MIVNI{
         int getCompanyNumOfEmployees();
         void increasecompanyvalue(int increase);
         int getHighestEarnerID();
-        void AddEmployeeToSalaryTree(SalaryID sal_id, shared_ptr<Employee> emp);
+        void AddEmployeeToSalaryTree(shared_ptr<SalaryID> sal_id, shared_ptr<Employee> emp);
         tree_node<int,shared_ptr<Employee>> *AddEmployeeToIDTree(int id, shared_ptr<Employee> emp);
         tree_node<int,shared_ptr<Employee>> *getEmployeeTreeByIDRoot();
-        void RemoveEmployeeFromSalaryTree(SalaryID sal_id);
+        void RemoveEmployeeFromSalaryTree(shared_ptr<SalaryID> sal_id);
         shared_ptr<Employee> getHighestEarner();
         AVL_Tree<int,shared_ptr<Employee>>* getCompanyEmployeesTreeByID();
         void changeCompanyEmployeesTreeByID(AVL_Tree<int,shared_ptr<Employee>>& tree);
-        AVL_Tree<SalaryID,shared_ptr<Employee>>* getCompanyEmployeesTreeBySalary();
-        void changeCompanyEmployeesTreeBySalary(AVL_Tree<SalaryID,shared_ptr<Employee>>& tree);
-
-
+        AVL_Tree<shared_ptr<SalaryID>,shared_ptr<Employee>>* getCompanyEmployeesTreeBySalary();
+        void changeCompanyEmployeesTreeBySalary(AVL_Tree<shared_ptr<SalaryID>,shared_ptr<Employee>>& tree);
     };
 
 

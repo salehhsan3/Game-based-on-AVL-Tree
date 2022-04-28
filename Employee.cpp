@@ -44,9 +44,9 @@ namespace MIVNI
     {
         this->company_id = NewID;
     }
-    SalaryID Employee::getEmployeeSalaryID()
+    std::shared_ptr<SalaryID> Employee::getEmployeeSalaryID()
     {
-        SalaryID to_ret = SalaryID(salary, ID);
+        std::shared_ptr<SalaryID> to_ret = std::make_shared<SalaryID>(salary, ID);
         return to_ret;
     }
 

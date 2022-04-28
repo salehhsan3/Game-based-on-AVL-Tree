@@ -94,7 +94,7 @@ namespace MIVNI{
         void bumpGrade(int bump);
         void promote(int increase,int bump);
         void UpdateCompanyID(int NewID);
-        SalaryID getEmployeeSalaryID();
+        std::shared_ptr<SalaryID> getEmployeeSalaryID();
     };
 
 
