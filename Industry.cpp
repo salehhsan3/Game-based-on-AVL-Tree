@@ -401,6 +401,12 @@ namespace MIVNI{
         int target_num = target_company->getCompanyNumOfEmployees();
         int after_num = acquire_num + target_num;
 
+        if(after_num == 0){ // companies are empty
+            RemoveCompany(TargetID);
+            acquirer_company->UpdateCompanyValue(after_value);
+            return SUCCESS;
+        }
+
         AVL_Tree<int, shared_ptr<Employee>>* acquire_employee_tree = companies.findNode(AcquirerID)->data->get()->getCompanyEmployeesTreeByID();
         AVL_Tree<int, shared_ptr<Employee>>* target_employee_tree = companies.findNode(TargetID)->data->get()->getCompanyEmployeesTreeByID();
         AVL_Tree<SalaryID, shared_ptr<Employee>>* acquire_employee_tree_salary = companies.findNode(AcquirerID)->data->get()->getCompanyEmployeesTreeBySalary();
@@ -541,10 +547,13 @@ namespace MIVNI{
 
         if (CompanyID < 0)
         {
-            *Employees = (int*)malloc(this->num_of_workers*sizeof(int));
-            if (*Employees == NULL)
+            if (this->num_of_workers > 0)
             {
-                return ALLOCATION_ERROR;
+                *Employees = (int*)malloc((this->num_of_workers+1)*sizeof(int));// not sure but +1 for valgrind!
+                if (*Employees == nullptr)
+                {
+                    return ALLOCATION_ERROR;
+                }
             }
             getEmployeesBySalary(this->workers_by_salary.root,(*Employees),index_ptr);
             (*NumOfEmployees) = *index_ptr;//correct implementation?
@@ -554,10 +563,13 @@ namespace MIVNI{
         if (CompanyID > 0)
         {
             shared_ptr<Company> comp = *(comp_node->data);
-            *Employees = (int*)malloc(comp->getCompanyNumOfEmployees()*sizeof(int));
-            if (*Employees == nullptr)
+            if (comp->getCompanyNumOfEmployees() > 0)
             {
-                return ALLOCATION_ERROR;
+                *Employees = (int*)malloc((comp->getCompanyNumOfEmployees()+1)*sizeof(int));// not sure but +1 for valgrind!
+                if (*Employees == nullptr)
+                {
+                    return ALLOCATION_ERROR;
+                }
             }
             getEmployeesBySalary(comp->getCompanyEmployeesTreeBySalary()->root,(*Employees),index_ptr);
             *NumOfEmployees = *index_ptr;//correct implementation?
