@@ -18196,7 +18196,7 @@ AcquireCompany: INVALID_INPUT
 GetHighestEarnerInEachCompany: SUCCESS. Highest earners:
 Company Index || Employee ID
 0 - 2519
-1 - 5338
+1 - 6691
 HireEmployee: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT
 IncreaseCompanyValue: SUCCESS

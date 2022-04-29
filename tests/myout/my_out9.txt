@@ -4855,7 +4855,7 @@ GetHighestEarnerInEachCompany: SUCCESS. Highest earners:
 Company Index || Employee ID
 0 - 1293
 1 - 3503
-2 - 5803
+2 - 2537
 GetNumEmployeesMatching: INVALID_INPUT
 HireEmployee: SUCCESS
 AddEmployee: SUCCESS

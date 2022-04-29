@@ -444,21 +444,22 @@ namespace MIVNI{
         // createFromSortedArrForID(new_tree_by_id,new_arr, 0, acquire_num+target_num-1);
         // createFromSortedArrForSalary(new_tree_by_salary,new_arr_salary, 0, acquire_num+target_num-1);
 
-        AVL_Tree<int, shared_ptr<Employee>>* new_tree_by_id = createFromSortedArrForID(new_arr, 0, acquire_num+target_num-1);
-        AVL_Tree<SalaryID, shared_ptr<Employee>>* new_tree_by_salary = createFromSortedArrForSalary(new_arr_salary, 0, acquire_num+target_num-1);
+        tree_node<int, shared_ptr<Employee>>* new_tree_by_id = createFromSortedArrAuxForID(new_arr, 0, acquire_num+target_num-1,nullptr);
+        tree_node<SalaryID, shared_ptr<Employee>>* new_tree_by_salary = createFromSortedArrAuxForSalary(new_arr_salary, 0, acquire_num+target_num-1,nullptr);
 
         this->companies.removeNode(TargetID);
         if (target_num > 0)
         {
             this->companies_with_employees.removeNode(TargetID);
         }
+        
 
         acquirer_company->UpdateCompanyValue(after_value);
         acquirer_company->updateNumOfEmployees(after_num);
 //        acquirer_company->getCompanyEmployeesTreeByID()->treeClear();
-        acquirer_company->changeCompanyEmployeesTreeByID(new_tree_by_id);
+        acquirer_company->changeCompanyEmployeesTreeByID(new_tree_by_id,after_num);
 //        acquirer_company->getCompanyEmployeesTreeBySalary()->treeClear();
-        acquirer_company->changeCompanyEmployeesTreeBySalary(new_tree_by_salary);
+        acquirer_company->changeCompanyEmployeesTreeBySalary(new_tree_by_salary,after_num);
         acquirer_company->updateHighestEarner();
 
         delete[] acquire_employees_arr;
