@@ -12450,18 +12450,19 @@ GetCompanyInfo: SUCCESS. Company 287 has 3 employees and value 5
 GetAllEmployeesBySalary: SUCCESS. Highest earners:
 Employee Rank || Employee ID
 0 - 4055
-1 - 1430
-2 - 6107
-3 - 4989
-4 - 4295
-5 - 691
-6 - 7174
-7 - 897
-8 - 132
-9 - 1394
+1 - 6107
+2 - 4989
+3 - 4295
+4 - 691
+5 - 7174
+6 - 897
+7 - 132
+8 - 1394
+9 - 1430
 10 - 3982
 11 - 1128
-12 - 4562
+12 - 6149
+13 - 4562
 GetCompanyInfo: SUCCESS. Company 275 has 9 employees and value 47
 GetCompanyInfo: SUCCESS. Company 440 has 9 employees and value 111
 GetNumEmployeesMatching: INVALID_INPUT

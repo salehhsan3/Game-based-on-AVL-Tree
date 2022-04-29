@@ -11459,7 +11459,7 @@ Employee Rank || Employee ID
 IncreaseCompanyValue: INVALID_INPUT
 GetHighestEarnerInEachCompany: SUCCESS. Highest earners:
 Company Index || Employee ID
-0 - 7259
+0 - 57
 1 - 6580
 RemoveEmployee: INVALID_INPUT
 GetNumEmployeesMatching: INVALID_INPUT
@@ -14407,7 +14407,7 @@ Employee Rank || Employee ID
 AcquireCompany: FAILURE
 GetHighestEarnerInEachCompany: SUCCESS. Highest earners:
 Company Index || Employee ID
-0 - 718
+0 - 796
 1 - 6580
 GetCompanyInfo: SUCCESS. Company 64 has 0 employees and value 7
 GetCompanyInfo: SUCCESS. Company 35 has 8 employees and value 50

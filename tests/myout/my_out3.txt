@@ -13700,7 +13700,7 @@ GetHighestEarnerInEachCompany: SUCCESS. Highest earners:
 Company Index || Employee ID
 0 - 4940
 1 - 6624
-2 - 7404
+2 - 1704
 GetNumEmployeesMatching: INVALID_INPUT
 GetCompanyInfo: SUCCESS. Company 359 has 2 employees and value 9
 HireEmployee: SUCCESS
@@ -17284,3 +17284,1003 @@ Employee Rank || Employee ID
 AcquireCompany: INVALID_INPUT
 HireEmployee: SUCCESS
 GetEmployeeInfo: SUCCESS. Employee 5160 works at 56 and earns 35 at grade 4
+AcquireCompany: SUCCESS
+GetEmployeeInfo: SUCCESS. Employee 5981 works at 178 and earns 103 at grade 8
+IncreaseCompanyValue: SUCCESS
+IncreaseCompanyValue: SUCCESS
+PromoteEmployee: SUCCESS
+GetAllEmployeesBySalary: FAILURE
+HireEmployee: SUCCESS
+GetNumEmployeesMatching: INVALID_INPUT
+GetNumEmployeesMatching: INVALID_INPUT
+PromoteEmployee: SUCCESS
+HireEmployee: SUCCESS
+GetNumEmployeesMatching: INVALID_INPUT
+GetNumEmployeesMatching: INVALID_INPUT
+PromoteEmployee: INVALID_INPUT
+AcquireCompany: FAILURE
+GetHighestEarnerInEachCompany: INVALID_INPUT
+GetNumEmployeesMatching: INVALID_INPUT
+GetEmployeeInfo: SUCCESS. Employee 2938 works at 18 and earns 3 at grade 9
+PromoteEmployee: SUCCESS
+HireEmployee: SUCCESS
+AcquireCompany: SUCCESS
+IncreaseCompanyValue: SUCCESS
+GetAllEmployeesBySalary: FAILURE
+AcquireCompany: SUCCESS
+GetNumEmployeesMatching: INVALID_INPUT
+HireEmployee: SUCCESS
+GetCompanyInfo: SUCCESS. Company 68 has 8 employees and value 507
+HireEmployee: SUCCESS
+GetNumEmployeesMatching: INVALID_INPUT
+GetNumEmployeesMatching: INVALID_INPUT
+PromoteEmployee: SUCCESS
+GetAllEmployeesBySalary: SUCCESS. Highest earners:
+Employee Rank || Employee ID
+0 - 1689
+1 - 4445
+2 - 1259
+3 - 5566
+4 - 4127
+5 - 7281
+6 - 6620
+7 - 2226
+8 - 5167
+9 - 1704
+10 - 4940
+11 - 5937
+12 - 3970
+13 - 4899
+14 - 2639
+15 - 5258
+16 - 403
+17 - 2630
+18 - 7437
+19 - 1737
+20 - 2918
+21 - 3217
+22 - 2038
+23 - 2311
+24 - 7330
+25 - 6264
+26 - 6731
+27 - 5057
+28 - 4021
+29 - 6323
+30 - 5654
+31 - 1379
+32 - 1665
+33 - 536
+34 - 6831
+35 - 7404
+36 - 162
+37 - 4946
+38 - 3036
+39 - 4341
+40 - 1927
+41 - 3839
+42 - 5447
+43 - 7025
+44 - 6089
+45 - 6355
+46 - 6807
+47 - 362
+48 - 2402
+49 - 3701
+50 - 522
+51 - 7833
+52 - 1260
+53 - 1750
+54 - 2329
+55 - 5755
+56 - 2960
+57 - 4921
+58 - 5128
+59 - 1708
+60 - 3952
+61 - 4714
+62 - 3786
+63 - 6116
+64 - 155
+65 - 652
+66 - 4902
+67 - 547
+68 - 1172
+69 - 3636
+70 - 4463
+71 - 1576
+72 - 6224
+73 - 5981
+74 - 2188
+75 - 4535
+76 - 6339
+77 - 5787
+78 - 2660
+79 - 5343
+80 - 7354
+81 - 1901
+82 - 4857
+83 - 3901
+84 - 5375
+85 - 5712
+86 - 5838
+87 - 7037
+88 - 4489
+89 - 1807
+90 - 3477
+91 - 4815
+92 - 20
+93 - 1480
+94 - 1938
+95 - 7198
+96 - 2503
+97 - 3658
+98 - 4584
+99 - 1165
+100 - 3968
+101 - 7623
+102 - 610
+103 - 1267
+104 - 2365
+105 - 5834
+106 - 5973
+107 - 1371
+108 - 3137
+109 - 6294
+110 - 5821
+111 - 6995
+112 - 7350
+113 - 1252
+114 - 5919
+115 - 6107
+116 - 479
+117 - 6798
+118 - 7900
+119 - 2803
+120 - 193
+121 - 211
+122 - 3170
+123 - 7486
+124 - 2273
+125 - 3404
+126 - 4404
+127 - 125
+128 - 7381
+129 - 6619
+130 - 6715
+131 - 3418
+132 - 5006
+133 - 1553
+134 - 4281
+135 - 1915
+136 - 5504
+137 - 2966
+138 - 6878
+139 - 6287
+140 - 7694
+141 - 7980
+142 - 787
+143 - 3300
+144 - 3531
+145 - 4091
+146 - 2953
+147 - 3046
+148 - 3922
+149 - 1834
+150 - 7541
+151 - 6742
+152 - 4023
+153 - 5095
+154 - 5133
+155 - 5160
+156 - 1146
+157 - 2717
+158 - 3787
+159 - 7473
+160 - 373
+161 - 2569
+162 - 4353
+163 - 7041
+164 - 22
+165 - 3241
+166 - 7267
+167 - 2642
+168 - 7999
+169 - 6902
+170 - 1640
+171 - 6793
+172 - 3657
+173 - 4976
+174 - 4
+175 - 468
+176 - 3244
+177 - 1087
+178 - 1829
+179 - 4709
+180 - 2744
+181 - 6071
+182 - 4262
+183 - 6624
+184 - 7554
+185 - 3135
+186 - 3983
+187 - 6740
+188 - 7610
+189 - 392
+190 - 1813
+191 - 330
+192 - 1273
+193 - 2938
+194 - 3547
+195 - 2891
+196 - 6014
+197 - 7064
+HireEmployee: SUCCESS
+PromoteEmployee: SUCCESS
+GetEmployeeInfo: SUCCESS. Employee 3244 works at 32 and earns 30 at grade 8
+IncreaseCompanyValue: SUCCESS
+AcquireCompany: SUCCESS
+GetCompanyInfo: SUCCESS. Company 49 has 19 employees and value 7964
+AddEmployee: SUCCESS
+GetNumEmployeesMatching: INVALID_INPUT
+GetEmployeeInfo: SUCCESS. Employee 7900 works at 416 and earns 69 at grade 9
+HireEmployee: SUCCESS
+GetNumEmployeesMatching: INVALID_INPUT
+IncreaseCompanyValue: SUCCESS
+GetHighestEarner: FAILURE
+GetAllEmployeesBySalary: SUCCESS. Highest earners:
+Employee Rank || Employee ID
+0 - 1689
+1 - 4445
+2 - 1259
+3 - 5566
+4 - 4127
+5 - 7281
+6 - 6620
+7 - 2226
+8 - 5167
+9 - 1704
+10 - 4940
+11 - 5937
+12 - 3970
+13 - 4899
+14 - 2639
+15 - 5258
+16 - 403
+17 - 2630
+18 - 7437
+19 - 1737
+20 - 2918
+21 - 3217
+22 - 2038
+23 - 2311
+24 - 7330
+25 - 6264
+26 - 6731
+27 - 5057
+28 - 4021
+29 - 6323
+30 - 5654
+31 - 1379
+32 - 1665
+33 - 536
+34 - 6831
+35 - 7404
+36 - 162
+37 - 4946
+38 - 3036
+39 - 4341
+40 - 1927
+41 - 3839
+42 - 5447
+43 - 7025
+44 - 6089
+45 - 6355
+46 - 6807
+47 - 362
+48 - 2402
+49 - 3701
+50 - 522
+51 - 7833
+52 - 1260
+53 - 1750
+54 - 2329
+55 - 5755
+56 - 2960
+57 - 4921
+58 - 5128
+59 - 1708
+60 - 3952
+61 - 4714
+62 - 3786
+63 - 6116
+64 - 155
+65 - 652
+66 - 4902
+67 - 547
+68 - 1172
+69 - 3636
+70 - 4463
+71 - 1576
+72 - 6224
+73 - 5981
+74 - 2188
+75 - 4535
+76 - 6339
+77 - 5787
+78 - 2660
+79 - 5343
+80 - 7354
+81 - 1901
+82 - 4857
+83 - 3901
+84 - 5375
+85 - 5712
+86 - 3937
+87 - 5838
+88 - 7037
+89 - 4489
+90 - 1807
+91 - 3477
+92 - 4815
+93 - 20
+94 - 1480
+95 - 1938
+96 - 7198
+97 - 2503
+98 - 3658
+99 - 4584
+100 - 1165
+101 - 3968
+102 - 7623
+103 - 610
+104 - 1267
+105 - 2365
+106 - 5834
+107 - 5973
+108 - 1371
+109 - 3137
+110 - 6294
+111 - 5821
+112 - 6995
+113 - 7350
+114 - 1252
+115 - 5919
+116 - 6107
+117 - 479
+118 - 6798
+119 - 7900
+120 - 2803
+121 - 193
+122 - 211
+123 - 3170
+124 - 7486
+125 - 2273
+126 - 3404
+127 - 4404
+128 - 125
+129 - 7381
+130 - 6619
+131 - 6715
+132 - 3418
+133 - 5006
+134 - 1553
+135 - 4281
+136 - 1915
+137 - 5504
+138 - 2966
+139 - 6878
+140 - 6287
+141 - 7694
+142 - 7980
+143 - 787
+144 - 3300
+145 - 3531
+146 - 4091
+147 - 2953
+148 - 3046
+149 - 3922
+150 - 1834
+151 - 7541
+152 - 6742
+153 - 4023
+154 - 5095
+155 - 5133
+156 - 5160
+157 - 1146
+158 - 2717
+159 - 3787
+160 - 7473
+161 - 373
+162 - 2569
+163 - 4353
+164 - 7041
+165 - 3244
+166 - 22
+167 - 3241
+168 - 7267
+169 - 2642
+170 - 7999
+171 - 6902
+172 - 1640
+173 - 6793
+174 - 3657
+175 - 4976
+176 - 4
+177 - 468
+178 - 1087
+179 - 1829
+180 - 4709
+181 - 2744
+182 - 6071
+183 - 4262
+184 - 6624
+185 - 7554
+186 - 3135
+187 - 3983
+188 - 6740
+189 - 7610
+190 - 392
+191 - 1813
+192 - 330
+193 - 1273
+194 - 2938
+195 - 3547
+196 - 2891
+197 - 6014
+198 - 7064
+AcquireCompany: INVALID_INPUT
+HireEmployee: SUCCESS
+PromoteEmployee: SUCCESS
+IncreaseCompanyValue: INVALID_INPUT
+GetNumEmployeesMatching: INVALID_INPUT
+HireEmployee: SUCCESS
+GetEmployeeInfo: SUCCESS. Employee 3636 works at 416 and earns 106 at grade 4
+GetNumEmployeesMatching: INVALID_INPUT
+GetHighestEarnerInEachCompany: INVALID_INPUT
+PromoteEmployee: SUCCESS
+HireEmployee: SUCCESS
+IncreaseCompanyValue: SUCCESS
+GetNumEmployeesMatching: INVALID_INPUT
+IncreaseCompanyValue: SUCCESS
+PromoteEmployee: SUCCESS
+GetEmployeeInfo: SUCCESS. Employee 403 works at 416 and earns 230 at grade 3
+GetNumEmployeesMatching: INVALID_INPUT
+GetNumEmployeesMatching: INVALID_INPUT
+GetHighestEarnerInEachCompany: INVALID_INPUT
+GetNumEmployeesMatching: INVALID_INPUT
+GetEmployeeInfo: SUCCESS. Employee 2402 works at 49 and earns 146 at grade 5
+HireEmployee: SUCCESS
+GetNumEmployeesMatching: INVALID_INPUT
+AcquireCompany: FAILURE
+GetHighestEarner: FAILURE
+GetNumEmployeesMatching: INVALID_INPUT
+GetCompanyInfo: SUCCESS. Company 80 has 4 employees and value 36
+IncreaseCompanyValue: SUCCESS
+RemoveEmployee: FAILURE
+GetNumEmployeesMatching: INVALID_INPUT
+HireEmployee: SUCCESS
+IncreaseCompanyValue: SUCCESS
+GetNumEmployeesMatching: INVALID_INPUT
+IncreaseCompanyValue: SUCCESS
+AcquireCompany: SUCCESS
+GetAllEmployeesBySalary: SUCCESS. Highest earners:
+Employee Rank || Employee ID
+0 - 1689
+1 - 4445
+2 - 1259
+3 - 5566
+4 - 4127
+5 - 7281
+6 - 6620
+7 - 2226
+8 - 5167
+9 - 403
+10 - 1704
+11 - 4940
+12 - 5937
+13 - 3970
+14 - 4899
+15 - 2639
+16 - 5258
+17 - 2630
+18 - 7437
+19 - 1737
+20 - 2918
+21 - 3217
+22 - 2038
+23 - 2311
+24 - 7330
+25 - 6264
+26 - 6731
+27 - 5057
+28 - 4021
+29 - 6323
+30 - 5654
+31 - 1379
+32 - 1665
+33 - 536
+34 - 6831
+35 - 7404
+36 - 162
+37 - 4946
+38 - 3036
+39 - 4341
+40 - 1927
+41 - 3839
+42 - 5447
+43 - 7025
+44 - 6089
+45 - 6355
+46 - 6807
+47 - 362
+48 - 2402
+49 - 3701
+50 - 522
+51 - 7833
+52 - 1260
+53 - 1750
+54 - 4535
+55 - 2329
+56 - 5755
+57 - 2960
+58 - 4921
+59 - 5128
+60 - 1708
+61 - 3952
+62 - 4714
+63 - 3786
+64 - 6116
+65 - 155
+66 - 652
+67 - 4902
+68 - 547
+69 - 1172
+70 - 3636
+71 - 4463
+72 - 1576
+73 - 6224
+74 - 5981
+75 - 2188
+76 - 6339
+77 - 5787
+78 - 2660
+79 - 5343
+80 - 7354
+81 - 1901
+82 - 4857
+83 - 3901
+84 - 5375
+85 - 5712
+86 - 3937
+87 - 5838
+88 - 7037
+89 - 4489
+90 - 1807
+91 - 3477
+92 - 4815
+93 - 20
+94 - 1480
+95 - 1938
+96 - 7198
+97 - 2503
+98 - 3658
+99 - 4584
+100 - 1165
+101 - 3968
+102 - 7623
+103 - 610
+104 - 1267
+105 - 2365
+106 - 5834
+107 - 5973
+108 - 1371
+109 - 3137
+110 - 6294
+111 - 5821
+112 - 6995
+113 - 7350
+114 - 1252
+115 - 5919
+116 - 6107
+117 - 479
+118 - 6798
+119 - 7900
+120 - 2803
+121 - 193
+122 - 211
+123 - 3170
+124 - 7486
+125 - 2273
+126 - 3404
+127 - 4404
+128 - 125
+129 - 7381
+130 - 6619
+131 - 6715
+132 - 3418
+133 - 5006
+134 - 1553
+135 - 4281
+136 - 1915
+137 - 5504
+138 - 2966
+139 - 6878
+140 - 6287
+141 - 7694
+142 - 7980
+143 - 787
+144 - 3300
+145 - 3531
+146 - 4091
+147 - 2953
+148 - 3046
+149 - 3922
+150 - 1834
+151 - 7541
+152 - 6742
+153 - 4023
+154 - 5095
+155 - 5133
+156 - 5160
+157 - 1146
+158 - 2717
+159 - 3787
+160 - 7473
+161 - 373
+162 - 2569
+163 - 4353
+164 - 7041
+165 - 3244
+166 - 22
+167 - 3241
+168 - 7267
+169 - 2642
+170 - 7999
+171 - 6902
+172 - 1640
+173 - 6793
+174 - 3657
+175 - 4976
+176 - 4
+177 - 468
+178 - 1087
+179 - 1829
+180 - 4709
+181 - 2744
+182 - 6071
+183 - 4262
+184 - 6624
+185 - 7554
+186 - 3135
+187 - 3983
+188 - 6740
+189 - 7610
+190 - 392
+191 - 1813
+192 - 330
+193 - 1273
+194 - 2938
+195 - 3547
+196 - 2891
+197 - 6014
+198 - 7064
+GetHighestEarner: SUCCESS. Highest earner is 1689
+GetNumEmployeesMatching: INVALID_INPUT
+RemoveEmployee: FAILURE
+HireEmployee: SUCCESS
+GetEmployeeInfo: SUCCESS. Employee 7486 works at 180 and earns 67 at grade 0
+RemoveEmployee: SUCCESS
+PromoteEmployee: SUCCESS
+GetEmployeeInfo: SUCCESS. Employee 4463 works at 32 and earns 157 at grade 4
+GetNumEmployeesMatching: INVALID_INPUT
+AcquireCompany: INVALID_INPUT
+GetHighestEarnerInEachCompany: SUCCESS. Highest earners:
+Company Index || Employee ID
+0 - 1750
+1 - 4940
+2 - 3839
+3 - 6323
+4 - 4463
+5 - 7330
+AcquireCompany: INVALID_INPUT
+HireEmployee: SUCCESS
+GetHighestEarner: SUCCESS. Highest earner is 1689
+HireEmployee: FAILURE
+IncreaseCompanyValue: SUCCESS
+HireEmployee: SUCCESS
+AcquireCompany: FAILURE
+HireEmployee: SUCCESS
+PromoteEmployee: SUCCESS
+PromoteEmployee: SUCCESS
+GetEmployeeInfo: SUCCESS. Employee 1553 works at 18 and earns 64 at grade 9
+PromoteEmployee: SUCCESS
+GetNumEmployeesMatching: INVALID_INPUT
+PromoteEmployee: SUCCESS
+GetHighestEarnerInEachCompany: INVALID_INPUT
+GetEmployeeInfo: SUCCESS. Employee 2938 works at 18 and earns 3 at grade 9
+HireEmployee: SUCCESS
+AcquireCompany: FAILURE
+PromoteEmployee: INVALID_INPUT
+GetNumEmployeesMatching: INVALID_INPUT
+GetHighestEarner: FAILURE
+GetAllEmployeesBySalary: SUCCESS. Highest earners:
+Employee Rank || Employee ID
+0 - 1689
+1 - 4445
+2 - 1259
+3 - 4940
+4 - 5566
+5 - 4127
+6 - 7281
+7 - 6620
+8 - 2226
+9 - 5167
+10 - 403
+11 - 1704
+12 - 5937
+13 - 3970
+14 - 4899
+15 - 2639
+16 - 5258
+17 - 2630
+18 - 7437
+19 - 1737
+20 - 2918
+21 - 3217
+22 - 2038
+23 - 2311
+24 - 7330
+25 - 6264
+26 - 6731
+27 - 5057
+28 - 4021
+29 - 6323
+30 - 5654
+31 - 1379
+32 - 1665
+33 - 536
+34 - 6831
+35 - 7404
+36 - 162
+37 - 4946
+38 - 3036
+39 - 4341
+40 - 1927
+41 - 3839
+42 - 4463
+43 - 5447
+44 - 7025
+45 - 6089
+46 - 6355
+47 - 6807
+48 - 362
+49 - 2402
+50 - 3701
+51 - 125
+52 - 522
+53 - 7833
+54 - 1260
+55 - 1750
+56 - 4535
+57 - 2329
+58 - 5755
+59 - 2960
+60 - 4921
+61 - 5128
+62 - 1708
+63 - 3952
+64 - 4714
+65 - 3786
+66 - 6116
+67 - 155
+68 - 652
+69 - 4902
+70 - 547
+71 - 1172
+72 - 3636
+73 - 1576
+74 - 6224
+75 - 5981
+76 - 2188
+77 - 6339
+78 - 5787
+79 - 2660
+80 - 5343
+81 - 7354
+82 - 1901
+83 - 4857
+84 - 1480
+85 - 3901
+86 - 5712
+87 - 3937
+88 - 5838
+89 - 7037
+90 - 4489
+91 - 1807
+92 - 3477
+93 - 4815
+94 - 20
+95 - 1938
+96 - 7198
+97 - 2503
+98 - 3658
+99 - 4584
+100 - 1165
+101 - 3968
+102 - 7623
+103 - 610
+104 - 1267
+105 - 2365
+106 - 5834
+107 - 5973
+108 - 1371
+109 - 3137
+110 - 6294
+111 - 5821
+112 - 6995
+113 - 7350
+114 - 1252
+115 - 5919
+116 - 6107
+117 - 479
+118 - 6798
+119 - 7900
+120 - 2803
+121 - 193
+122 - 211
+123 - 3170
+124 - 7486
+125 - 2273
+126 - 3404
+127 - 4404
+128 - 1553
+129 - 7381
+130 - 6619
+131 - 6715
+132 - 3418
+133 - 5006
+134 - 4281
+135 - 1915
+136 - 5504
+137 - 2966
+138 - 6878
+139 - 6287
+140 - 7694
+141 - 7980
+142 - 787
+143 - 3300
+144 - 3531
+145 - 4091
+146 - 2953
+147 - 3046
+148 - 3922
+149 - 1834
+150 - 7541
+151 - 6742
+152 - 4023
+153 - 5095
+154 - 5133
+155 - 5160
+156 - 1146
+157 - 2717
+158 - 3787
+159 - 7473
+160 - 373
+161 - 2569
+162 - 4353
+163 - 7041
+164 - 3244
+165 - 22
+166 - 3241
+167 - 7267
+168 - 2642
+169 - 7999
+170 - 6902
+171 - 1640
+172 - 6793
+173 - 3657
+174 - 4976
+175 - 4
+176 - 468
+177 - 1087
+178 - 1829
+179 - 4709
+180 - 2744
+181 - 6071
+182 - 4262
+183 - 6624
+184 - 7554
+185 - 3135
+186 - 3983
+187 - 6740
+188 - 7610
+189 - 392
+190 - 1813
+191 - 330
+192 - 1273
+193 - 2938
+194 - 3547
+195 - 2891
+196 - 6014
+197 - 7064
+GetHighestEarner: FAILURE
+GetNumEmployeesMatching: INVALID_INPUT
+RemoveEmployee: INVALID_INPUT
+GetNumEmployeesMatching: INVALID_INPUT
+GetHighestEarnerInEachCompany: INVALID_INPUT
+RemoveEmployee: SUCCESS
+IncreaseCompanyValue: SUCCESS
+GetNumEmployeesMatching: INVALID_INPUT
+GetNumEmployeesMatching: INVALID_INPUT
+AcquireCompany: FAILURE
+HireEmployee: SUCCESS
+IncreaseCompanyValue: SUCCESS
+GetEmployeeInfo: SUCCESS. Employee 7267 works at 359 and earns 27 at grade 3
+GetCompanyInfo: SUCCESS. Company 299 has 2 employees and value 31
+AcquireCompany: FAILURE
+PromoteEmployee: SUCCESS
+GetNumEmployeesMatching: INVALID_INPUT
+GetNumEmployeesMatching: INVALID_INPUT
+HireEmployee: SUCCESS
+GetCompanyInfo: SUCCESS. Company 80 has 4 employees and value 36
+AddEmployee: SUCCESS
+GetCompanyInfo: SUCCESS. Company 303 has 16 employees and value 30562
+PromoteEmployee: SUCCESS
+GetCompanyInfo: SUCCESS. Company 416 has 15 employees and value 167
+PromoteEmployee: SUCCESS
+IncreaseCompanyValue: SUCCESS
+GetNumEmployeesMatching: INVALID_INPUT
+RemoveEmployee: FAILURE
+GetHighestEarnerInEachCompany: INVALID_INPUT
+GetHighestEarnerInEachCompany: INVALID_INPUT
+HireEmployee: SUCCESS
+GetCompanyInfo: SUCCESS. Company 180 has 17 employees and value 2392
+GetCompanyInfo: FAILURE
+GetEmployeeInfo: SUCCESS. Employee 1273 works at 32 and earns 4 at grade 5
+GetHighestEarner: FAILURE
+GetNumEmployeesMatching: INVALID_INPUT
+GetCompanyInfo: SUCCESS. Company 299 has 2 employees and value 31
+RemoveCompany: FAILURE
+AcquireCompany: INVALID_INPUT
+GetEmployeeInfo: SUCCESS. Employee 6995 works at 303 and earns 79 at grade 6
+RemoveCompany: FAILURE
+IncreaseCompanyValue: SUCCESS
+HireEmployee: SUCCESS
+IncreaseCompanyValue: SUCCESS
+HireEmployee: SUCCESS
+GetEmployeeInfo: SUCCESS. Employee 4584 works at 235 and earns 84 at grade 7
+GetEmployeeInfo: SUCCESS. Employee 6107 works at 50 and earns 75 at grade 7
+GetHighestEarnerInEachCompany: INVALID_INPUT
+GetNumEmployeesMatching: INVALID_INPUT
+GetNumEmployeesMatching: INVALID_INPUT
+IncreaseCompanyValue: SUCCESS
+GetCompanyInfo: SUCCESS. Company 178 has 6 employees and value 8
+GetCompanyInfo: SUCCESS. Company 299 has 2 employees and value 31
+IncreaseCompanyValue: SUCCESS
+GetCompanyInfo: SUCCESS. Company 413 has 10 employees and value 316
+GetHighestEarnerInEachCompany: INVALID_INPUT
+GetHighestEarner: SUCCESS. Highest earner is 1689
+GetHighestEarnerInEachCompany: INVALID_INPUT
+GetEmployeeInfo: FAILURE
+GetNumEmployeesMatching: INVALID_INPUT
+GetNumEmployeesMatching: INVALID_INPUT
+GetNumEmployeesMatching: INVALID_INPUT
+GetHighestEarnerInEachCompany: INVALID_INPUT
+AcquireCompany: FAILURE
+IncreaseCompanyValue: SUCCESS
+GetCompanyInfo: SUCCESS. Company 50 has 4 employees and value 11
+GetHighestEarner: SUCCESS. Highest earner is 1689
+IncreaseCompanyValue: INVALID_INPUT
+HireEmployee: FAILURE
+AddCompany: SUCCESS
+HireEmployee: SUCCESS
+GetHighestEarner: SUCCESS. Highest earner is 1689
+IncreaseCompanyValue: SUCCESS
+AddCompany: SUCCESS
+GetNumEmployeesMatching: INVALID_INPUT
+AcquireCompany: INVALID_INPUT
+IncreaseCompanyValue: SUCCESS
+GetHighestEarnerInEachCompany: INVALID_INPUT
+AcquireCompany: FAILURE
+Quit done

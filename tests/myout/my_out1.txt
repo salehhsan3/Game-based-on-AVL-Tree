@@ -8861,7 +8861,7 @@ GetCompanyInfo: SUCCESS. Company 347 has 4 employees and value 12
 GetHighestEarnerInEachCompany: SUCCESS. Highest earners:
 Company Index || Employee ID
 0 - 3812
-1 - 2733
+1 - 3859
 2 - 5632
 IncreaseCompanyValue: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT

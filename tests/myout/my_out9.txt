@@ -4854,7 +4854,7 @@ GetCompanyInfo: SUCCESS. Company 368 has 8 employees and value 39
 GetHighestEarnerInEachCompany: SUCCESS. Highest earners:
 Company Index || Employee ID
 0 - 1293
-1 - 3635
+1 - 3503
 2 - 5803
 GetNumEmployeesMatching: INVALID_INPUT
 HireEmployee: SUCCESS

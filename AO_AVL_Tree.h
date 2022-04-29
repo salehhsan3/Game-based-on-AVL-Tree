@@ -16,21 +16,27 @@ public:
     tree_node<Key, Data>* max;
     int size;
 
-    AVL_Tree() : root(NULL), min(NULL), max(NULL), size(0){}
+    AVL_Tree() : root(nullptr), min(nullptr), max(nullptr), size(0){}
+    AVL_Tree(const AVL_Tree<Key,Data>& tree) : root(tree.root), min(tree.min), max(tree.max), size(tree.size){}
     void delete_sub_tree(tree_node<Key, Data>* curr_root);
     ~AVL_Tree();
     void treeClear();
+    tree_node<Key,Data> *createTreeFromSortedArrAux(Data array[],Key keys[], int start,int end, tree_node<Key, Data> *parent);
+    AVL_Tree<Key,Data> *createTreeFromSortedArr(Data array[],Key keys[], int start, int end);
     // rotations
     tree_node<Key, Data>* LL(tree_node<Key, Data> *unbalanced_node);
     tree_node<Key, Data>* LR(tree_node<Key, Data> *unbalanced_node);
     tree_node<Key, Data>* RR(tree_node<Key, Data> *unbalanced_node);
     tree_node<Key, Data>* RL(tree_node<Key, Data> *unbalanced_node);
+    void mergearrays(Data arr1[],Key keys1[], Data arr2[],Key keys2[] ,int n1, int n2, Data  arr3[],Key keys3[]);
+    void mergeTrees(AVL_Tree<Key,Data>& other);
     tree_node<Key, Data>* addNode(Key key, Data data);
     tree_node<Key, Data>* addNodeAux(tree_node<Key, Data> *curr_root, tree_node<Key, Data> *parent, Key key, Data data, tree_node<Key, Data> *min_aux, tree_node<Key, Data> *max_aux );
     tree_node<Key, Data>* findNode(Key key);
     tree_node<Key, Data>* findNodeAux(tree_node<Key, Data>* curr_root, Key key);
     void removeNode(Key key);
     tree_node<Key, Data>* removeNodeAux(tree_node<Key, Data>* curr_root, Key key);
+    void treetoarray(Data * array,Key *keys, tree_node<Key,Data>* node, int* counter_ptr);
     void printTree() {
         tree_node<Key, Data>::printInorder(std::cout, this->root);
     }
@@ -81,7 +87,7 @@ tree_node<Key, Data>* rightRotate(tree_node<Key, Data> *root){
     tree_node<Key, Data>* tmp2 = tmp1->right_son;
     root->left_son = tmp2;
     tmp1->right_son = root;
-    if (tmp2 != NULL) {
+    if (tmp2 != nullptr) {
         tmp2->parent = root;
     }
     tmp1->parent = root->parent;
@@ -97,7 +103,7 @@ tree_node<Key, Data>* leftRotate(tree_node<Key, Data> *root){
     tree_node<Key, Data>* tmp2 = tmp1->left_son;
     root->right_son = tmp2;
     tmp1->left_son = root;
-    if (tmp2 != NULL) {
+    if (tmp2 != nullptr) {
         tmp2->parent = root;
     }
     tmp1->parent = root->parent;
@@ -133,10 +139,10 @@ tree_node<Key, Data>* AVL_Tree<Key, Data>::RL(tree_node<Key, Data> *unbalanced_n
 template<class Key, class Data>
 tree_node<Key, Data>* AVL_Tree<Key, Data>::addNode(Key key, Data data) {
     if(findNode(key)){
-        return NULL;
+        return nullptr;
     }
-    if (this->root == NULL){
-        root = new tree_node<Key, Data>(key, data, NULL, NULL, NULL, 0);
+    if (this->root == nullptr){
+        root = new tree_node<Key, Data>(key, data, nullptr, nullptr, nullptr, 0);
         min = root;
         max = root;
         size++;
@@ -149,8 +155,8 @@ tree_node<Key, Data>* AVL_Tree<Key, Data>::addNode(Key key, Data data) {
 template<class Key, class Data>
 tree_node<Key, Data>* AVL_Tree<Key, Data>::addNodeAux(tree_node<Key, Data> *curr_root, tree_node<Key, Data> *parent, Key key,
                                                       Data data, tree_node<Key, Data>* min_aux, tree_node<Key, Data>* max_aux) {
-    if (curr_root == NULL) {
-        curr_root = new tree_node<Key, Data>(key, data, parent, NULL, NULL, 0);
+    if (curr_root == nullptr) {
+        curr_root = new tree_node<Key, Data>(key, data, parent, nullptr, nullptr, 0);
         size++;
             if (*this->min->key > key) {
                 this->min = curr_root;
@@ -240,9 +246,9 @@ tree_node<Key, Data>* AVL_Tree<Key, Data>::removeNodeAux(tree_node<Key, Data> *c
         if(!curr_root->left_son || !curr_root->right_son) {
             son = curr_root->left_son ? curr_root->left_son : curr_root->right_son;
             /// Did not have childs
-            if (son == NULL) {
+            if (son == nullptr) {
                 delete (curr_root);
-                return NULL;
+                return nullptr;
             } else { /// have one child
                 son->parent = curr_root->parent;
                 delete (curr_root);
@@ -294,8 +300,8 @@ AVL_Tree<Key, Data>& AVL_Tree<Key, Data>::operator=(AVL_Tree<struct player_level
 
 template<class Key, class Data>
 tree_node<Key, Data>* AVL_Tree<Key, Data>::copyTreeNode(tree_node<Key, Data> root) {
-    if(root == NULL){
-        return NULL;
+    if(root == nullptr){
+        return nullptr;
     }
     tree_node<Key, Data>* left = copyTreeNode(root->left);
     tree_node<Key, Data>* right = copyTreeNode(root->right);
@@ -303,7 +309,118 @@ tree_node<Key, Data>* AVL_Tree<Key, Data>::copyTreeNode(tree_node<Key, Data> roo
     tree_node<Key, Data>* new_node(new tree_node<Key, Data>(*root.key, *root.data, root.parent, root.left_son, root.right_son, root.height));
     return new_node;
 }
+template<class Key, class Data>
+void AVL_Tree<Key, Data>::treetoarray(Data * array,Key *keys, tree_node<Key,Data>* node, int* counter_ptr){
+        if (node == nullptr) {
+            return;
+        }
+        /* first recur on left child */
+        treetoarray(array, node->left_son, counter_ptr);
+        array[*counter_ptr] = (node->data);
+        keys[*counter_ptr] = (node->key);
+        (*counter_ptr)++;
+        /* now recur on right child */
+        treetoarray(array, node->right_son, counter_ptr);
+    }
 
+template<class Key, class Data>
+void AVL_Tree<Key, Data>::mergearrays(Data arr1[],Key keys1[], Data arr2[],Key keys2[] ,int n1, int n2,Data  arr3[],Key keys3[])
+{
+    int i = 0, j = 0, k = 0;
+
+        while (i<n1 && j <n2)
+        {
+            if ((keys1[i]) < (keys2[j]))
+            {
+                arr3[k++] = arr1[i++];
+                keys3[k++] = keys1[i++];
+            }
+            else
+            {
+                arr3[k++] = arr2[j++];
+                keys3[k++] = keys2[j++];
+            }
+        }
+
+        // Store remaining elements of first array
+        while (i < n1)
+        {
+            arr3[k++] = arr1[i++];
+            keys3[k++] = keys1[i++];
+        }
+        // Store remaining elements of second array
+        while (j < n2)
+        {
+            arr3[k++] = arr2[j++];
+            keys3[k++] = keys2[j++];
+        }
+}
+template<class Key, class Data>
+tree_node<Key,Data> *AVL_Tree<Key, Data>::createTreeFromSortedArrAux(Data array[],Key keys[], int start,
+                                                                         int end, tree_node<Key, Data> *parent){
+        if(start > end)
+            return nullptr;
+        int mid = (start+end)/2;
+        tree_node<Key, Data> *new_node = new tree_node<Key, Data>(keys[mid],array[mid],parent, nullptr, nullptr, 0);
+        new_node->left_son = createFromSortedArrAuxForID(array, start, mid-1, new_node);
+        new_node->right_son = createFromSortedArrAuxForID(array, mid+1, end, new_node);
+        new_node->updateHeight();
+        return new_node;
+    }
+
+template<class Key, class Data>
+AVL_Tree<Key, Data>* AVL_Tree<Key, Data>::createTreeFromSortedArr(Data array[],Key keys[], int start, int end){
+    AVL_Tree<int, Data> *new_tree = new AVL_Tree<int, Data>();
+    new_tree->root = createFromSortedArrAuxForID(array, start, end, nullptr);
+    new_tree->max = new_tree->root->findMax();
+    new_tree->min = new_tree->root->findMin();
+    new_tree->size = end+1;
+    return new_tree;
+}
+
+template<class Key, class Data>
+void AVL_Tree<Key, Data>::mergeTrees(AVL_Tree<Key,Data>& other)
+{
+    int nodes = this->root->countnodes();
+    int other_nodes = other.root->countnodes();
+    int total_nodes = nodes+other_nodes;
+
+    if (total_nodes == 0)
+    {
+       return;
+    }
+    if (total_nodes == 1)
+    {
+        if (other_nodes == 1)
+        {
+            this->root = other.root;
+        }
+        // otherwise (this) already has the 1 member!
+        return;
+    }
+    int index = 0;
+    int *index_ptr = &index;
+    Data data_arr[nodes];
+    Key key_arr[nodes];
+    treetoarray(data_arr,key_arr,this->root,index_ptr);
+    index = 0;
+
+    Data other_data_arr[other_nodes];
+    Key other_key_arr[other_nodes];
+    treetoarray(other_data_arr,other_key_arr,other.root,index_ptr);
+    index = 0;
+
+    Data total_data[total_nodes];
+    Key total_keys[total_nodes];
+    mergearrays(data_arr,key_arr,other_data_arr,other_key_arr,nodes,other_nodes,total_data,total_keys);
+    other.treeClear();
+    delete_sub_tree(this->root);
+    tree_node<Key,Data> *new_tree = createTreeFromSortedArrAux(total_data,total_keys,0,total_nodes-1,nullptr);
+    this->root = new_tree;
+    this->min = new_tree->findMin();
+    this->max = new_tree->findMax();
+    this->size = total_nodes;
+}
 
 
 

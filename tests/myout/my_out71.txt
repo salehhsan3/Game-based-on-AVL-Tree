@@ -2387,7 +2387,7 @@ Company Index || Employee ID
 2 - 3798
 3 - 7321
 4 - 3791
-5 - 5585
+5 - 940
 HireEmployee: SUCCESS
 GetNumEmployeesMatching: INVALID_INPUT
 HireEmployee: SUCCESS
@@ -2650,7 +2650,7 @@ Company Index || Employee ID
 2 - 3798
 3 - 1332
 4 - 5766
-5 - 5585
+5 - 940
 6 - 7981
 AddCompany: SUCCESS
 AcquireCompany: INVALID_INPUT

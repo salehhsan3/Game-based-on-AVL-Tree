@@ -5592,7 +5592,7 @@ GetHighestEarnerInEachCompany: SUCCESS. Highest earners:
 Company Index || Employee ID
 0 - 7836
 1 - 2526
-2 - 4009
+2 - 4152
 3 - 3400
 GetEmployeeInfo: SUCCESS. Employee 5730 works at 168 and earns 200 at grade 6
 PromoteEmployee: SUCCESS

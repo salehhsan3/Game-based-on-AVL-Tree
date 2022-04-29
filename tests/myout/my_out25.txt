@@ -3232,7 +3232,7 @@ GetCompanyInfo: FAILURE
 GetHighestEarnerInEachCompany: SUCCESS. Highest earners:
 Company Index || Employee ID
 0 - 7736
-1 - 5827
+1 - 3671
 2 - 4367
 GetAllEmployeesBySalary: SUCCESS. Highest earners:
 Employee Rank || Employee ID
@@ -3964,7 +3964,7 @@ GetHighestEarnerInEachCompany: SUCCESS. Highest earners:
 Company Index || Employee ID
 0 - 7736
 1 - 3650
-2 - 5827
+2 - 3671
 3 - 4367
 GetAllEmployeesBySalary: FAILURE
 HireEmployee: SUCCESS

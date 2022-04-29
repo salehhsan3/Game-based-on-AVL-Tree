@@ -12718,7 +12718,7 @@ GetHighestEarnerInEachCompany: INVALID_INPUT
 IncreaseCompanyValue: SUCCESS
 GetHighestEarnerInEachCompany: SUCCESS. Highest earners:
 Company Index || Employee ID
-0 - 7767
+0 - 5147
 1 - 4303
 GetHighestEarnerInEachCompany: INVALID_INPUT
 AcquireCompany: FAILURE

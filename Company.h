@@ -59,9 +59,9 @@ namespace MIVNI{
         void RemoveEmployeeFromSalaryTree(SalaryID sal_id);
         shared_ptr<Employee> getHighestEarner();
         AVL_Tree<int,shared_ptr<Employee>>* getCompanyEmployeesTreeByID();
-        void changeCompanyEmployeesTreeByID(AVL_Tree<int,shared_ptr<Employee>>& tree);
+        void changeCompanyEmployeesTreeByID(AVL_Tree<int,shared_ptr<Employee>>* tree);
         AVL_Tree<SalaryID,shared_ptr<Employee>>* getCompanyEmployeesTreeBySalary();
-        void changeCompanyEmployeesTreeBySalary(AVL_Tree<SalaryID,shared_ptr<Employee>>& tree);
+        void changeCompanyEmployeesTreeBySalary(AVL_Tree<SalaryID,shared_ptr<Employee>>* tree);
 
 
     };

@@ -13724,7 +13724,7 @@ IncreaseCompanyValue: SUCCESS
 IncreaseCompanyValue: SUCCESS
 GetHighestEarnerInEachCompany: SUCCESS. Highest earners:
 Company Index || Employee ID
-0 - 6958
+0 - 6037
 1 - 7613
 HireEmployee: SUCCESS
 HireEmployee: SUCCESS
@@ -14521,7 +14521,7 @@ GetCompanyInfo: SUCCESS. Company 257 has 1 employees and value 4
 IncreaseCompanyValue: INVALID_INPUT
 GetHighestEarnerInEachCompany: SUCCESS. Highest earners:
 Company Index || Employee ID
-0 - 166
+0 - 6037
 1 - 7613
 2 - 7198
 3 - 5782
