@@ -27,17 +27,6 @@ public:
 
     ~tree_node();
 
-    static int countnodes(tree_node<Key,Data> *node)
-    {
-        if (node == nullptr)
-        {
-            return 0;
-        }
-        return(countnodes(node->left_son)+countnodes(node->right_son)+1);
-    }
-
-    void updateHeight();
-
     void setData(Data* new_data);
 
     bool operator==(const tree_node &node_to_cmp) const;
@@ -53,6 +42,8 @@ public:
     bool operator>=(const tree_node &node_to_cmp) const;
 
    //tree_node<Key, Data>& operator=(tree_node<Key,Data> *tree_node);
+
+    void updateHeight();
 
     int getBalance();
 

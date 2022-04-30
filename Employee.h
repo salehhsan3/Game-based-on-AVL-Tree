@@ -73,9 +73,9 @@ namespace MIVNI{
         {
             if (salary == emp.salary)
             {
-                return ID > emp.ID;
+                return (ID > emp.ID);
             }
-            return salary < emp.salary;
+            return (salary < emp.salary);
         }
         bool operator==(const Employee& emp) const
         {
