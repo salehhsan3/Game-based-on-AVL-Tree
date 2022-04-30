@@ -2,8 +2,8 @@
 // Created by Saleh on 23/04/2022.
 //
 
-#ifndef DS_WET1_STOCKEXCHANGE_H
-#define DS_WET1_STOCKEXCHANGE_H
+#ifndef DS_WET1_INDUSTRY_H
+#define DS_WET1_INDUSTRY_H
 #include "Company.h"
 #include "library1.h"
 
@@ -68,6 +68,8 @@ namespace MIVNI{
 
         AVL_Tree<SalaryID, shared_ptr<Employee>>* createFromSortedArrForSalary(shared_ptr<Employee> array[], int start, int end);
 
+        tree_node<int,shared_ptr<Employee>>* findLCA(tree_node<int,shared_ptr<Employee>> *root, int MinID, int MaxID);
+
         Industry *Init();
 
         StatusType AddCompany(int CompanyID, int Value);
@@ -98,10 +100,10 @@ namespace MIVNI{
 
         StatusType GetNumEmployeesMatching(int CompanyID, int MinEmployeeID, int MaxEmployeeId,
                                            int MinSalary, int MinGrade, int *TotalNumOfEmployees, int *NumOfEmployees);
-        tree_node<int,shared_ptr<Employee>>* findLCA(tree_node<int,shared_ptr<Employee>> *root, int MinID, int MaxID);
+        
 
     };
 
 }
 
-#endif //DS_WET1_STOCKEXCHANGE_H
+#endif //DS_WET1_INDUSTRY_H

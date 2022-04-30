@@ -68,7 +68,7 @@ namespace MIVNI
     }
 
     void Company::UpdateCompanyValue(int new_value){
-        value = new_value;
+        this->value=new_value;
     }
 
     int Company::getHighestEarnerID()
@@ -92,10 +92,6 @@ namespace MIVNI
 
     void Company::updateHighestEarner()
     {
-        if(employees_by_salary.root) {
-            employees_by_salary.min = employees_by_salary.root->findMin();//ommmm
-            employees_by_salary.max = employees_by_salary.root->findMax();
-        }
         if (this->employees_by_salary.max != nullptr){
             this->highest_earner = *(this->employees_by_salary.max->data);
         }
@@ -105,15 +101,23 @@ namespace MIVNI
         }
         return;
     }
-    void Company::changeCompanyEmployeesTreeByID(AVL_Tree<int,shared_ptr<Employee>>& tree)
+    void Company::changeCompanyEmployeesTreeByID(tree_node<int,shared_ptr<Employee>>* new_root,int size)
     {
         // review later!
-        this->employees_by_id = tree;
+        this->employees_by_id.treeClear();
+        this->employees_by_id.root = new_root;
+        this->employees_by_id.max = new_root->findMax();
+        this->employees_by_id.min = new_root->findMin();
+        this->employees_by_id.size = size;
         return;
     }
-    void Company::changeCompanyEmployeesTreeBySalary(AVL_Tree<SalaryID,shared_ptr<Employee>>& tree)
+    void Company::changeCompanyEmployeesTreeBySalary(tree_node<SalaryID,shared_ptr<Employee>>* new_root,int size)
     {
-        this->employees_by_salary = tree;
+        this->employees_by_salary.treeClear();
+        this->employees_by_salary.root = new_root;
+        this->employees_by_salary.max = new_root->findMax();
+        this->employees_by_salary.min = new_root->findMin();
+        this->employees_by_salary.size = size;
         return;
     }
 

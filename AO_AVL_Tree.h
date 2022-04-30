@@ -57,10 +57,6 @@ void AVL_Tree<Key, Data>::delete_sub_tree(tree_node<Key, Data> *curr_root) {
 
 template<class Key, class Data>
 void AVL_Tree<Key, Data>::treeClear() {
-    if(!this){
-        return;
-    }
-
     if(this->root){
         delete_sub_tree(this->root);
     }
@@ -209,7 +205,7 @@ tree_node<Key, Data>* AVL_Tree<Key, Data>::findNodeAux(tree_node<Key, Data> *cur
 
 template<class Key, class Data>
 void AVL_Tree<Key, Data>::removeNode(Key key) {
-    if (!this || !findNode(key)){
+    if (!findNode(key)){
         return;
     }
     root = removeNodeAux(root, key);
